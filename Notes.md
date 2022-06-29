@@ -32,3 +32,7 @@ How to verify if I've logged in successfully?
 
 Problem: What to do if verify failed?
 
+### Possible Concurrent Issues
+When checking login processing, after get the URL as Login.aspx and before processing the get message in login page, the browser may go to Welcome.aspx page already.
+I use try..catch block and ignore the error, then try again. See Login.xaml for more details.
+
