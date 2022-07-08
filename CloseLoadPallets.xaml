@@ -1,0 +1,196 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseLoadPallets" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1161,1306</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CloseLoadPallets" sap:VirtualizedContainerService.HintSize="476,1241" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="LoadID" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please type the Load ID:" Title="Get Load ID">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">LoadID</CSharpReference>
+        </OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Load ID is " + LoadID</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="434,740" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,604" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'RECEIVING'" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Welcome.aspx" DesignTimeRectangle="508, 179, 66, 14" ElementType="Text" FriendlyName="'RECEIVING'" FullSelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkReceiving' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkReceiving' tag='A' type='' class='' aaname='RECEIVING' check:innerText='RECEIVING' /&gt;" Guid="97739490-09cf-4898-addc-fac32463dc77" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAASCAYAAADmMahlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVFhH7ZU9qsMwDMffqd51eqZconuv0I5dQ9YMhWxdAoFuerZlxbI+3BconSz4QyNbsvTzR39+TwN0aXUwjjoYRx2MowLm/IAVDNseMOQ5lyX7hK3TrSRVeZ5wobHTCHP21vaC+7nExnzD9Eoj85ViUVhDnH+D+xZ+Un20LquX5ys5dA31OEqBsZokHxbFGxW6PuOEKkdpJH7nopaxxHDx9ajRam6OT807YILtMGVP8jvKqDmqDUY00gYjCjV1AAzl4+tZ4waYPaY1/40+d2KseKUjYAZ1nfCbTp8NZt0wJuXg+f5VX9HbN4YnQjDS9Puw51TKYKTJ5igH1ZRAyh13wEwj+uMG8nyqPlGLOEnOicmLBuOP37dPTNV8a0zG5t8QTk+J8daWwFH+VaLkDMR33xj00fWZF36Nohpgwjc/3ejz6jsKJoiS14t5YII++a8kfMmq4ttgeJzysfV3gEfAlHuIjfFdqIw3yhtJxneZ8mlLV9asIQPw/B6YIHq87Z646c0uYLoqdTCOOhhHHYyjDsbUAH+j0aqrbfhggQAAAABJRU5ErkJggg==" InformativeScreenshot="4b2585f0515882e025e12528ac7564e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="619, 179, 37, 14" ElementType="Text" FriendlyName="'AUDIT'" FullSelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkAudit' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkAudit' tag='A' type='' class='' aaname='AUDIT' check:innerText='AUDIT' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAASCAYAAADG3feYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADlSURBVEhL7ZSxDoQgDIbvqXydeyZewt1X0NHVuDKYuLGYmLj1DiiEVi65AwYuoUmj0Pr3s0Uf3VNA7d4gS/mfQvYbHKDtgrmnsWHX+wqGj3sLSL1kdqyTz+9GZfbkOMF8mtuI0Ro3SLFemMjE3/415L74uIPyWh4S47Ec5gwS3+5UIM11AxHEkyB5TjYkjlon247SkadCEq1cSCIWALt4BZBu1G7EfF0DJCbGzAnaYr9DkpwcSCtEz6D/HbmiNzEOFYHkxyYdEsXZ1+xHHnTPdjMw8gzqMCPFczpZszfIUt4gy7iAF8LfUFSnld6PAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Input 'SEARCH LOADS'" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Receiving/LoadPalletDetails.aspx" DesignTimeRectangle="439, 531, 132, 21" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='dxeTextBoxSys dxeTextBox_Aqua dxeTextBoxDefaultWidthSys' aaname='' /&gt;" Guid="f04b1652-9e50-47ea-955d-5a91e190d5ae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAAZCAYAAADqgGa0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABkSURBVGhD7dJRCYAwAABR+4cxiGnWYOLHBoJegvfgGtwxIRiEtAc5ryHtltcg8DAIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySCk30Gk1bIHgS8GIcx5A8qQPid8czjJAAAAAElFTkSuQmCC" InformativeScreenshot="3f1d533e6d553cc8a6743179fd324ab7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target DesignTimeRectangle="445, 519, 117, 12" ElementType="Text" FriendlyName="'SEARCH LOADS'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='                         SEARCH LOADS:' check:innerText='SEARCH LOADS:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHkAAAAQCAYAAAAyAdDbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH2SURBVFhH7ZXLccIwEIZTVdpJC9RAB66AoQAyw5kD9xwZbukAOKSDDdaupH3JBlsHBuuf2YP1WK/+b2V/QNPbq0FegBrkBahBXoAqQL7Aft3B5xfF9kzjZ+jiGI803yvu3cD+SkOk01btM3sBboeNmF8dLjRD+9dHuNEznHdhTSdTBJm1Qup8QzmcOV1jH7zOIKoNw3oxV/MhhwKpMGEkQjYH4roeYUWH0+uM8bQ2mojmMUNoPuapA5kAj+ZhDe024g5O9KzPkd4R9jnvq6DZkI3ZSeOQsft30DkmW+N5vgdzj8JBFSEX9uj10YNuq4DeZSAbkNQgqjmCVONOVYXPdamL2TiLbBg7XDBTNsogJHMbrMJ+eiePZyBbQCg5zqA5dXk5sLY8hmv6MXVZXgcyKhcaDzly2wRY280epJTrUcilJlGaBVnUYj+3j0BGsUvh1DJH1SCjOKxhyB5EfnBhvAE00kB31YBc2sPX8+bOkW9kEXIBJK73fn/TNRtyKFh1NZo/AML7DClDtRH4Hm0eM0PlNEZOgRxvJock8vCmJqk6DGRx8/OzqNv1c7rq/pP7SGapcTb/63arNMwaT/NsTN8ibsbTkFmeEAlcBJ0j5XBzyk+2rrEPDU2vKTXAVFX+XDe9ohrkBejj++cPWrx3tJv89gL4B7Di8b94g9tcAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SEARCH LOADS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Receiving/LoadPalletDetails.aspx" DesignTimeRectangle="439, 531, 132, 21" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='dxeTextBoxSys dxeTextBox_Aqua dxeTextBoxDefaultWidthSys' aaname='' /&gt;" Guid="0a0f578e-d5f5-4258-932c-964db29ef5e0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAAZCAYAAADqgGa0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABkSURBVGhD7dJRCYAwAABR+4cxiGnWYOLHBoJegvfgGtwxIRiEtAc5ryHtltcg8DAIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySCk30Gk1bIHgS8GIcx5A8qQPid8czjJAAAAAElFTkSuQmCC" InformativeScreenshot="3f1d533e6d553cc8a6743179fd324ab7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="445, 519, 117, 12" ElementType="Text" FriendlyName="'SEARCH LOADS'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='                         SEARCH LOADS:' check:innerText='SEARCH LOADS:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHkAAAAQCAYAAAAyAdDbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH2SURBVFhH7ZXLccIwEIZTVdpJC9RAB66AoQAyw5kD9xwZbukAOKSDDdaupH3JBlsHBuuf2YP1WK/+b2V/QNPbq0FegBrkBahBXoAqQL7Aft3B5xfF9kzjZ+jiGI803yvu3cD+SkOk01btM3sBboeNmF8dLjRD+9dHuNEznHdhTSdTBJm1Qup8QzmcOV1jH7zOIKoNw3oxV/MhhwKpMGEkQjYH4roeYUWH0+uM8bQ2mojmMUNoPuapA5kAj+ZhDe024g5O9KzPkd4R9jnvq6DZkI3ZSeOQsft30DkmW+N5vgdzj8JBFSEX9uj10YNuq4DeZSAbkNQgqjmCVONOVYXPdamL2TiLbBg7XDBTNsogJHMbrMJ+eiePZyBbQCg5zqA5dXk5sLY8hmv6MXVZXgcyKhcaDzly2wRY280epJTrUcilJlGaBVnUYj+3j0BGsUvh1DJH1SCjOKxhyB5EfnBhvAE00kB31YBc2sPX8+bOkW9kEXIBJK73fn/TNRtyKFh1NZo/AML7DClDtRH4Hm0eM0PlNEZOgRxvJock8vCmJqk6DGRx8/OzqNv1c7rq/pP7SGapcTb/63arNMwaT/NsTN8ibsbTkFmeEAlcBJ0j5XBzyk+2rrEPDU2vKTXAVFX+XDe9ohrkBejj++cPWrx3tJv89gL4B7Di8b94g9tcAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">LoadID + "[k(enter)]"</CSharpValue>
+                </InArgument>
+              </uix:NTypeInto.Text>
+            </uix:NTypeInto>
+            <Delay Duration="00:00:08" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.InUiElement>
+        <InArgument x:TypeArguments="ui:UiElement">
+          <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_Browser</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.InUiElement>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

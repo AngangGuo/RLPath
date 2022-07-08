@@ -1,0 +1,197 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Louout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1161,1116</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="58">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Louout" sap:VirtualizedContainerService.HintSize="602,1051" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="560,959" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="ebd1fd98-8cd8-4ff6-ad18-9e993fc34447" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,823" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="CurrentURL" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetUrl DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="484,86" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V1">
+              <uix:NGetUrl.CurrentUrl>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">CurrentURL</CSharpReference>
+                </OutArgument>
+              </uix:NGetUrl.CurrentUrl>
+            </uix:NGetUrl>
+            <If sap:VirtualizedContainerService.HintSize="484,473" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">!CurrentURL.Contains("Login.aspx")</CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,285" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ebd1fd98-8cd8-4ff6-ad18-9e993fc34447" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Receiving/LoadPalletDetails.aspx?searchby=LoadID&amp;searchvalue=L1021369" DesignTimeRectangle="1467, 143, 34, 12" ElementType="Text" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_ContentPlaceHolderHeader_topHeader_LoginView1_LoginS*' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_ContentPlaceHolderHeader_topHeader_LoginView1_LoginS*' tag='A' type='' class='' aaname='Logout' check:innerText='Logout' /&gt;" Guid="5d1280d8-7dd6-4d2c-a9e7-5522191d1179" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAQCAYAAAB6Hg0eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEJSURBVEhL5VSxDYMwEGQq1mEFZmAD1ykQA6CImoI2NWKAVCkAZYWP/+yHBykSEIKIctIL//E+zm+bgI5GV1Ec5VT7FGAuqaj3KSMII0NHBNDkGMdlixS858K5Mf88HX7AGFo62/uD0JcphVnjM4dTGKsze8Y2GZMDyqEEIIiDm5NJDJnhVUNG6gdNx0nN0CWlPc5fYgzXO6Wi46SlwhrArdL1qBFhVWMBA7hxb4xZbOsY8+oqi+BUzJlxH2UDshCL4b/1N8Z220rNu/EKY7ZAhxTrd0oAgswtOvzeJLiUTDZ2TPhxvjb2CSZd3Qcwdn88/UqWx7zDsnWaWxuX6w0ajH069gWc1BjRCzDIW0DKcTqlAAAAAElFTkSuQmCC" InformativeScreenshot="ef1b03778c8aa07577fe611edb682ea3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="1419, 131, 82, 12" ElementType="Text" FriendlyName="'[Change Facility]'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_ContentPlaceHolderHeader_topHeader_LoginView1_lnkCha*' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_ContentPlaceHolderHeader_topHeader_LoginView1_lnkCha*' tag='A' type='' class='' aaname='[Change Facility]' check:innerText='[Change Facility]' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAQCAYAAACMV4iGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJBSURBVFhH7ZVLUgIxEIY9Fddx78ozsND1XECKA7BwJYULFh7AguIOUuAd2vQjnT+ZAIMyOmXxV6Uq00n68aUDNzQgfcwX9G7zfrSll4enn8fYLmg8WdkH0fvkkV629mEaENhQ9Dwl25tWT3QHUM4XXw6APOBvUB37n3QF25MM7I6exw2NbhtqNmqh/ZLuwzfbeNy/7mxB96bvv1LKORvTWEBXqR+pezOj0XhJn2ijDTW3E3re87wiPsNx5VwSgIXDshmdIUyc/6V6yMPBgqTBjoBl8Z4uYNfTSsL7Ha3D8IKmM+9o73Jb8+6xYJ+vk9BJs3DzZoeu4li6N6yHs9GXnKnsTzoO1v3KmNG6YtdY6qfesVBPsL8hFwFufruB5dZHWKUsGEKLTvebAJ8nrPSEFBIkETtAXgbaywJZUHgmKNpHBBjy8P1wvhWP58W6xAVbma9dsjaLBekGFpxWpet+cxkElq5roQDW9yTg0j3ejSlu1q1xtLq2yKOisjszGC6o9xRYyV0vhn07o25g9VD7pyC/4SpYnlsRCPBbYFsAShV5oCTXuHbKb1o/DTYCTYBFXcEqIPjOisB5UAk2g3wcrO7BpwkFevwinuuQPcibIM7RL9o5hvrpCpa/m8AquyDe0wksS5JITykVUBTkychHgGZnpktP7iDYIH+uF/3z0jX1G/KAF4h+1QYQa2BjTZ4/rpnOAvvbKjtjqJI84WeAdRys3mK8iXirfY5DrwJtQxkiyxfz9BrqYK+6tK5gexHRF15jTWGjb/3LAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="Input 'User Name'" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Target>
+                          <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Login.aspx" DesignTimeRectangle="857, 528, 214, 30" ElementType="InputBox" FriendlyName="'INPUT ctl00_MainContent…'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='form-login' aaname='' /&gt;" Guid="7bc9b5c0-b21c-4a8f-b93c-5bb4d3358f73" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANoAAAAiCAYAAAA53MevAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAECSURBVHhe7d0xboNQFETRLIGStbGEUMQ7ZSH0UVL9aCR/isixTIBXnSONZBm3V3TPbw24nNCgwBba59d3W5alTdPUxnFswzCY2c6lnTSUltJUt4WWBwIzO2dpKU11W2ipMD+Y57mt63r/Ftgj7aShtJSmui20/jYTGRyThvpbrdtCy4MMOO53T0KDC7wc2vvH7f4J2EtoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUODl0ID/ExoUEBoU+DM05+bgHE/PzTmgCselnacHVJ0ENztvaenhSXB/cmF2fGknDaWlh39yAVxHaHC51n4AttTgmTEt4ZEAAAAASUVORK5CYII=" InformativeScreenshot="a4812ffa3529bfdc9c9df59d06b2a22e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <uix:Target DesignTimeRectangle="767, 528, 90, 28" ElementType="Text" FriendlyName="'User Name'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='login-box-name' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='login-box-name' type='' tag='DIV' class='' aaname='                                 User Name:' check:innerText='User Name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAgCAYAAACb+s/fAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH0SURBVGhD7ZpLbsIwEEB7BJacjSOwoWfIAu7AAo4B4hJRTkFOULUr1/OxPTYurUuTQdU8yRI440nmjeNVXpyhgolXwsTPzNv7h+v73sTPDUhfLpcmfm5Wq5VbLBYmfm5gt5t4BUC6iVfAxCth4pUw8UqYeCVMvBImXgkTr4SJV8LEK2HilZhA/OD2m1e3H/gvcz3v3PpYTP4V48V1/p7deeQJoj/ezj0L/0r8enNwPU8BJt6Tix/daQuiaGRyhkOcX28v7oqTFN9tfY5KbhJ/cHsvWjY3F0/PFXOHOF57gufDazt3GkWs3CyxwTBEkzmHbPp3qIjPmwDx/NBYABSOf6g5GCd/V4iFQ66wXornxoUmyPuwzHAN1pD8Iq6oC+PixmjnCcQncF4WA7sf/xfiSqL4PMfXR41oUCa3tin4Gr6Jj+1yiYp4gHYWjRCLMTyXBhRH4suckUxCis3EyyMMhxSfBN4XL9eLHL9gAvF1SSi6sstlcWVzEi3iPbw74cwn8eVmEEJbxD9wtJRMIL5y/mFxqfD8CIDiuHCMS7so5WkU78G1/p418fRmNYqv5sjv2cIk4oFQeBi5NCqiei17pUNh7eLDPUKDSRTl7c5Dyvdj8R6MDc9Wzrc1YTLxxn1MvBL2eYcS9kGTEvYJnxL00WrvPgEH/Q9l7vi6WAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:VerifyExecutionOptions.Target>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Logged out"</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.InUiElement>
+        <InArgument x:TypeArguments="ui:UiElement">
+          <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_Browser</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.InUiElement>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

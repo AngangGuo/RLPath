@@ -3,9 +3,10 @@
     <x:Property Name="out_Success" Type="OutArgument(x:Boolean)" />
     <x:Property Name="out_FileName" Type="OutArgument(x:String)" />
     <x:Property Name="out_Message" Type="OutArgument(x:String)" />
+    <x:Property Name="out_LoginBrowserElement" Type="OutArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>2006,3930</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,3797</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -99,10 +100,7 @@
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Login to https://blueiq.cloudblue.com/ by using BLUEIQUSERNAME and BLUEIQPASSWORD variables from environment." DisplayName="Login to BlueIQ" sap:VirtualizedContainerService.HintSize="2016,3865" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="ui:UiElement" Name="out_Element" />
-    </Sequence.Variables>
+  <Sequence sap2010:Annotation.AnnotationText="Login to https://blueiq.cloudblue.com/ by using BLUEIQUSERNAME and BLUEIQPASSWORD variables from environment." DisplayName="Login to BlueIQ" sap:VirtualizedContainerService.HintSize="1250,3732" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -430,7 +428,7 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <TryCatch sap2010:Annotation.AnnotationText="If BlueIQ enter Welcome page after the condition check, UiPath will not able to find the Login element at the Welcome page. This will cause timeout error.&#xD;&#xA;" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="767,255" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                        <TryCatch sap2010:Annotation.AnnotationText="If BlueIQ enter Welcome page after the condition check, UiPath will not able to find the Login element at the Welcome page. This will cause timeout error.&#xA;" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="767,255" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -608,7 +606,7 @@
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.OutUiElement>
         <OutArgument x:TypeArguments="ui:UiElement">
-          <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">out_Element</CSharpReference>
+          <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">out_LoginBrowserElement</CSharpReference>
         </OutArgument>
       </uix:NApplicationCard.OutUiElement>
       <uix:NApplicationCard.TargetApp>
