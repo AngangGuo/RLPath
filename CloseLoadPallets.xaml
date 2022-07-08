@@ -1,12 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CloseLoadPallets" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseLoadPallets" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1161,1306</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1161,1843</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="40">
+    <scg:List x:TypeArguments="x:String" Capacity="68">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -41,10 +41,11 @@
       <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
       <AssemblyReference>Microsoft.CSharp</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
       <AssemblyReference>System.Core</AssemblyReference>
@@ -96,9 +97,10 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Private.Xml</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CloseLoadPallets" sap:VirtualizedContainerService.HintSize="476,1241" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CloseLoadPallets" sap:VirtualizedContainerService.HintSize="552,1778" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="LoadID" />
     </Sequence.Variables>
@@ -107,37 +109,40 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please type the Load ID:" Title="Get Load ID">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="510,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please type the Load ID:" Title="Get Load ID">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">LoadID</CSharpReference>
         </OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Load ID is " + LoadID</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="434,740" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: BlueIQ" sap:VirtualizedContainerService.HintSize="510,1277" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,604" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1141" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="PalletsDataTable" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ClickType="Single" DisplayName="Click 'RECEIVING'" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+            <uix:NClick ClickType="Single" DisplayName="Click 'RECEIVING'" sap:VirtualizedContainerService.HintSize="434,192" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Welcome.aspx" DesignTimeRectangle="508, 179, 66, 14" ElementType="Text" FriendlyName="'RECEIVING'" FullSelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkReceiving' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkReceiving' tag='A' type='' class='' aaname='RECEIVING' check:innerText='RECEIVING' /&gt;" Guid="97739490-09cf-4898-addc-fac32463dc77" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAASCAYAAADmMahlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVFhH7ZU9qsMwDMffqd51eqZconuv0I5dQ9YMhWxdAoFuerZlxbI+3BconSz4QyNbsvTzR39+TwN0aXUwjjoYRx2MowLm/IAVDNseMOQ5lyX7hK3TrSRVeZ5wobHTCHP21vaC+7nExnzD9Eoj85ViUVhDnH+D+xZ+Un20LquX5ys5dA31OEqBsZokHxbFGxW6PuOEKkdpJH7nopaxxHDx9ajRam6OT807YILtMGVP8jvKqDmqDUY00gYjCjV1AAzl4+tZ4waYPaY1/40+d2KseKUjYAZ1nfCbTp8NZt0wJuXg+f5VX9HbN4YnQjDS9Puw51TKYKTJ5igH1ZRAyh13wEwj+uMG8nyqPlGLOEnOicmLBuOP37dPTNV8a0zG5t8QTk+J8daWwFH+VaLkDMR33xj00fWZF36Nohpgwjc/3ejz6jsKJoiS14t5YII++a8kfMmq4ttgeJzysfV3gEfAlHuIjfFdqIw3yhtJxneZ8mlLV9asIQPw/B6YIHq87Z646c0uYLoqdTCOOhhHHYyjDsbUAH+j0aqrbfhggQAAAABJRU5ErkJggg==" InformativeScreenshot="4b2585f0515882e025e12528ac7564e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="619, 179, 37, 14" ElementType="Text" FriendlyName="'AUDIT'" FullSelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkAudit' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkAudit' tag='A' type='' class='' aaname='AUDIT' check:innerText='AUDIT' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAASCAYAAADG3feYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADlSURBVEhL7ZSxDoQgDIbvqXydeyZewt1X0NHVuDKYuLGYmLj1DiiEVi65AwYuoUmj0Pr3s0Uf3VNA7d4gS/mfQvYbHKDtgrmnsWHX+wqGj3sLSL1kdqyTz+9GZfbkOMF8mtuI0Ro3SLFemMjE3/415L74uIPyWh4S47Ec5gwS3+5UIM11AxHEkyB5TjYkjlon247SkadCEq1cSCIWALt4BZBu1G7EfF0DJCbGzAnaYr9DkpwcSCtEz6D/HbmiNzEOFYHkxyYdEsXZ1+xHHnTPdjMw8gzqMCPFczpZszfIUt4gy7iAF8LfUFSnld6PAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -151,7 +156,7 @@
                   <uix:VerifyExecutionOptions.Target>
                     <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Receiving/LoadPalletDetails.aspx" DesignTimeRectangle="439, 531, 132, 21" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='dxeTextBoxSys dxeTextBox_Aqua dxeTextBoxDefaultWidthSys' aaname='' /&gt;" Guid="f04b1652-9e50-47ea-955d-5a91e190d5ae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAAZCAYAAADqgGa0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABkSURBVGhD7dJRCYAwAABR+4cxiGnWYOLHBoJegvfgGtwxIRiEtAc5ryHtltcg8DAIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySCk30Gk1bIHgS8GIcx5A8qQPid8czjJAAAAAElFTkSuQmCC" InformativeScreenshot="3f1d533e6d553cc8a6743179fd324ab7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
-                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                           <uix:Target DesignTimeRectangle="445, 519, 117, 12" ElementType="Text" FriendlyName="'SEARCH LOADS'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='                         SEARCH LOADS:' check:innerText='SEARCH LOADS:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHkAAAAQCAYAAAAyAdDbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH2SURBVFhH7ZXLccIwEIZTVdpJC9RAB66AoQAyw5kD9xwZbukAOKSDDdaupH3JBlsHBuuf2YP1WK/+b2V/QNPbq0FegBrkBahBXoAqQL7Aft3B5xfF9kzjZ+jiGI803yvu3cD+SkOk01btM3sBboeNmF8dLjRD+9dHuNEznHdhTSdTBJm1Qup8QzmcOV1jH7zOIKoNw3oxV/MhhwKpMGEkQjYH4roeYUWH0+uM8bQ2mojmMUNoPuapA5kAj+ZhDe024g5O9KzPkd4R9jnvq6DZkI3ZSeOQsft30DkmW+N5vgdzj8JBFSEX9uj10YNuq4DeZSAbkNQgqjmCVONOVYXPdamL2TiLbBg7XDBTNsogJHMbrMJ+eiePZyBbQCg5zqA5dXk5sLY8hmv6MXVZXgcyKhcaDzly2wRY280epJTrUcilJlGaBVnUYj+3j0BGsUvh1DJH1SCjOKxhyB5EfnBhvAE00kB31YBc2sPX8+bOkW9kEXIBJK73fn/TNRtyKFh1NZo/AML7DClDtRH4Hm0eM0PlNEZOgRxvJock8vCmJqk6DGRx8/OzqNv1c7rq/pP7SGapcTb/63arNMwaT/NsTN8ibsbTkFmeEAlcBJ0j5XBzyk+2rrEPDU2vKTXAVFX+XDe9ohrkBejj++cPWrx3tJv89gL4B7Di8b94g9tcAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                         </scg:List>
                       </uix:TargetAnchorable.Anchors>
@@ -163,11 +168,11 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SEARCH LOADS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SEARCH LOADS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Receiving/LoadPalletDetails.aspx" DesignTimeRectangle="439, 531, 132, 21" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='dxeTextBoxSys dxeTextBox_Aqua dxeTextBoxDefaultWidthSys' aaname='' /&gt;" Guid="0a0f578e-d5f5-4258-932c-964db29ef5e0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAAZCAYAAADqgGa0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABkSURBVGhD7dJRCYAwAABR+4cxiGnWYOLHBoJegvfgGtwxIRiEtAc5ryHtltcg8DAIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySCk30Gk1bIHgS8GIcx5A8qQPid8czjJAAAAAElFTkSuQmCC" InformativeScreenshot="3f1d533e6d553cc8a6743179fd324ab7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target DesignTimeRectangle="445, 519, 117, 12" ElementType="Text" FriendlyName="'SEARCH LOADS'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='                         SEARCH LOADS:' check:innerText='SEARCH LOADS:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHkAAAAQCAYAAAAyAdDbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH2SURBVFhH7ZXLccIwEIZTVdpJC9RAB66AoQAyw5kD9xwZbukAOKSDDdaupH3JBlsHBuuf2YP1WK/+b2V/QNPbq0FegBrkBahBXoAqQL7Aft3B5xfF9kzjZ+jiGI803yvu3cD+SkOk01btM3sBboeNmF8dLjRD+9dHuNEznHdhTSdTBJm1Qup8QzmcOV1jH7zOIKoNw3oxV/MhhwKpMGEkQjYH4roeYUWH0+uM8bQ2mojmMUNoPuapA5kAj+ZhDe024g5O9KzPkd4R9jnvq6DZkI3ZSeOQsft30DkmW+N5vgdzj8JBFSEX9uj10YNuq4DeZSAbkNQgqjmCVONOVYXPdamL2TiLbBg7XDBTNsogJHMbrMJ+eiePZyBbQCg5zqA5dXk5sLY8hmv6MXVZXgcyKhcaDzly2wRY280epJTrUcilJlGaBVnUYj+3j0BGsUvh1DJH1SCjOKxhyB5EfnBhvAE00kB31YBc2sPX8+bOkW9kEXIBJK73fn/TNRtyKFh1NZo/AML7DClDtRH4Hm0eM0PlNEZOgRxvJock8vCmJqk6DGRx8/OzqNv1c7rq/pP7SGapcTb/63arNMwaT/NsTN8ibsbTkFmeEAlcBJ0j5XBzyk+2rrEPDU2vKTXAVFX+XDe9ohrkBejj++cPWrx3tJv89gL4B7Di8b94g9tcAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -179,7 +184,45 @@
                 </InArgument>
               </uix:NTypeInto.Text>
             </uix:NTypeInto>
-            <Delay Duration="00:00:08" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Action' ReferenceName='Action' ReferenceIdx='0'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Pallet ID' ReferenceName='Pallet ID' ReferenceIdx='1'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Weight (lbs)' ReferenceName='Weight (lbs)' ReferenceIdx='2'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Site' ReferenceName='Site' ReferenceIdx='3'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Location' ReferenceName='Location' ReferenceIdx='4'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Facility' ReferenceName='Facility' ReferenceIdx='5'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Remaining Weight (lbs)' ReferenceName='Remaining Weight (lbs)' ReferenceIdx='6'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Status' ReferenceName='Status' ReferenceIdx='7'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Action' attr='text' /&gt;&lt;column name='Pallet ID' attr='text' /&gt;&lt;column name='Weight (lbs)' attr='text' /&gt;&lt;column name='Site' attr='text' /&gt;&lt;column name='Location' attr='text' /&gt;&lt;column name='Facility' attr='text' /&gt;&lt;column name='Remaining Weight (lbs)' attr='text' /&gt;&lt;column name='Status' attr='text' /&gt;&lt;/extract-table&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Page" MaximumResults="1" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+              <uix:NExtractData.DataTable>
+                <InOutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">PalletsDataTable</CSharpReference>
+                </InOutArgument>
+              </uix:NExtractData.DataTable>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="593, 870, 879, 237" FriendlyName="'ActionPallet IDWeight'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_gvLoadPallet' tag='TABLE' /&gt;" Guid="e9323d5d-bcd4-48b0-b67e-733026769a23" InformativeScreenshot="9e76e057ad8ba86b100f4b44221dc287.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,300" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,184" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">CurrentRow.ItemArray[0]</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <ui:ForEachRow.DataTable>
+                <InArgument x:TypeArguments="sd:DataTable">
+                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">PalletsDataTable</CSharpValue>
+                </InArgument>
+              </ui:ForEachRow.DataTable>
+            </ui:ForEachRow>
+            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -189,7 +232,7 @@
         </InArgument>
       </uix:NApplicationCard.InUiElement>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" />
+        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="1881b2714ca7d772546a4851254637a0.png" Selector="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" Url="https://blueiq.cloudblue.com/Receiving/LoadPalletDetails.aspx?searchby=LoadID&amp;searchvalue=L1025592" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
