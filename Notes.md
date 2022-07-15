@@ -36,3 +36,7 @@ Problem: What to do if verify failed?
 When checking login processing, after get the URL as Login.aspx and before processing the get message in login page, the browser may go to Welcome.aspx page already.
 I use try..catch block and ignore the error, then try again. See Login.xaml for more details.
 
+## Close Pallets
+* Get the pallet id from Pallet Details section in the load information page will ensure that they are all valid pallet ids so that we can omit the need for the logic to check wrong pallet id
+* Using filter to filtering out the pallet ids with empty site also eliminate some error logic
+* 
