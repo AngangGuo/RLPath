@@ -3,7 +3,7 @@
     <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>2704,5256</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1089,2910</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -102,7 +102,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CloseLoadPallets" sap:VirtualizedContainerService.HintSize="2714,5191" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CloseLoadPallets" sap:VirtualizedContainerService.HintSize="630,2845" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="LoadID" />
       <Variable x:TypeArguments="s:String[]" Name="LoadIDs" />
@@ -113,7 +113,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="You can type in any single load id or many load ids separated by spaces or semi-colon, like &quot;L956769 L966682; L979021&quot;&#xA;&#xA;When copying the load ids from RL-Amazon All In One spread sheet and paste them directly into the input dialog, all the new lines between each load id will be removed.&#xA;&#xA;For example:&#xA;When copying the load id from spread sheet and paste into input dialog like this&#xA;L956769&#xA;L966682&#xA;L979021&#xA;&#xA;In this case the result string will become: &quot;L956769L966682L979021&quot;" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="2672,520" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Title="Get Load IDs">
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="You can type in any single load id or many load ids separated by spaces or semi-colon, like &quot;L956769 L966682; L979021&quot;&#xA;&#xA;When copying the load ids from RL-Amazon All In One spread sheet and paste them directly into the input dialog, all the new lines between each load id will be removed.&#xA;&#xA;For example:&#xA;When copying the load id from spread sheet and paste into input dialog like this&#xA;L956769&#xA;L966682&#xA;L979021&#xA;&#xA;In this case the result string will become: &quot;L956769L966682L979021&quot;" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="588,520" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Title="Get Load IDs">
       <ui:InputDialog.Label>
         <InArgument x:TypeArguments="x:String">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">"Please type the Load IDs:"+Environment.NewLine+Environment.NewLine+"Note: You can type in multiple load ids separeted by spaces, semi-colon or new lines."</CSharpValue>
@@ -130,7 +130,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InputDialog>
-    <Assign sap2010:Annotation.AnnotationText="Note: &#xA;Add a space  before &quot;L&quot; and Split the string using &quot; &quot; and &quot;;&quot; so that it can process these two strings: &quot;L956769L966682L979021&quot;&#xA;&quot;L956769  L966682  L979021&quot;&#xA;&quot;L956769L; 966682; L979021&quot;" DisplayName="Assign LoadIDs" sap:VirtualizedContainerService.HintSize="2672,177" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap2010:Annotation.AnnotationText="Note: &#xA;Add a space  before &quot;L&quot; and Split the string using &quot; &quot; and &quot;;&quot; so that it can process these two strings: &quot;L956769L966682L979021&quot;&#xA;&quot;L956769  L966682  L979021&quot;&#xA;&quot;L956769L; 966682; L979021&quot;" DisplayName="Assign LoadIDs" sap:VirtualizedContainerService.HintSize="588,177" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">
           <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">LoadIDs</CSharpReference>
@@ -147,32 +147,32 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each LoadIDs" sap:VirtualizedContainerService.HintSize="2672,4322" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each LoadIDs" sap:VirtualizedContainerService.HintSize="588,1976" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="LoadID" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2636,4198" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1852" sap2010:WorkflowViewState.IdRef="Sequence_19">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="2594,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">"Load ID is " + LoadID</CSharpValue>
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: BlueIQ" sap:VirtualizedContainerService.HintSize="2594,3975" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V2">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: BlueIQ" sap:VirtualizedContainerService.HintSize="510,1629" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2560,3839" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1493" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="PalletsDataTable" />
                     </Sequence.Variables>
@@ -181,7 +181,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'RECEIVING'" sap:VirtualizedContainerService.HintSize="2518,192" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'RECEIVING'" sap:VirtualizedContainerService.HintSize="434,192" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Welcome.aspx" DesignTimeRectangle="508, 179, 66, 14" ElementType="Text" FriendlyName="'RECEIVING'" FullSelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkReceiving' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkReceiving' tag='A' type='' class='' aaname='RECEIVING' check:innerText='RECEIVING' /&gt;" Guid="97739490-09cf-4898-addc-fac32463dc77" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAASCAYAAADmMahlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGXSURBVFhH7ZU9qsMwDMffqd51eqZconuv0I5dQ9YMhWxdAoFuerZlxbI+3BconSz4QyNbsvTzR39+TwN0aXUwjjoYRx2MowLm/IAVDNseMOQ5lyX7hK3TrSRVeZ5wobHTCHP21vaC+7nExnzD9Eoj85ViUVhDnH+D+xZ+Un20LquX5ys5dA31OEqBsZokHxbFGxW6PuOEKkdpJH7nopaxxHDx9ajRam6OT807YILtMGVP8jvKqDmqDUY00gYjCjV1AAzl4+tZ4waYPaY1/40+d2KseKUjYAZ1nfCbTp8NZt0wJuXg+f5VX9HbN4YnQjDS9Puw51TKYKTJ5igH1ZRAyh13wEwj+uMG8nyqPlGLOEnOicmLBuOP37dPTNV8a0zG5t8QTk+J8daWwFH+VaLkDMR33xj00fWZF36Nohpgwjc/3ejz6jsKJoiS14t5YII++a8kfMmq4ttgeJzysfV3gEfAlHuIjfFdqIw3yhtJxneZ8mlLV9asIQPw/B6YIHq87Z646c0uYLoqdTCOOhhHHYyjDsbUAH+j0aqrbfhggQAAAABJRU5ErkJggg==" InformativeScreenshot="4b2585f0515882e025e12528ac7564e8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -211,7 +211,7 @@
                         </uix:VerifyExecutionOptions>
                       </uix:NClick.VerifyOptions>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SEARCH LOADS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="2518,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'SEARCH LOADS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Receiving/LoadPalletDetails.aspx" DesignTimeRectangle="439, 531, 132, 21" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='dxeTextBoxSys dxeTextBox_Aqua dxeTextBoxDefaultWidthSys' aaname='' /&gt;" Guid="0a0f578e-d5f5-4258-932c-964db29ef5e0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAAZCAYAAADqgGa0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABkSURBVGhD7dJRCYAwAABR+4cxiGnWYOLHBoJegvfgGtwxIRiEtAc5ryHtltcg8DAIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySCk30Gk1bIHgS8GIcx5A8qQPid8czjJAAAAAElFTkSuQmCC" InformativeScreenshot="3f1d533e6d553cc8a6743179fd324ab7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -227,7 +227,7 @@
                         </InArgument>
                       </uix:NTypeInto.Text>
                     </uix:NTypeInto>
-                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Action' ReferenceName='Action' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Pallet ID' ReferenceName='Pallet ID' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Weight (lbs)' ReferenceName='Weight (lbs)' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Site' ReferenceName='Site' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Location' ReferenceName='Location' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Facility' ReferenceName='Facility' ReferenceIdx='5'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Remaining Weight (lbs)' ReferenceName='Remaining Weight (lbs)' ReferenceIdx='6'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Status' ReferenceName='Status' ReferenceIdx='7'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Action' attr='text' /&gt;&lt;column name='Pallet ID' attr='text' /&gt;&lt;column name='Weight (lbs)' attr='text' /&gt;&lt;column name='Site' attr='text' /&gt;&lt;column name='Location' attr='text' /&gt;&lt;column name='Facility' attr='text' /&gt;&lt;column name='Remaining Weight (lbs)' attr='text' /&gt;&lt;column name='Status' attr='text' /&gt;&lt;/extract-table&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="2518,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Page" MaximumResults="1" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Action' ReferenceName='Action' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Pallet ID' ReferenceName='Pallet ID' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Weight (lbs)' ReferenceName='Weight (lbs)' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Site' ReferenceName='Site' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Location' ReferenceName='Location' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Facility' ReferenceName='Facility' ReferenceIdx='5'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Remaining Weight (lbs)' ReferenceName='Remaining Weight (lbs)' ReferenceIdx='6'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Status' ReferenceName='Status' ReferenceIdx='7'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Action' attr='text' /&gt;&lt;column name='Pallet ID' attr='text' /&gt;&lt;column name='Weight (lbs)' attr='text' /&gt;&lt;column name='Site' attr='text' /&gt;&lt;column name='Location' attr='text' /&gt;&lt;column name='Facility' attr='text' /&gt;&lt;column name='Remaining Weight (lbs)' attr='text' /&gt;&lt;column name='Status' attr='text' /&gt;&lt;/extract-table&gt;" ExtractSimilar="True" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Page" MaximumResults="1" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
                       <uix:NExtractData.DataTable>
                         <InOutArgument x:TypeArguments="sd:DataTable">
                           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">PalletsDataTable</CSharpReference>
@@ -237,7 +237,7 @@
                         <uix:TargetAnchorable DesignTimeRectangle="593, 870, 879, 237" FriendlyName="'ActionPallet IDWeight'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_gvLoadPallet' tag='TABLE' /&gt;" Guid="e9323d5d-bcd4-48b0-b67e-733026769a23" InformativeScreenshot="9e76e057ad8ba86b100f4b44221dc287.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
                       </uix:NExtractData.Target>
                     </uix:NExtractData>
-                    <ui:FilterDataTable sap2010:Annotation.AnnotationText="" DisplayName="Filter Data Table - Remove closed pallets" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="2518,191" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Keep">
+                    <ui:FilterDataTable sap2010:Annotation.AnnotationText="" DisplayName="Filter Data Table - Remove closed pallets" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,191" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Keep">
                       <ui:FilterDataTable.DataTable>
                         <InArgument x:TypeArguments="sd:DataTable">
                           <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">PalletsDataTable</CSharpValue>
@@ -272,7 +272,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:FilterDataTable>
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="2518,301" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,301" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
@@ -300,7 +300,7 @@
                         </InArgument>
                       </ui:ForEachRow.DataTable>
                     </ui:ForEachRow>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'AUDIT'" sap:VirtualizedContainerService.HintSize="2518,192" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'AUDIT'" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Receiving/LoadPalletDetails.aspx" DesignTimeRectangle="619, 179, 37, 14" ElementType="Text" FriendlyName="'AUDIT'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_ContentPlaceHolderHeader_topHeader_lnkAudit' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_ContentPlaceHolderHeader_topHeader_lnkAudit' tag='A' type='' class='' aaname='AUDIT' check:innerText='AUDIT' /&gt;" Guid="c172f32a-0a88-4334-86c4-9e6e632c46d3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAASCAYAAADG3feYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADlSURBVEhL7ZSxDoQgDIbvqXydeyZewt1X0NHVuDKYuLGYmLj1DiiEVi65AwYuoUmj0Pr3s0Uf3VNA7d4gS/mfQvYbHKDtgrmnsWHX+wqGj3sLSL1kdqyTz+9GZfbkOMF8mtuI0Ro3SLFemMjE3/415L74uIPyWh4S47Ec5gwS3+5UIM11AxHEkyB5TjYkjlon247SkadCEq1cSCIWALt4BZBu1G7EfF0DJCbGzAnaYr9DkpwcSCtEz6D/HbmiNzEOFYHkxyYdEsXZ1+xHHnTPdjMw8gzqMCPFczpZszfIUt4gy7iAF8LfUFSnld6PAAAAAElFTkSuQmCC" InformativeScreenshot="bcdba2c010d5b7c11adbd130141da84f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -329,21 +329,27 @@
                           </uix:VerifyExecutionOptions.Timeout>
                         </uix:VerifyExecutionOptions>
                       </uix:NClick.VerifyOptions>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="2518,2256" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                       <ui:ForEachRow.Body>
                         <ActivityAction x:TypeArguments="sd:DataRow">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2484,2140" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1666,2140" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Pallet ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="2442,217" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Pallet ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1624,217" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
                               <uix:NTypeInto.Target>
                                 <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/PreSort/PreSortInfoCapture.aspx" DesignTimeRectangle="750, 239, 86, 21" ElementType="InputBox" FriendlyName="'INPUT ctl00_ctl00_MainC…'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_txtPalletID' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_txtPalletID' tag='INPUT' type='text' class='dxeTextBoxSys dxeTextBox_Aqua dxeTextBoxDefaultWidthSys' aaname='' /&gt;" Guid="1dcccc39-161e-4d1f-81c8-79e7ee24adf9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFoAAAAZCAYAAACxZDnAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADISURBVGhD7dmxDcIwFEXReIOUmc0rZNgM4hWAjx7iWxQBBHFeda/0mzjViZXCnoIsAW2qQ1+ut9i2LWqtsSxLzPPM/DGyk6EsZZp1aC0APG5kKdOsQ+sr6IV1XaOU8nxKv9ZaexjKUqZZh87drBeniV/3kWSYuzrrolrQKKCP9+qpgD4poE0BbQpoU0CbAtoU0KaANgW0KaBNAW0KaFNvoTm9G9fH0zvOo8f09TyaG5axI8vdGxbuDMeM7GQoy907Qzo3oC1F3AFrAG6ktoQHaAAAAABJRU5ErkJggg==" InformativeScreenshot="7c928b5010979fea6fad4827590ff10a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
@@ -359,7 +365,7 @@
                                 </InArgument>
                               </uix:NTypeInto.Text>
                             </uix:NTypeInto>
-                            <uix:NClick ClickType="Single" DisplayName="Click 'Update to Completed'" sap:VirtualizedContainerService.HintSize="2442,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+                            <uix:NClick ClickType="Single" DisplayName="Click 'Update to Completed'" sap:VirtualizedContainerService.HintSize="1624,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/PreSort/PreSortInfoCapture.aspx" DesignTimeRectangle="871, 244, 111, 12" ElementType="Text" FriendlyName="'Update to Completed'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_lnkUpdate' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_lnkUpdate' tag='A' type='' class='' aaname='Update to Completed' check:innerText='Update to Completed' /&gt;" Guid="4702ff82-f6b9-4738-91fb-b1819304efa1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHMAAAAQCAYAAAAlI0ASAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKWSURBVFhH7ZY9ihRRFIVdlUtwB5q6AYPJNHABghiIgWAkY6KhkWAgBoKBiSgYDAYyMAgOBh04iknJV/oVpy+vurt6GEZ66sDj/dxzz/3rpvtSN2NnMA9zhzAPc4cwD3OHsDTMpy/fd9du7XffFz/6+8HhcXflxqP+fQqqzhjefviylTZ+U4Hf5ev3hzU17jY4+fW727v3vLvz+NW/lzbgwVnXr4SzyV6c2zCxwZmi3SpgExADP/zBtnVNxabD3KRfFacaps0nOXY+3ZkkZ97g3374YtCxIL8R8Fpv6qth40XaWeTU0qnQb9XgWtrAfhiD84NnbwaejYRn3bybfx1mq0Y01PPNvvMGHz+QXGLBOdUwtWtDzCDsFiAPX+68Yzdh9bDrwxnUPETGBDSp5qOGqD4Vxs4crQUtz+rkh1EfecaGg4282NNHDnv2yDOLc9aI39G3Rf/OHRgz65o8TMXyXv3GdAjOzl1/uGl3yUvIo4D0FxZO40T6tFDtNr3WJc94GYu3zNf7x89fBy39WzVmHPJIDgvbu0+HPd88a95go2HiYPNIDOS9+uUdu0mj41l/uMbhvAqtfNInGyxavERqgrMeZiuPjEMeDNB8RM2z3sHSMKsQu0nalFocnPSzGfCOjhf9uVV0Nlkfea2hgFoAvJrPWLOMC5JbY2ct2Mf06zDxqTb82LnXONXfOPYlfTjnOzCmvQBLwwSSXCaoGOLs2BQGnHmj4PwDZHNYV2/u93beTFQdm6WGjU+YAxzySg11xjBWF0jdtLFbx7phWjf+5p/DAGM12iPfsmfGTx5r7R+gVbDgVQ27qHCYDue8MAzz7pPXw9Rbqw6zxbmIC+QwW5yzXic///4cbfzNnPH/Yx7mzqDr/gD6vI2If1ZVNwAAAABJRU5ErkJggg==" InformativeScreenshot="f05ff740e70b755472dc8be7bd19c30d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
@@ -370,7 +376,7 @@
                                 </uix:TargetAnchorable>
                               </uix:NClick.Target>
                             </uix:NClick>
-                            <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Usually it will show &quot;Are you sure to update the pallet status to completed?&quot; after click yes.&#xA;Sometimes it may show other messages:&#xA;1. wrong pallet id(not likely when get from receiving tab. but more likely when typed manually.&#xA;2. pallet closed already; not likely when I filtered the closed pallet id; &#xA;3. some other error message" DisplayName="Check App State 'Are you'" sap:VirtualizedContainerService.HintSize="2442,1593" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
+                            <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Usually it will show &quot;Are you sure to update the pallet status to completed?&quot; after click yes.&#xA;Sometimes it may show other messages:&#xA;1. wrong pallet id(not likely when get from receiving tab. but more likely when typed manually.&#xA;2. pallet closed already; not likely when I filtered the closed pallet id; &#xA;3. some other error message" DisplayName="Check App State 'Are you'" sap:VirtualizedContainerService.HintSize="1624,1593" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Version="V1">
                               <uix:NCheckState.IfExists>
                                 <Sequence sap2010:Annotation.AnnotationText="there'll be two conditions after click yes:&#xA;1. pallet closed and back to sort condition&#xA;2. if it's the last pallet, another message box will show out asking close the load" DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1320,1290" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -510,11 +516,12 @@
                                 </Sequence>
                               </uix:NCheckState.IfExists>
                               <uix:NCheckState.IfNotExists>
-                                <Sequence sap2010:Annotation.AnnotationText="If pallet is closed, this message will show out: Pallet ID is not in production/sort site.&#xA;Better filter the closed pallet before hand to avoid this error" DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="1068,1170" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <Sequence sap2010:Annotation.AnnotationText="If pallet is closed, this message will show out: Pallet ID is not in production/sort site.&#xA;Better filter the closed pallet before hand to avoid this error" DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,153" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Pallet ID'" sap:VirtualizedContainerService.HintSize="1026,1034" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="43987dee-23f4-4a92-b3cd-3346941d78a9" Timeout="2" Version="V1">
@@ -630,6 +637,12 @@
                           <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">PalletsDataTable</CSharpValue>
                         </InArgument>
                       </ui:ForEachRow.DataTable>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                     </ui:ForEachRow>
                   </Sequence>
                 </ActivityAction>
