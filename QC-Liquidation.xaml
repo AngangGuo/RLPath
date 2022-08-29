@@ -3,7 +3,7 @@
     <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1329,17250</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1329,18630</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
@@ -102,7 +102,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for liquidation assets.&#xA;Passing in Browser instance,&#xA;" DisplayName="QC_Liquidation" sap:VirtualizedContainerService.HintSize="1339,17185" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for liquidation assets.&#xA;Passing in Browser instance,&#xA;" DisplayName="QC_Liquidation" sap:VirtualizedContainerService.HintSize="1339,18565" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="AssetTags" />
       <Variable x:TypeArguments="s:String[]" Name="AllLPNs" />
@@ -244,13 +244,13 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="QC each liquidation asset" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1297,15485" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="QC each liquidation asset" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1297,16865" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="AssetTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1261,15330" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1261,16710" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -280,13 +280,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1219,14860" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V2">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1219,16240" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence sap2010:Annotation.AnnotationText="Process liquidation asset in BlueIQ" DisplayName="Do - Process liquidation asset" sap:VirtualizedContainerService.HintSize="1185,14724" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence sap2010:Annotation.AnnotationText="Process liquidation asset in BlueIQ" DisplayName="Do - Process liquidation asset" sap:VirtualizedContainerService.HintSize="1185,16104" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="TheText" />
                       <Variable x:TypeArguments="x:Boolean" Name="ProcessItemUpdated" />
@@ -335,7 +335,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Waiting for &quot;Source Name: Amazon&quot; is showed out;&#xA;Change the timeout from 5s(default) to 10s for sometimes it need more time to show out." DisplayName="Check App State 'Amazon'" sap:VirtualizedContainerService.HintSize="1143,517" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Timeout="15" Version="V1">
+                    <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Waiting for &quot;Source Name: Amazon&quot; is showed out;&#xA;Change the timeout from 5s(default) to 10s for sometimes it need more time to show out." DisplayName="Check App State 'Amazon'" sap:VirtualizedContainerService.HintSize="1143,637" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Timeout="15" Version="V1">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_9">
                           <sap:WorkflowViewStateService.ViewState>
@@ -346,7 +346,7 @@
                         </Sequence>
                       </uix:NCheckState.IfExists>
                       <uix:NCheckState.IfNotExists>
-                        <Sequence sap2010:Annotation.AnnotationText="If Asset Tag is invalid, the Source Name will not show out" DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="304,259" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence sap2010:Annotation.AnnotationText="If Asset Tag is invalid, the Source Name will not show out" DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,379" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -354,7 +354,7 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+                          <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_5">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">
                                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">AllAssetProcessInfo[AssetTag]</CSharpReference>
@@ -366,7 +366,14 @@
                               </InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:Continue sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Warn">
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                          </ui:LogMessage>
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Continue_1" />
                         </Sequence>
                       </uix:NCheckState.IfNotExists>
                       <uix:NCheckState.Target>
@@ -409,7 +416,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="Facility doesn't match" sap:VirtualizedContainerService.HintSize="1143,82" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If sap2010:Annotation.AnnotationText="Facility doesn't match" sap:VirtualizedContainerService.HintSize="1143,567" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">TheText != Facility</CSharpValue>
@@ -418,18 +425,18 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="304,217" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,348" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_9">
+                          <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_9">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">
                                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">AllAssetProcessInfo[AssetTag]</CSharpReference>
@@ -441,7 +448,14 @@
                               </InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:Continue sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Warn">
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                          </ui:LogMessage>
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Continue_2" />
                         </Sequence>
                       </If.Then>
                       <If.Else>
@@ -1061,7 +1075,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="Already in QC status. &#xA;No more processing if nothing changed. Need further checking by team leader." sap:VirtualizedContainerService.HintSize="1143,762" sap2010:WorkflowViewState.IdRef="If_7">
+                    <If sap2010:Annotation.AnnotationText="Already in QC status. &#xA;No more processing if nothing changed. Need further checking by team leader." sap:VirtualizedContainerService.HintSize="1143,892" sap2010:WorkflowViewState.IdRef="If_7">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">TheText.StartsWith("QC-")</CSharpValue>
@@ -1073,7 +1087,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap2010:Annotation.AnnotationText="Asset already finished QC before" sap:VirtualizedContainerService.HintSize="526,561" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                        <Sequence sap2010:Annotation.AnnotationText="Asset already finished QC before" sap:VirtualizedContainerService.HintSize="526,691" sap2010:WorkflowViewState.IdRef="Sequence_25">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1092,7 +1106,7 @@
                               </InArgument>
                             </Assign.Value>
                           </Assign>
-                          <If sap2010:Annotation.AnnotationText="If there's no change, just stop further checking." sap:VirtualizedContainerService.HintSize="484,335" sap2010:WorkflowViewState.IdRef="If_13">
+                          <If sap2010:Annotation.AnnotationText="If there's no change, just stop further checking." sap:VirtualizedContainerService.HintSize="484,465" sap2010:WorkflowViewState.IdRef="If_13">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">!ProcessItemUpdated</CSharpValue>
@@ -1104,13 +1118,20 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="242,116" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,246" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:Continue sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Continue_3" />
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Warn">
+                                  <ui:LogMessage.Message>
+                                    <InArgument x:TypeArguments="x:Object">
+                                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
+                                    </InArgument>
+                                  </ui:LogMessage.Message>
+                                </ui:LogMessage>
+                                <ui:Continue sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Continue_3" />
                               </Sequence>
                             </If.Then>
                             <If.Else>
@@ -1424,26 +1445,42 @@
                         </Sequence>
                       </If.Then>
                     </If>
-                    <ui:LogMessage sap2010:Annotation.AnnotationText="Todo: Check other values in &quot;Repair: Checklist Questions&quot; page" DisplayName="Todo:  &quot;Repair: Checklist Questions" sap:VirtualizedContainerService.HintSize="1143,133" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info">
-                      <ui:LogMessage.Message>
-                        <InArgument x:TypeArguments="x:Object">
-                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">""</CSharpValue>
-                        </InArgument>
-                      </ui:LogMessage.Message>
+                    <ui:CommentOut sap2010:Annotation.AnnotationText="Todo: Check other values in &quot;Repair: Checklist Questions&quot; page" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1143,334" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,225" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage sap2010:Annotation.AnnotationText="Todo: Check other values in &quot;Repair: Checklist Questions&quot; page" DisplayName="Todo:  &quot;Repair: Checklist Questions" sap:VirtualizedContainerService.HintSize="334,133" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info">
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">""</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:LogMessage>
+                        </Sequence>
+                      </ui:CommentOut.Body>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                    </ui:LogMessage>
-                    <If sap:VirtualizedContainerService.HintSize="1143,1256" sap2010:WorkflowViewState.IdRef="If_14">
+                    </ui:CommentOut>
+                    <If sap:VirtualizedContainerService.HintSize="1143,1257" sap2010:WorkflowViewState.IdRef="If_14">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_78">ProcessItemUpdated</CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="722,1097" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                        <Sequence sap:VirtualizedContainerService.HintSize="722,1098" sap2010:WorkflowViewState.IdRef="Sequence_52">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1543,7 +1580,7 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence sap:VirtualizedContainerService.HintSize="376,280" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,281" sap2010:WorkflowViewState.IdRef="Sequence_53">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1880,6 +1917,43 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
+                    <If sap2010:Annotation.AnnotationText="Print error message for each asset" DisplayName="If - Print error message" sap:VirtualizedContainerService.HintSize="1143,403" sap2010:WorkflowViewState.IdRef="If_19">
+                      <If.Condition>
+                        <InArgument x:TypeArguments="x:Boolean">
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">AllAssetProcessInfo[AssetTag] != ""</CSharpValue>
+                        </InArgument>
+                      </If.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,184" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Warn">
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                          </ui:LogMessage>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_66">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
@@ -1914,7 +1988,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each - list processing information" sap:VirtualizedContainerService.HintSize="434,307" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each - list processing information" sap:VirtualizedContainerService.HintSize="1297,307" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
           <ActivityAction.Argument>
@@ -1942,7 +2016,7 @@
         </InArgument>
       </ui:ForEach.Values>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message - finished time" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info">
+    <ui:LogMessage DisplayName="Log Message - finished time" sap:VirtualizedContainerService.HintSize="1297,91" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">DateTime.Now.ToString() + " Finished"</CSharpValue>
