@@ -3,7 +3,7 @@
     <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1329,17131</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1329,17250</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
@@ -102,7 +102,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for liquidation assets.&#xA;Passing in Browser instance,&#xA;" DisplayName="QC_Liquidation" sap:VirtualizedContainerService.HintSize="1339,17066" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for liquidation assets.&#xA;Passing in Browser instance,&#xA;" DisplayName="QC_Liquidation" sap:VirtualizedContainerService.HintSize="1339,17185" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="AssetTags" />
       <Variable x:TypeArguments="s:String[]" Name="AllLPNs" />
@@ -244,13 +244,13 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="QC each liquidation asset" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1297,15366" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="QC each liquidation asset" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1297,15485" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="AssetTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1261,15211" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1261,15330" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -280,13 +280,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1219,14741" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V2">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1219,14860" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence sap2010:Annotation.AnnotationText="Process liquidation asset in BlueIQ" DisplayName="Do - Process liquidation asset" sap:VirtualizedContainerService.HintSize="1185,14605" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence sap2010:Annotation.AnnotationText="Process liquidation asset in BlueIQ" DisplayName="Do - Process liquidation asset" sap:VirtualizedContainerService.HintSize="1185,14724" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="TheText" />
                       <Variable x:TypeArguments="x:Boolean" Name="ProcessItemUpdated" />
@@ -593,7 +593,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <Sequence DisplayName="Sequence - Verify Defect Code" sap:VirtualizedContainerService.HintSize="1143,1680" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                    <Sequence DisplayName="Sequence - Verify Defect Code" sap:VirtualizedContainerService.HintSize="1143,1799" sap2010:WorkflowViewState.IdRef="Sequence_60">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="DefectCode" />
                       </Sequence.Variables>
@@ -602,7 +602,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NGetText DisplayName="Get Text 'Defect Code'" sap:VirtualizedContainerService.HintSize="1097,156" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                      <uix:NGetText DisplayName="Get Text 'Defect Code'" sap:VirtualizedContainerService.HintSize="562,156" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                         <uix:NGetText.Target>
                           <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="836, 541, 175, 16" ElementType="InputBox" FriendlyName="'ACCY ::'" FullSelectorArgument="&lt;webctrl tag='INPUT' id='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails_ddlDefectCode_I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='INPUT' id='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails_ddlDefectCode_I' type='text' class='dxeEditArea_Aqua dxeEditAreaSys ' aaname='' /&gt;" Guid="2a609647-a166-47d6-8fbd-4404b3fdb059" InformativeScreenshot="f1d7da9435f48d28aa133da9d4bd6f13.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' idx='2' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
@@ -618,7 +618,7 @@
                           </OutArgument>
                         </uix:NGetText.Text>
                       </uix:NGetText>
-                      <If DisplayName="If - Wrong Defect Code" sap:VirtualizedContainerService.HintSize="1097,415" sap2010:WorkflowViewState.IdRef="If_18">
+                      <If DisplayName="If - Wrong Defect Code" sap:VirtualizedContainerService.HintSize="562,415" sap2010:WorkflowViewState.IdRef="If_18">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
                             <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">DefectCode.StartsWith("FAKE") || DefectCode.StartsWith("LIQMSNG") || DefectCode.StartsWith("MISMATCH") || DefectCode.StartsWith("LOCKED") || DefectCode.StartsWith("NPRB")</CSharpValue>
@@ -662,10 +662,10 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <If sap2010:Annotation.AnnotationText="Disposition Status must be &quot;LIQC&quot; if the Defect Code is &quot;COSDEF&quot;(with very few exceptions)&#xA;For all other Defect Codes, the Disposition Status should be &quot;LIQF&quot;" DisplayName="If - Verify Disposition Status" sap:VirtualizedContainerService.HintSize="1097,935" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If sap2010:Annotation.AnnotationText="Disposition Status can be &quot;LIQC&quot; or &quot;LIQF&quot; if the Defect Code is &quot;COSDEF&quot; or &quot;ACCY&quot;.&#xA;For all other Defect Codes, the Disposition Status should be &quot;LIQF&quot;" DisplayName="If - Verify Disposition Status" sap:VirtualizedContainerService.HintSize="562,1054" sap2010:WorkflowViewState.IdRef="If_3">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
-                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">DefectCode.StartsWith("COSDEF")</CSharpValue>
+                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">!(DefectCode.StartsWith("COSDEF") || DefectCode.StartsWith("ACCY"))</CSharpValue>
                           </InArgument>
                         </If.Condition>
                         <sap:WorkflowViewStateService.ViewState>
@@ -676,86 +676,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="526,734" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <If DisplayName="If - Not LIQC" sap:VirtualizedContainerService.HintSize="484,640" sap2010:WorkflowViewState.IdRef="If_16">
-                              <If.Condition>
-                                <InArgument x:TypeArguments="x:Boolean">
-                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">!TheText.StartsWith("LIQC")</CSharpValue>
-                                </InArgument>
-                              </If.Condition>
-                              <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,452" sap2010:WorkflowViewState.IdRef="Sequence_56">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_11">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">
-                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">AllAssetProcessInfo[AssetTag]</CSharpReference>
-                                      </OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">
-                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">String.Format("{0}; Wrong Disposition Status: {1} with Defect Code {2}", AllAssetProcessInfo[AssetTag], TheText, DefectCode)</CSharpValue>
-                                      </InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <uix:NSelectItem DisplayName="Select Item 'Disposition Status'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="LIQC :: LIQUIDATED FOR COSMETIC REASONS" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
-                                    <uix:NSelectItem.Items>
-                                      <scg:List x:TypeArguments="x:String" Capacity="8">
-                                        <x:String>Make a selection...</x:String>
-                                        <x:String>COMP :: Repair Completed, Return to Client</x:String>
-                                        <x:String>DEST :: Destroyed</x:String>
-                                        <x:String>FRAUD :: MISSING OR WRONG MAIN ASSET</x:String>
-                                        <x:String>LIQC :: LIQUIDATED FOR COSMETIC REASONS</x:String>
-                                        <x:String>LIQF :: LIQUIDATED FOR FUNCTIONAL REASONS</x:String>
-                                        <x:String>RUR :: Return Unrepaired</x:String>
-                                        <x:String>VRA :: Vendor RA Return</x:String>
-                                      </scg:List>
-                                    </uix:NSelectItem.Items>
-                                    <uix:NSelectItem.Target>
-                                      <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29323612" DesignTimeRectangle="832, 515, 200, 20" ElementType="DropDown" FriendlyName="'LIQC ::'" FullSelectorArgument="&lt;webctrl idx='2' parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='DevPurpose' aaname='' /&gt;" Guid="85e73ca9-f14b-4ca7-8935-368a32902c80" InformativeScreenshot="fa1f86cdea605e411c1b1fe76a5da78f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
-                                        <uix:TargetAnchorable.Anchors>
-                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                            <uix:Target DesignTimeRectangle="682, 515, 150, 12" ElementType="Text" FriendlyName="'Disposition Status'" FullSelectorArgument="&lt;webctrl idx='2' parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='                                                                 Disposition Status:                                                             ' check:innerText='Disposition Status:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAQCAYAAADu1GapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIPSURBVGhD7ZdLbsIwEIZ7Kq7DFTgDN+AEiANQiTUL9l0iTgEseoPp2PPbzCRO4lCSqmg+yWoefoxnPqfigxxnBlw0ZxZcNGdSPr++Y3PRnEkJkgWMaOfdhhZL2zYXvKQrHdb8bJcfTM/tRCsdw2VPq+M1Xy+WWzrc5PYlxDnT3vXcYe97OuOumwtt1ie6487pE00naopiPg0XkQXIor0cfZBwjVzcj1vOw7Borfw5laKhuCb5+KJJ8vk+tlSE1H8vf/NY0PnFwDi0LFP+omHt1CfM2TgE5XjSnjiePL5LGL1XRSnmwrPW+ugjX2Mr7tB+pztM81Mpmk6QFk0XRa4lOSmBKKb+19dIYlwL/aRIumCF8WadcKtE6ymqrIN+A4V8yIL+wMSEOMxakNPkryemof26aDmpuI5F0WO0gPbeFovREpkvRCoOUylaK+7Od405iiDm0DCuFTsjAqONFK1zv2/IONG0XFkiRicsjntStIiVNz7/E9GEoa9OKSfVokUK+31DnvgxoJNqC/YYB7EaRdHSmDHoVyrkGNH6ilotWm18Zi3stySamQ/98G5ov8X4/indooWEqCYJDdjTmxIuLcmYEj/2x4A93XmMEU31Ce+1aIwUL82BIjLVojF2DrX3HHdYT8e6pZWS+jE+rK/6pR8jOY7+/b69aL/HnnDHcdGcWZhINMexuGjOLIhoRD8vqCH8tUAxngAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
-                                          </scg:List>
-                                        </uix:TargetAnchorable.Anchors>
-                                      </uix:TargetAnchorable>
-                                    </uix:NSelectItem.Target>
-                                  </uix:NSelectItem>
-                                  <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_31">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:Boolean">
-                                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_51">ProcessItemUpdated</CSharpReference>
-                                      </OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                </Sequence>
-                              </If.Then>
-                              <If.Else>
-                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_57">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </If.Else>
-                            </If>
-                          </Sequence>
-                        </If.Then>
-                        <If.Else>
-                          <Sequence sap:VirtualizedContainerService.HintSize="526,734" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                          <Sequence sap:VirtualizedContainerService.HintSize="526,824" sap2010:WorkflowViewState.IdRef="Sequence_16">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -831,6 +752,108 @@
                                 </Sequence>
                               </If.Else>
                             </If>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If DisplayName="If - Not LIQC" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_16">
+                                    <If.Condition>
+                                      <InArgument x:TypeArguments="x:Boolean">
+                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">!TheText.StartsWith("LIQC")</CSharpValue>
+                                      </InArgument>
+                                    </If.Condition>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="376,452" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">
+                                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">AllAssetProcessInfo[AssetTag]</CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">String.Format("{0}; Wrong Disposition Status: {1} with Defect Code {2}", AllAssetProcessInfo[AssetTag], TheText, DefectCode)</CSharpValue>
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <uix:NSelectItem DisplayName="Select Item 'Disposition Status'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NSelectItem_3" Item="LIQC :: LIQUIDATED FOR COSMETIC REASONS" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                                          <uix:NSelectItem.Items>
+                                            <scg:List x:TypeArguments="x:String" Capacity="8">
+                                              <x:String>Make a selection...</x:String>
+                                              <x:String>COMP :: Repair Completed, Return to Client</x:String>
+                                              <x:String>DEST :: Destroyed</x:String>
+                                              <x:String>FRAUD :: MISSING OR WRONG MAIN ASSET</x:String>
+                                              <x:String>LIQC :: LIQUIDATED FOR COSMETIC REASONS</x:String>
+                                              <x:String>LIQF :: LIQUIDATED FOR FUNCTIONAL REASONS</x:String>
+                                              <x:String>RUR :: Return Unrepaired</x:String>
+                                              <x:String>VRA :: Vendor RA Return</x:String>
+                                            </scg:List>
+                                          </uix:NSelectItem.Items>
+                                          <uix:NSelectItem.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29323612" DesignTimeRectangle="832, 515, 200, 20" ElementType="DropDown" FriendlyName="'LIQC ::'" FullSelectorArgument="&lt;webctrl idx='2' parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='DevPurpose' aaname='' /&gt;" Guid="85e73ca9-f14b-4ca7-8935-368a32902c80" InformativeScreenshot="fa1f86cdea605e411c1b1fe76a5da78f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="682, 515, 150, 12" ElementType="Text" FriendlyName="'Disposition Status'" FullSelectorArgument="&lt;webctrl idx='2' parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='                                                                 Disposition Status:                                                             ' check:innerText='Disposition Status:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAQCAYAAADu1GapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIPSURBVGhD7ZdLbsIwEIZ7Kq7DFTgDN+AEiANQiTUL9l0iTgEseoPp2PPbzCRO4lCSqmg+yWoefoxnPqfigxxnBlw0ZxZcNGdSPr++Y3PRnEkJkgWMaOfdhhZL2zYXvKQrHdb8bJcfTM/tRCsdw2VPq+M1Xy+WWzrc5PYlxDnT3vXcYe97OuOumwtt1ie6487pE00naopiPg0XkQXIor0cfZBwjVzcj1vOw7Borfw5laKhuCb5+KJJ8vk+tlSE1H8vf/NY0PnFwDi0LFP+omHt1CfM2TgE5XjSnjiePL5LGL1XRSnmwrPW+ugjX2Mr7tB+pztM81Mpmk6QFk0XRa4lOSmBKKb+19dIYlwL/aRIumCF8WadcKtE6ymqrIN+A4V8yIL+wMSEOMxakNPkryemof26aDmpuI5F0WO0gPbeFovREpkvRCoOUylaK+7Od405iiDm0DCuFTsjAqONFK1zv2/IONG0XFkiRicsjntStIiVNz7/E9GEoa9OKSfVokUK+31DnvgxoJNqC/YYB7EaRdHSmDHoVyrkGNH6ilotWm18Zi3stySamQ/98G5ov8X4/indooWEqCYJDdjTmxIuLcmYEj/2x4A93XmMEU31Ce+1aIwUL82BIjLVojF2DrX3HHdYT8e6pZWS+jE+rK/6pR8jOY7+/b69aL/HnnDHcdGcWZhINMexuGjOLIhoRD8vqCH8tUAxngAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NSelectItem.Target>
+                                        </uix:NSelectItem>
+                                        <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_31">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Boolean">
+                                              <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_51">ProcessItemUpdated</CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="200,84" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
                           </Sequence>
                         </If.Else>
                       </If>
