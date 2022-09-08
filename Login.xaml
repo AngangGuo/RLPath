@@ -6,7 +6,7 @@
     <x:Property Name="out_LoginBrowserElement" Type="OutArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1240,3797</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1233.6,4700.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -100,7 +100,7 @@
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Login to https://blueiq.cloudblue.com/ by using BLUEIQUSERNAME and BLUEIQPASSWORD variables from environment." DisplayName="Login to BlueIQ" sap:VirtualizedContainerService.HintSize="1250,3732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Login to https://blueiq.cloudblue.com/ by using BLUEIQUSERNAME and BLUEIQPASSWORD variables from environment." DisplayName="Login to BlueIQ" sap:VirtualizedContainerService.HintSize="1244,4636" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -108,13 +108,13 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: BlueIQ" sap:VirtualizedContainerService.HintSize="1208,3609" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="2655fe37-1cca-4084-a995-b574cb7a45b5" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: BlueIQ" sap:VirtualizedContainerService.HintSize="1202.4,4512" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="2655fe37-1cca-4084-a995-b574cb7a45b5" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1174,3393" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1168.8,4295.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="UserName" />
               <Variable x:TypeArguments="x:String" Name="Password" />
@@ -126,13 +126,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Init Arguments" sap:VirtualizedContainerService.HintSize="1132,357" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence DisplayName="Init Arguments" sap:VirtualizedContainerService.HintSize="1127.2,359.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_7">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Boolean">
                     <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">out_Success</CSharpReference>
@@ -142,7 +142,7 @@
                   <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_8">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">
                     <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">out_FileName</CSharpReference>
@@ -152,7 +152,7 @@
                   <InArgument x:TypeArguments="x:String">Login.xaml</InArgument>
                 </Assign.Value>
               </Assign>
-              <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <Assign sap:VirtualizedContainerService.HintSize="262.4,61.6" sap2010:WorkflowViewState.IdRef="Assign_9">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">
                     <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">out_Message</CSharpReference>
@@ -165,21 +165,65 @@
                 </Assign.Value>
               </Assign>
             </Sequence>
-            <ui:GetEnvironmentVariable DisplayName="Get Environment Variable BLUEIQUSERNAME" sap:VirtualizedContainerService.HintSize="1132,59" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_1" Variable="BLUEIQUSERNAME">
+            <ui:GetEnvironmentVariable DisplayName="Get Environment Variable BLUEIQUSERNAME" sap:VirtualizedContainerService.HintSize="1127.2,60" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_1" Variable="BLUEIQUSERNAME">
               <ui:GetEnvironmentVariable.VariableValue>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">UserName</CSharpReference>
                 </OutArgument>
               </ui:GetEnvironmentVariable.VariableValue>
             </ui:GetEnvironmentVariable>
-            <ui:GetEnvironmentVariable DisplayName="Get Environment Variable BLUEIQPASSWORD" sap:VirtualizedContainerService.HintSize="1132,59" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_2" Variable="BLUEIQPASSWORD">
+            <ui:GetEnvironmentVariable DisplayName="Get Environment Variable BLUEIQPASSWORD" sap:VirtualizedContainerService.HintSize="1127.2,60" sap2010:WorkflowViewState.IdRef="GetEnvironmentVariable_2" Variable="BLUEIQPASSWORD">
               <ui:GetEnvironmentVariable.VariableValue>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">Password</CSharpReference>
                 </OutArgument>
               </ui:GetEnvironmentVariable.VariableValue>
             </ui:GetEnvironmentVariable>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1132,217" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2655fe37-1cca-4084-a995-b574cb7a45b5" Version="V1">
+            <If sap2010:Annotation.AnnotationText="Note: If the environmental variable doesn't exist, the variable will set to null. Not empty string!!!&#xD;&#xA;" sap:VirtualizedContainerService.HintSize="1127.2,492.8" sap2010:WorkflowViewState.IdRef="If_3">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">UserName == null || Password == null</CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="375.2,242.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1">
+                    <ui:MessageBox.Text>
+                      <InArgument x:TypeArguments="x:Object">
+                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">String.Format("Missing credential. Please setup these environment variables: {0}, {1}", "BLUEIQUSERNAME", "BLUEIQPASSWORD")</CSharpValue>
+                      </InArgument>
+                    </ui:MessageBox.Text>
+                  </ui:MessageBox>
+                  <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1">
+                    <TerminateWorkflow.Reason>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">String.Format("Missing credential. Please setup these environment variables: {0}, {1}", "BLUEIQUSERNAME", "BLUEIQPASSWORD")</CSharpValue>
+                      </InArgument>
+                    </TerminateWorkflow.Reason>
+                  </TerminateWorkflow>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1127.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="2655fe37-1cca-4084-a995-b574cb7a45b5" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Login.aspx" DesignTimeRectangle="446, 574, 214, 30" ElementType="InputBox" FriendlyName="'INPUT ctl00_MainContent…'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='form-login' aaname='' /&gt;" Guid="f1747d0f-0e82-4ae8-a402-0bf7fce05e7b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANoAAAAiCAYAAAA53MevAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAECSURBVHhe7d0xboNQFETRLIGStbGEUMQ7ZSH0UVL9aCR/isixTIBXnSONZBm3V3TPbw24nNCgwBba59d3W5alTdPUxnFswzCY2c6lnTSUltJUt4WWBwIzO2dpKU11W2ipMD+Y57mt63r/Ftgj7aShtJSmui20/jYTGRyThvpbrdtCy4MMOO53T0KDC7wc2vvH7f4J2EtoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUEBoUODl0ID/ExoUEBoU+DM05+bgHE/PzTmgCselnacHVJ0ENztvaenhSXB/cmF2fGknDaWlh39yAVxHaHC51n4AttTgmTEt4ZEAAAAASUVORK5CYII=" InformativeScreenshot="6b264ec7108aaf7d9ab17f4521f1e55c.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -195,7 +239,7 @@
                 </InArgument>
               </uix:NTypeInto.Text>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1132,217" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="2655fe37-1cca-4084-a995-b574cb7a45b5" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1127.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="2655fe37-1cca-4084-a995-b574cb7a45b5" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Login.aspx" DesignTimeRectangle="446, 611, 214, 30" ElementType="InputBoxPassword" FriendlyName="'INPUT ctl00_MainContent…'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='form-login' tag='INPUT' type='password' aaname='' /&gt;" Guid="7e622ad2-f779-45fe-ab32-0048ab2ddffd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANoAAAAiCAYAAAA53MevAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACLSURBVHhe7dMxDYAwAABBDOAENfj3UiaaMLC1P90lL+GPAWxnNAjM0c7rlrS412c0YB2jQcBoEDAaBIwGAaNBwGgQMBoEjAYBo0HAaBAwGgSMBgGjQcBoEDAaBIwGAaNBwGgQMBoEjAYBo0HAaBAwGgSMBgGjQcBoEDAaBH5Hk7S21xwN2MdosN0YD8a2wxu+UkGcAAAAAElFTkSuQmCC" InformativeScreenshot="43fefdeff664aaff27fc050cd092ece2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -211,35 +255,35 @@
                 </InArgument>
               </uix:NTypeInto.Text>
             </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'INPUT ctl00_MainContent…'" sap:VirtualizedContainerService.HintSize="1132,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2655fe37-1cca-4084-a995-b574cb7a45b5" Timeout="20" Version="V1">
+            <uix:NClick ClickType="Single" DisplayName="Click 'INPUT ctl00_MainContent…'" sap:VirtualizedContainerService.HintSize="1127.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2655fe37-1cca-4084-a995-b574cb7a45b5" Timeout="20" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Login.aspx" DesignTimeRectangle="446, 668, 103, 42" ElementType="InputBox" FriendlyName="'INPUT ctl00_MainContent…'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='' tag='INPUT' type='image' aaname='' /&gt;" Guid="0e231bf8-a23b-41a6-9a1a-ff6d9b748be0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGsAAAAuCAYAAAAvKufTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASfSURBVHhe7Zz9b5NVFMf920QRUFES0B8kEWciiQm4AlsjDjZAhp1sxOg0JrA3B46igWBismCQdU1RnLR2CJsb7cro2rEic7zMOdyx39t7n97n9rlEftjt0+Se5JNn555zz2nud/fZs7V3z5C1mjErVg1ZhVjLj1fo/Mg8BU9mafOxW7Spw7LaYJ0D3SnqvZCm/OwcLS0tcTXc5hKrsLBM9X0zngUtZqj7dIxiI7/TwsICrayscGVK5oiFHbWzJ+tZwGKWrR3XaDgaY4LJ5oiFW5/XREt12HX0LI2OjrpuiY5Yjf12V/mJLYeiFA6HqVAocIUksezDhM9oT1EoFKLJyUmukCSW5wRLVQkGg+xWKMyK5WPq6+spkUhwhaxYvgZixeNxrpAVy9dYsWoIK1YNYcWqIaxYNYQVq4bQivVqR8YofcP3eGd9762fT7O8/Pwyy8N1MHmftp/IeuZjHPmTefdbDJgnctS+zd/Mcq+Uh54iV46JMZPoxWqfMkpf5E/e2bv39uO3HZHuL/5Licwiuwp/d/+MKx++iKuGuSJP7dt8Js+9kiEucuWYGDOJVqxX2tNG6ZUWzSueyDxiMeySNzozbAxXsWtwFbkYl4XsvFBwYrv6s7S/uOjCV/siJhvmv3N8uiIm5ptEK9bGoymj9Ebu8s6VvQNfZXmEKHR+1hWDLwx5GJNriTEdat99Z3LcI8rxnRwdf1ARk2uYQi/WxzeN0jskLZoS6xyc4xHv1yUMNeAnpkq7MDpWXGQlV0Xtuy88wz1y9cW4HFPrmEAr1sttE0bpGSq/T/M0MSAMeV4++GxwtijiQwf4GFdrN50u72L4E/m/2deYo8ZMoxXrpdC4UXoulb+LnyYGhCHPywdyDZiIqbWbBqa5V+mruabRivXiR2NG6b50h3eu7P1ezxSPEB05l3XF4AtDHsbi6YfMz937x5ULhKEffLXvBwO3uFd+HcM3Sp99EHVhImYSrVgbjlw3SteP5QcFr3g8/YDFJnKL9NqxcTaGK3wY4iK39extNgYbvvEX7exOOTFh6Adf7bv36wz3yq+j7ouJ4lPhYz5aMhEziVas9a3XjNJ10f3ILNveU2na0XXTWTBcrxbFkX3E5Xrhy+7bnmrop/aFj17C5Hrq65NjptCKte5w0ignLpYfi1V7/1SK5WzrHKPvr94t3t5Kv1vhCh/jaj2AeZHr865d8UfuERsTNeW+Yo4wuRYQfWFqzARasV748DeLz9CKtfZQ3OIztGI9f/BXi8/QivXcgRGLz9CL1fKLxWdoxVrT8rPFZ2jFerb5J4vP0Iu1/7LFZ2jFWnvAe4KlSjQNUSAQ8P74dN0nV7wnWapD4LT+YMKX3416T7JUhXV1B/VHfnL5O7SlNeI50WKYPedo21tvs8N0c3PlP1A7YuE4ZPRKkja2/OBdwGKGolCbXn+T2tra9MdUYThwHInG6N3DJ2lD8FvvYpZVYU1ggN36sKMgVCz2hAPgMBzlRwIUxRbEPbOxsZE9QlpWl4aGBrbeWHes/xP/tYJs2Ho4eIwfbslkkj3rW1YXrDPWG+v+v/5piTV/mxWrZozoP0x19R3/uknQAAAAAElFTkSuQmCC" InformativeScreenshot="f53545d10e8126d6f9f0021af3aa896e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1132,1863" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1127.2,2221.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
               <ui:InterruptibleDoWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1096,1698" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1092,2054.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NGetUrl DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="1054,86" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V1">
+                  <uix:NGetUrl DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="1050.4,87.2" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V1">
                     <uix:NGetUrl.CurrentUrl>
                       <OutArgument x:TypeArguments="x:String">
                         <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">CurrentURL</CSharpReference>
                       </OutArgument>
                     </uix:NGetUrl.CurrentUrl>
                   </uix:NGetUrl>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1054,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
                     <ui:LogMessage.Message>
                       <InArgument x:TypeArguments="x:Object">
                         <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">CurrentURL</CSharpValue>
                       </InArgument>
                     </ui:LogMessage.Message>
                   </ui:LogMessage>
-                  <If sap2010:Annotation.AnnotationText="If logged in successfully, the URL will changed to Welcome page&#xA;" sap:VirtualizedContainerService.HintSize="1054,1349" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If sap2010:Annotation.AnnotationText="If logged in successfully, the URL will changed to Welcome page&#xA;" sap:VirtualizedContainerService.HintSize="1050.4,1701.6" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Condition>
                       <InArgument x:TypeArguments="x:Boolean">
                         <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">CurrentURL=="https://blueiq.cloudblue.com/Welcome.aspx"</CSharpValue>
@@ -253,7 +297,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -418,7 +462,7 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="809,1150" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <Sequence sap:VirtualizedContainerService.HintSize="806.4,1498.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="ErrorMsg" />
                         </Sequence.Variables>
@@ -428,7 +472,7 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <TryCatch sap2010:Annotation.AnnotationText="If BlueIQ enter Welcome page after the condition check, UiPath will not able to find the Login element at the Welcome page. This will cause timeout error.&#xA;" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="767,255" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                        <TryCatch sap2010:Annotation.AnnotationText="If BlueIQ enter Welcome page after the condition check, UiPath will not able to find the Login element at the Welcome page. This will cause timeout error.&#xA;" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="764.8,596.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -437,7 +481,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <uix:NGetText DisplayName="Get Text 'Your login'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="2655fe37-1cca-4084-a995-b574cb7a45b5" Timeout="1" Version="V1">
+                            <uix:NGetText DisplayName="Get Text 'Your login'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="2655fe37-1cca-4084-a995-b574cb7a45b5" Timeout="1" Version="V1">
                               <uix:NGetText.Target>
                                 <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Login.aspx" DesignTimeRectangle="437, 370, 972, 30" ElementType="Text" FriendlyName="'Your login'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' /&gt;" Guid="73ca921c-42d8-45c5-a708-12d778ea1cab" InformativeScreenshot="ed1ee5778007bc1092df9fc757fca252.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                                   <uix:TargetAnchorable.Anchors>
@@ -455,10 +499,10 @@
                             </uix:NGetText>
                           </TryCatch.Try>
                           <TryCatch.Catches>
-                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,356" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -466,20 +510,20 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                 </ActivityAction.Argument>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,285.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Warn">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Warn">
                                     <ui:LogMessage.Message>
                                       <InArgument x:TypeArguments="x:Object">
                                         <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">"Login: Can't find message"</CSharpValue>
                                       </InArgument>
                                     </ui:LogMessage.Message>
                                   </ui:LogMessage>
-                                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                  <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">
                                         <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">ErrorMsg</CSharpReference>
@@ -496,21 +540,21 @@
                             </Catch>
                           </TryCatch.Catches>
                         </TryCatch>
-                        <If sap:VirtualizedContainerService.HintSize="767,763" sap2010:WorkflowViewState.IdRef="If_2">
+                        <If sap:VirtualizedContainerService.HintSize="764.8,768.8" sap2010:WorkflowViewState.IdRef="If_2">
                           <If.Condition>
                             <InArgument x:TypeArguments="x:Boolean">
                               <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">ErrorMsg==""</CSharpValue>
                             </InArgument>
                           </If.Condition>
                           <If.Then>
-                            <Sequence sap2010:Annotation.AnnotationText="Didn't find error message yet. Maybe not logged in yet, or already logged in. Try again." sap:VirtualizedContainerService.HintSize="304,194" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <Sequence sap2010:Annotation.AnnotationText="Didn't find error message yet. Maybe not logged in yet, or already logged in. Try again." sap:VirtualizedContainerService.HintSize="304,196.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                              <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_15">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Boolean">
                                     <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">TryAgain</CSharpReference>
@@ -523,20 +567,20 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap2010:Annotation.AnnotationText="Found some error message from the login page" sap:VirtualizedContainerService.HintSize="418,606" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <Sequence sap2010:Annotation.AnnotationText="Found some error message from the login page" sap:VirtualizedContainerService.HintSize="416.8,609.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence DisplayName="Login failed" sap:VirtualizedContainerService.HintSize="376,483" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                              <Sequence DisplayName="Login failed" sap:VirtualizedContainerService.HintSize="375.2,485.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_10">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">
                                       <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">out_Message</CSharpReference>
@@ -548,7 +592,7 @@
                                     </InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_11">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Boolean">
                                       <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">out_Success</CSharpReference>
@@ -558,14 +602,14 @@
                                     <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Error">
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Error">
                                   <ui:LogMessage.Message>
                                     <InArgument x:TypeArguments="x:Object">
                                       <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">out_FileName + ":" + out_Message</CSharpValue>
                                     </InArgument>
                                   </ui:LogMessage.Message>
                                 </ui:LogMessage>
-                                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_16">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Boolean">
                                       <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">TryAgain</CSharpReference>
@@ -588,7 +632,7 @@
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">TryAgain==true</CSharpValue>
               </ui:InterruptibleDoWhile.Condition>
             </ui:InterruptibleDoWhile>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1132,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1127.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">"Login successfully"</CSharpValue>
