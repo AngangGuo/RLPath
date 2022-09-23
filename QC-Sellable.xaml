@@ -3,7 +3,7 @@
     <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1329,22281</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1329,22477</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -98,7 +98,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for sellable assets" DisplayName="QC_Sellable" sap:VirtualizedContainerService.HintSize="1339,22216" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for sellable assets" DisplayName="QC_Sellable" sap:VirtualizedContainerService.HintSize="1339,22412" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Facility" />
       <Variable x:TypeArguments="x:String" Name="QCLocation" />
@@ -240,13 +240,13 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="QC each sellable asset" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1297,18718" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="QC each sellable asset" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1297,18914" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="AssetTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1261,18563" sap2010:WorkflowViewState.IdRef="Sequence_47">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1261,18759" sap2010:WorkflowViewState.IdRef="Sequence_47">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -276,13 +276,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1219,18093" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V2">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1219,18289" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence sap2010:Annotation.AnnotationText="Process sellable asset in BlueIQ" DisplayName="Do - Process sellable asset" sap:VirtualizedContainerService.HintSize="1185,17957" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <Sequence sap2010:Annotation.AnnotationText="Process sellable asset in BlueIQ" DisplayName="Do - Process sellable asset" sap:VirtualizedContainerService.HintSize="1185,18153" sap2010:WorkflowViewState.IdRef="Sequence_46">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="TheText" />
                       <Variable x:TypeArguments="x:Boolean" Name="ProcessItemUpdated" />
@@ -333,7 +333,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Waiting for &quot;Source Name: Amazon&quot; is showed out;&#xA;Change the timeout from 5s(default) to 15s for sometimes it need more time to show out." DisplayName="Check App State 'Amazon'" sap:VirtualizedContainerService.HintSize="1143,637" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Timeout="15" Version="V1">
+                    <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Waiting for Asset Tag to be showed out;&#xA;Change the timeout from 5s(default) to 15s for sometimes it need more time to show out." DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1143,637" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Timeout="15" Version="V1">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <sap:WorkflowViewStateService.ViewState>
@@ -375,10 +375,10 @@
                         </Sequence>
                       </uix:NCheckState.IfNotExists>
                       <uix:NCheckState.Target>
-                        <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29038557" DesignTimeRectangle="743, 322, 44, 14" ElementType="Text" FriendlyName="'Amazon'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' aaname='Amazon' check:innerText='Amazon' /&gt;" Guid="e38da413-0506-4f76-a0d7-9608ba726b00" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAASCAYAAAAdZl26AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFFSURBVEhL7ZLNDYMwDIU7L5d2Bg50Bw4wRhFLVExRtnDjv8RxU4p6oVQ8KQKC7bzPzgl2rgNga/0hwDxCfb5AO8n3j+sF4N4H830HVb8PAgcwQXvu4E7PK9xm2Q5CsHoYw/4FKlwB8DFc+T2LneHWSAyuZoQHbfNk477953Li9KfQyKaDNv7LPaFyAEyQzqO5ekjRCFARXJCakVj6V3jnhpSvIzeE61OOwqAHNUrvmi+QsTYrA8BC8TA0GTtUMpa6QZNwhVl8qAfIa/kY/iY4ApCmBZXOMQDcLR2jH5nt2CJA4apYAIo1jdFzbUw8i65Qil0EeC2cJ6wDMN0jue46Q6wPE1gH4A8WmRF+BUD5Ys7U8qIrpUYpTmqvBqCxJ0NJPF40tPoKiWlaYU/zKEb341IgBtf9dxNbmMB+dQBsrQNgWwE8AcRul7m735ECAAAAAElFTkSuQmCC" InformativeScreenshot="20362fc13cf5edec006634bba5dd7762.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                        <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/AssetConfiguration.aspx?menu=Test&amp;Scanid=29287853" DesignTimeRectangle="1251, 326, 232, 33" ElementType="Text" FriendlyName="'LPNN851588755'" FullSelectorArgument="&lt;webctrl id='lblCurrentScanID' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='lblCurrentScanID' tag='SPAN' type='' class='' aaname='LPNN851588755' check:innerText='LPNN851588755' /&gt;" Guid="6065945e-35eb-4096-8641-24a56479a36d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOwAAAAlCAYAAABBNAVoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAsLSURBVHhe7Vzfa9vKEr5/egkmiGCCCeJgijnEAYWTkEAdqkBKfOCmJKUudalLfbm51KGYgzmYoAc/mBDMnJEt27szsyutXW7isB/Mg9mVLO3Ot/NjZ/Uv8PDw2Bh4wnp4bBA8YT08NgiesB4eGwRPWA+PDYInrIfHBsET1sNjg8AJ+7kOr169WkolhkHW5ILBeUW/j0VKOwEEYQ0aH/swnmQ3IOD3q0D8V9ZoALtGeJf2gdKeynYd2uOs0QB2zUE7a+FI7q6gUQshKCn9SwGEtQZc3SVZLxMSaP6mXGeV/PGYY3Rdc7vu+xGUtP+yiGksJgn03jegFgZQ2lr2LwUh1M6uoJc3FCkeBtA+j6C6W9L+s7Rbhei8DYOHrJ+GAcSVZV8XqX/ObqEg+TMU+0pSOZeY04Wjbbk/F9TF7Ko5ngVhNdk9gs4ou4kC8X6/NWGYtUtYibAowXE3a5VRjLAjaB8Gej9Byscd7GmCy+QWJOyoDfXA7ToXJRXHAv8z2hH6qrJVhqNv5pGA/gWECtFFCarQ7Gf9F/i1hO0e64uFTUTCJk0Ihb6ybAJhU9mLoU8srXy/EtQ/mSd5VcJOlZhN/BJFCNt3eP/KO8MIO01uAcImHTjadb/ORUnZWEz6EO8J/STZqsCF9CxskbFIEEFH85B+JWFdPB4DYV28lY0hLAp9WeP9giPoFnWjCxMWxWK9cwk7voGaZg0CqF72Zu7+ZAy9yyoE6vVbNbiR3PCvkXKPPLETL/l6ChXRQuURdggXRQmXChmL8QfV/UZJreCP7GXHPWi+Jl7I7zdAh6J3Vtb7oBfWvn+ctj3et9kiVD7rTdtmWJGwgtEA6ECUZ+UVkQg7fOfCi6ckrOQqofKOBl2I6aSlUm6ANuyWBaD8Ru25xFqERaldy9Y7l7CfyBgyJRzDze9KO0r0NWtSQCe3/ilrKIxHSP53BdGezULmEZYo6S4qctZSBK195VqU2gdCR7q4baGFzJpmQAutEbIMjbusaY67BpQX7Sh7F9ZQiYF6AQESRZr6vy+gov7PfitrKI7OoXI9vovNk5PwtIRdYAQ3NaXvVEJoKokIG2FNrtS6hOXu1Qx5hKX/G/7JMyq0j7Qarzu5bC5TYRYih7BrKSm1bvqczkD70OdBd3jRhrKNHlXWsgTpI1gmG/TwJUBX2BBmEY+n/NZ1Qqi3UoeWwTs04ZkQFkGtEpk4K2FTqd2w5M3ahEWRrHceYWmSpghha9d0ZeCT66KEU9C5nCZlWkS5cwhLlFSMy4ygMV8RwtLwgCTeihB2R/fOrOjH2oJUwgXJlBVhHo+QlLKDeCsrcGtzCcssRQkHUFf6lQhbwALlEZa5aLkusUQa6opGEJ9UoTzfHtoqQbkaQfM/fDFYQJnL4HUTetNtD2qN7ISlSlo9aUI9VFzs7XRbpmXYUuHxZ65LzOaIjlUBlzhP1xYY6IviFi4oFl+aejzR21OolpdjUSpXIbrsQmKymtRbeX0KzYNwuc2Fc5pu97UGs/hcwjN2ifWVlt8vJiszShr3KoO1CmErb2Ko060UYr1zCYu92wdqXB5A7X22xzxJoHuuJ52Cww4hNIJOrkWCw5asJJ8jJPUptPrq3d0IqyupRVDZ4ztB0WiGN6jB1fx5Epq/CDCWZyMxs4Iqqfca0J0nnQYtiNQY15RpFqDvR5tzITM4JN92ImhJ66hDEjE874FE26cl7MMIkp9taEhJp1DP0or3+0FWVhTVZVuJsHg9nUhqvfMJi5j0eQZUkvBCyEYinDLEBtKLcCGsY4bYRJZ+E6p5+7Ao4TtzTDj6ZspyK7KFhDfFnxSTHjTK6rVoIKyXumWIpfyHW4YYdVHY7vv/EdZRaIbWtAB0jwkpFLdmVcKmisr225Tto0KETYHWtKVZWiJ7MfQMLHMfvwCOvmcXW+FCWNq3gJi2w+4xdrbspVbeZtteFjz+1ONNXQKofxiKVkkC3W4q/aHnphn+sv23LLQAh+lNnggu+rMkbIAEoIudibAwQkUgLuw8cbA6YREkGTFty7KChQj79w3UC1gVU4UP+w+MYVs/RzOFfEjg9rIOAV3xhT1MDgfCMiUNoHrehWH2J+N+G05DtT0VHmMOr4VnlcRQ5ZaGGLdnxaqt0lhd9Fg04IKsPbcQF1NQXuC8RR/7MJrG7un2Gcb2dL61/XW+Hxy8jqG7HExon/B31PeUnyFhg/0bGAoDbiQsYshK52bWZi3CIkzWO5ewY3SfiDWpvOlCkk7uZAz9jxhbagqMCvNjdukM2OdTDKcHVSjvlPC5MTYXkjrDS/LebA9TggNh72+heRZN63+DElqwj0JgNumw8snKu6VZGKNrrxeJVKDxPZktPKikrUNSFEHyECkG1JVU4uDHe2EfX9gx0ECTVCT8kjDutyA+qUN1N62FxneQ4vUhr0xb7q+ni2wDorSuPCihnst5h84fZM+c7Ck/PWFREYKdMlQPY2hryREdNsJiK1u90om/ebseYWGMyi0koK5yCMuIJCgQ64OupCXfK4MlpqRtEwoXl7gYaGKqtHAFqSWTilF4H20bjC0IdHFDsD4la3hAM9fanK8FHvNLW3pW0NwF2cZ62qSTA3LvJySg0pVM/e1MWARPQOECQ2Mx7Vn4pIkVSoxshvJEK1Yh368nrHFu2DvKhQIsGYML3GIoqALvypVWdNEIjBlfkmz6Be+vIk+fcsHCEH3//eUQFqe4k3c6ZgXC4j/nZ0q1Z+HWXt5gtxAnaUPjsAZheuwwdYlNFTEYZ+uLVJHKmeKE7f07gnq1jM+QusTmyh5afrjol6N8C9h0rqA+FtY3+kxiIQZFAu15aIBjke6bymWitIxS6Xd3BdE0xEkXfJxTw8LD6hFIvxdEWMSIFt0TWYmwCMF6a5JDWF7FhLC5s2kxgdYmuZKoHgVcfg4Hwr4hC6AQX0pJv8UCxQgrexHMwqrhAdVHQxWT2S3XMaYeU6FSyzGvE5DiZJaoVMYWdUiL5SXXHu/Y2ideIdHzl0VYBE9AKbIqYREsAaUKeRZ6z0IxrKaIwjGuLCs53fp4GEH/fY0oAMZLl3mpkxQOLrFwFGya2cyKFsbDLjSo94EWqzMn9QT/iyygRWJYzZ1lpC8SwxoWSQQldlGXVToTXD5swSzt8gijn1dQo6GSlswSzjYHVYgXCbghdN8QHU9j8W/TixfIJ6yLKIr7VISVLNxC1iCsmICaC32Wb1zRy8dtS5aY/+8Y56H4uUkUw0EFDgfC2sbSIHSzn2U9ceE5+mLJErPn4YRWj+iJWWLjV0OE/ELRemDb/IvCq7aYDufJ3gXT1xdIWITJhV2HsAiegMqEPQstTcwR8eylyz0sJ0wYXAiLoGWBNpHew+XwOUrlXIjsXJ7BOha0WsntBNQIuUG9GpNItQSuh/mlZ3uZhDUloNYkLD6FnICSnmWSQOekwIoaNuDWpF+TIdzs55A2tVi2T6swOBIWMfpvI/fzLNaChaQDpwUsdXh2y5U8w+NdgfLGLSTrtS0scH93iiJFINbP/oxuoUE9Birip25meKGERUgJqLUJi5Cst+VZHgdtiA+rUFa3mLKTNvGXwcw1zEH6IbfTNFurfMht9vGyeQzlghWVdvoBtDqE06x1du38xNA8DrPiEQZfYojIe7zazvbgLSdUFlj3Q25Fs9Z5SHpwlZ6cUuc0+7CeftDChNlY1Ol7pB+TS0/7GE4+peCE9fDweLbwhPXw2CB4wnp4bBA8YT08NgiesB4eGwRPWA+PDYInrIfHBsET1sNjYwDwD56ZlEhRfonKAAAAAElFTkSuQmCC" InformativeScreenshot="01d324bf3b4038a1492c0ecfeb04983d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target DesignTimeRectangle="593, 322, 150, 12" ElementType="Text" FriendlyName="'Source Name'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='LABEL' class='' aaname='                                                                 Source Name:' check:innerText='Source Name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAQCAYAAADu1GapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVGhD7ZlBbsIwEAD7qn6Hey/kDTnAOdceGuUBHDiB4MATKlD+0Aj4wzb27jprxwkRkVwq7UiWHMexV+ywDuINFCUBKpqSBBVNSYKKpiTBF+12gmxRwDu1oqbxV4BjqzioK2zz9jo/wZ1GlNfFE+1SdYmz/cUGLnjr7xFfAvwCqGj/CSHaeOLux9JVuk7A4Jl6I0SooTBz81JUIhqjJismio0tO15pVCCrrd0vjJeueQ5XPhtTCUXF8ZewPWKcpsm9ojHQvtGYlImcg6OTRDHNOzY9gWSCp4gWiEDXKC4Ka/s8jxLr7W/g8Yr3iKznxdEKdeM+i+LHJKv2YAwq2nzOX7EfA7IyYBLkkWpxiZwgmnunwut+wuR+XevNc8nn+W2llHsbaA6uIUWjfhBTJ/vEGJSn+C6zmGiEkCaJaHL9GLLK0D620XNYnSJyyf4j0R7FoDzBGT6XnmixJMhksUB+UnrHj5sXihaTEtfv78ViCKRoLbgvr+evPbzekGgjz+jROYuf/Ro+VofhdzTT5IfLEmHD5FjEM937k70RiGagMZ7vbpEoNB5NaiCaOyY9cWkN+gFi504UbTAGFW0GDexWGeT7ZuToVJS5NAfIl2vYNfrPgJIIFU1JgoqmJADgF9u4yC0li2iIAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="1301, 224, 39, 14" ElementType="Text" FriendlyName="'ADMIN'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_ContentPlaceHolderHeader_topHeader_lnkAdmin' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_ContentPlaceHolderHeader_topHeader_lnkAdmin' tag='A' type='' class='' aaname='ADMIN' check:innerText='ADMIN' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAASCAYAAADCKCelAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFDSURBVEhL7ZQxDoMwDEV7ql6nZ+IS3XsFGFkRK0MlNhYkJDbXcWziBAfowICEJauN7W+/QMjj+SrgKn7DnuUXh31/YQRnM9TvOFe0M2ViG+AjNeXAMYCxrUxdV2KMZ0iN5NeamGEFqxtrccjpBhXUk6tkYAUL0xcK1n16jqFtweqNH4Dl4dMAHf2Ggc6tBtFghh0nVyeDG+iW2B4sWt9kZ8WwqolVbMIyDA0R2H6gPgRGMdS0PpeHnXFDrsL334WNCpKGq/yiM2Dbxr8hjHkNPmXObcHWpY8HXRZWjoC8+nT9D2zlz6kcJ5XbhMW+/j/m6NjkYLmZZTQgabro9GAFq/vp9R7ssnmyDKz/Ym0QejK4tmC9Lr4NCEK0Un8YNjzdDCzvJvn606spNNEWrpsINnOtHYENWhP2Gn7DnuU37DlewA8GOf/vuIwQPgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
@@ -391,7 +391,18 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheckState>
-                    <uix:NGetText sap2010:Annotation.AnnotationText="Check Facility" DisplayName="Get Text 'Source Location'" sap:VirtualizedContainerService.HintSize="1138,187" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Repair'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/AssetConfiguration.aspx?menu=Test&amp;Scanid=29287853" DesignTimeRectangle="720, 264, 110, 23" ElementType="Text" FriendlyName="'Repair'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_lnkbtnRepair' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_lnkbtnRepair' tag='A' type='' class='' aaname='Repair' check:innerText='REPAIR' /&gt;" Guid="5c5fd1a0-ac20-40fa-acc8-0110cb57167f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAbCAYAAACgJtvvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGFSURBVGhD7ZY9bsMwDEZzwZyhhyhyiewFPOYQGQpkyOo13rMaHnIHVrZIWX+2kqKITJYP+AZZigTwiY53fd+Dhn9UpJA4kbuPLw3DZEUqvFCRQlCRQlCRQlCRQtiuyMcZjt97+IxzPcOAS4bukM6PaW8r8w1006zFrfH2tQxwuc7Pl846duGvarF5kUGhome2uAe4PKZhQjJPlwNFO1mTlHifnMhwTen8d8JLJNzg5Il4WaSha0dp2JV0RttkziqLhHtjnu3hdMdxRf5XRxp8kfN8KM2iHfk30Gswii/WFjJdQx2SFJr2nDq6JCo3P59hsw2JI0w6Eotqxv5rrNQR2eJT18UdH4+zIvEsd8nCD6eaMBE5j/3iPScyP29fsbnQ/usd6y6J+3CqCx+RBio+Pfu9SPxoou5ESI7t+tKrF/dYOf+dsBIZF891RZzF4iP4tRnubaCuf+o/1ID7xBeiBtsVqbyEihSCihSCihSCihSCihSCihTCokgNvyQiNbyjIkWkhx+KFyZWCS+9IwAAAABJRU5ErkJggg==" InformativeScreenshot="c3b1eae703039364177ada254aef3c53.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target DesignTimeRectangle="608, 264, 110, 27" ElementType="Text" FriendlyName="'Test'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_topnav' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_topnav' tag='SPAN' type='' class='' aaname='Test' check:innerText='TEST' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAfCAYAAAA7t5n5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVGhD7dYxDoIwGIZhPKmH8CxuzN7CxcQr9ASkI0wkbr+UtlhKYcCk0s/vT54ESiXGN6iV1lqofAwJYgpZna9UIIYEwZAgGBIEQ4JgSBCFhVSiZGX6Ri6r119yvwX3ebRu3Y56mPWn3Hu3sJhW6tn7OJ7CQn5c1Gv8iG0Ez4XUKliL2T2deg7HPl4UyoW2e4L1A/u/kLdGOrNnfIIT1w2GzOfrkOOsfGUyZD6bIeOJnj7/Wj+LYAyZz/7fSGf2ZKb/DDFkBl+HdJL3Ych89oaMX2fP+UT+zGbIxIT7au0W3czvMWBI+hWGBMGQIBgSBEOCYEgQDAmCIUEwJAiGBMGQIKZ+p+HESG2i45v6+QMqG0NCuMobE94UZpl3a5EAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NGetText sap2010:Annotation.AnnotationText="Check Facility" DisplayName="Get Text 'Source Location'" sap:VirtualizedContainerService.HintSize="1143,187" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29038557" DesignTimeRectangle="340, 439, 31, 14" ElementType="Text" FriendlyName="'YVR3'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails_lblCustomerSourceLocation' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="16337e19-4ad2-44a9-b3a2-fdc99cee58af" InformativeScreenshot="c2af273017d5f27323d79b8a1c059ad3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -414,7 +425,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="Facility doesn't match" sap:VirtualizedContainerService.HintSize="1138,567" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If sap2010:Annotation.AnnotationText="Facility doesn't match" sap:VirtualizedContainerService.HintSize="1143,567" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">TheText != Facility</CSharpValue>
@@ -466,7 +477,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NGetText DisplayName="Get Text 'Threshold Remaining'" sap:VirtualizedContainerService.HintSize="1138,156" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'Threshold Remaining'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29409676" DesignTimeRectangle="743, 623, 37, 14" ElementType="Text" FriendlyName="'132.85'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='12' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="e47ba1d3-13cb-4bbc-a320-0b2943ba3929" InformativeScreenshot="60e321765484d719f48d3facea233db8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -488,7 +499,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="There're some cost for shipping, etc. It may turn to negtive if the threshold remaining is less than $0.5&#xA;&#xA;Todo: need verify the minimal cost" DisplayName="If - Low Threshold" sap:VirtualizedContainerService.HintSize="1138,608" sap2010:WorkflowViewState.IdRef="If_19">
+                    <If sap2010:Annotation.AnnotationText="There're some cost for shipping, etc. It may turn to negtive if the threshold remaining is less than $0.5&#xA;&#xA;Todo: need verify the minimal cost" DisplayName="If - Low Threshold" sap:VirtualizedContainerService.HintSize="1143,608" sap2010:WorkflowViewState.IdRef="If_19">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_155">Convert.ToDouble(TheText) &lt; 0.0</CSharpValue>
@@ -860,7 +871,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <uix:NGetText DisplayName="Get Text 'Repair Code'" sap:VirtualizedContainerService.HintSize="1138,156" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'Repair Code'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="1239, 565, 175, 16" ElementType="InputBox" FriendlyName="'UNRPR :: UNREPAIRABLE'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='INPUT' id='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails_ddlRepairCodes_I' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='dxeEditArea_Aqua dxeEditAreaSys' aaname='' /&gt;" Guid="828e6936-9678-4d56-9e8b-674c2290c444" InformativeScreenshot="eb4351cd7cf927724a0e4dbbc4297051.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -2839,7 +2850,7 @@
                     </Assign.To>
                     <Assign.Value>
                       <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_162">ErrMsg + item.Value + "\n"</CSharpValue>
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_166" xml:space="preserve">ErrMsg + item.Key + ": " +  item.Value + "\n"</CSharpValue>
                       </InArgument>
                     </Assign.Value>
                   </Assign>
