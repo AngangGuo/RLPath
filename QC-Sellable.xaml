@@ -3,7 +3,7 @@
     <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1329,21338</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1329,22281</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -98,13 +98,14 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for sellable assets" DisplayName="QC_Sellable" sap:VirtualizedContainerService.HintSize="1339,21273" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for sellable assets" DisplayName="QC_Sellable" sap:VirtualizedContainerService.HintSize="1339,22216" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Facility" />
       <Variable x:TypeArguments="x:String" Name="QCLocation" />
       <Variable x:TypeArguments="x:String" Name="AssetTags" />
       <Variable x:TypeArguments="s:String[]" Name="AllLPNs" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="AllAssetProcessInfo" />
+      <Variable x:TypeArguments="x:String" Name="ErrMsg" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -239,26 +240,26 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="QC each sellable asset" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1297,18752" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="QC each sellable asset" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1297,18718" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="AssetTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1256,18597" sap2010:WorkflowViewState.IdRef="Sequence_47">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1261,18563" sap2010:WorkflowViewState.IdRef="Sequence_47">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1214,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1219,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">"Processing " + AssetTag</CSharpValue>
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
-            <Assign sap2010:Annotation.AnnotationText="Add this asset tag into processing information variable.&#xA;&#xA;If any errors happened, the error message will be added by using following format:&#xA;&#xA;AllAssetProcessInfo[AssetTag] + &quot;Your error message here plus semicolon at the end followed with a space; &quot;" sap:VirtualizedContainerService.HintSize="1214,207" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign sap2010:Annotation.AnnotationText="Add this asset tag into processing information variable.&#xA;&#xA;If any errors happened, the error message will be added by using following format:&#xA;&#xA;AllAssetProcessInfo[AssetTag] + &quot;Your error message here plus semicolon at the end followed with a space; &quot;" sap:VirtualizedContainerService.HintSize="1219,207" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">AllAssetProcessInfo[AssetTag]</CSharpReference>
@@ -275,13 +276,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1214,18127" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V2">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1219,18093" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence sap2010:Annotation.AnnotationText="Process sellable asset in BlueIQ" DisplayName="Do - Process sellable asset" sap:VirtualizedContainerService.HintSize="1180,17991" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <Sequence sap2010:Annotation.AnnotationText="Process sellable asset in BlueIQ" DisplayName="Do - Process sellable asset" sap:VirtualizedContainerService.HintSize="1185,17957" sap2010:WorkflowViewState.IdRef="Sequence_46">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="TheText" />
                       <Variable x:TypeArguments="x:Boolean" Name="ProcessItemUpdated" />
@@ -295,7 +296,7 @@
                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick sap2010:Annotation.AnnotationText="Click AUDIT tab" ClickType="Single" DisplayName="Click 'AUDIT'" sap:VirtualizedContainerService.HintSize="1138,187" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NClick sap2010:Annotation.AnnotationText="Click AUDIT tab" ClickType="Single" DisplayName="Click 'AUDIT'" sap:VirtualizedContainerService.HintSize="1143,187" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Welcome.aspx" DesignTimeRectangle="259, 180, 37, 14" ElementType="Text" FriendlyName="'AUDIT'" FullSelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkAudit' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ContentPlaceHolderHeader_topHeader_lnkAudit' tag='A' type='' class='' aaname='AUDIT' check:innerText='AUDIT' /&gt;" Guid="24225566-6ab9-4b07-9851-b3426181409f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAASCAYAAADG3feYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADmSURBVEhL7ZNBCoQwDEXnVHMdz9RLuPcKunQrbl0I7twIgrtMnSaatBVmbGE60MBHbNKfZ1Mfz0JB6sqQsfS/kNUEJqZO5soRFr289M3lmuq391YZM1RUXzTQrnppHUHVs0l7gvfwQHYwYKE01/oYcoO2pH0IdXgxSPJwaqRcSPy6YcJnzXK3IO2aCJBm1Hsxnigf+V1I4RUMKcFOYMwnAUmjphHb77+HpEJPHIam2deQoiYEEo3EHdQyI6emrpkN5YOU1yYA0phbf/MuHPl5ejg6FnwP+cjgzUNOMmFlyFjKkHGk4AU52FPrTOtz3QAAAABJRU5ErkJggg==" InformativeScreenshot="9dd251312fa7f3f1daf65b39e19b4146.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -311,7 +312,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Type asset tag into SEARCH ASSETS field and press enter to get the asset record from BlueIQ" ClickBeforeMode="Single" DisplayName="Type Into 'SEARCH ASSETS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1138,259" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Type asset tag into SEARCH ASSETS field and press enter to get the asset record from BlueIQ" ClickBeforeMode="Single" DisplayName="Type Into 'SEARCH ASSETS'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1143,259" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/PreSort/PreSortInfoCapture.aspx" DesignTimeRectangle="80, 556, 132, 21" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='dxeTextBoxSys dxeTextBox_Aqua dxeTextBoxDefaultWidthSys' aaname='' /&gt;" Guid="572da9a7-e2f7-4753-8dff-4cbd36725f77" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAAZCAYAAADqgGa0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABkSURBVGhD7dJRCYAwAABR+4cxiGnWYOLHBoJegvfgGtwxIRiEtAc5ryHtltcg8DAIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySAkg5AMQjIIySCk30Gk1bIHgS8GIcx5A8qQPid8czjJAAAAAElFTkSuQmCC" InformativeScreenshot="4645c0f45da740b18a0c2dbd89d16af1.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -332,7 +333,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Waiting for &quot;Source Name: Amazon&quot; is showed out;&#xA;Change the timeout from 5s(default) to 15s for sometimes it need more time to show out." DisplayName="Check App State 'Amazon'" sap:VirtualizedContainerService.HintSize="1138,637" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Timeout="15" Version="V1">
+                    <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Waiting for &quot;Source Name: Amazon&quot; is showed out;&#xA;Change the timeout from 5s(default) to 15s for sometimes it need more time to show out." DisplayName="Check App State 'Amazon'" sap:VirtualizedContainerService.HintSize="1143,637" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Timeout="15" Version="V1">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <sap:WorkflowViewStateService.ViewState>
@@ -539,7 +540,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <Assign sap:VirtualizedContainerService.HintSize="1138,61" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign sap:VirtualizedContainerService.HintSize="1143,61" sap2010:WorkflowViewState.IdRef="Assign_7">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">
                           <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">ProcessItemUpdated</CSharpReference>
@@ -549,7 +550,7 @@
                         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NGetText sap2010:Annotation.AnnotationText="" DisplayName="Get Text 'Asset Status:*'" sap:VirtualizedContainerService.HintSize="1138,187" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NGetText sap2010:Annotation.AnnotationText="" DisplayName="Get Text 'Asset Status:*'" sap:VirtualizedContainerService.HintSize="1143,187" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29235957" DesignTimeRectangle="1235, 422, 200, 20" ElementType="DropDown" FriendlyName="'Repair Completed'" FullSelectorArgument="&lt;webctrl tag='SELECT' id='ddlRepairStatus' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='DevPurpose' aaname='' /&gt;" Guid="fc36d4f4-0532-4ddf-9686-270fffafa949" InformativeScreenshot="411f338721940b142eb86bbe5fb51835.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -572,7 +573,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="Asset Staus must be &quot;Repair Completed&quot;" sap:VirtualizedContainerService.HintSize="1138,702" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If sap2010:Annotation.AnnotationText="Asset Staus must be &quot;Repair Completed&quot;" sap:VirtualizedContainerService.HintSize="1143,702" sap2010:WorkflowViewState.IdRef="If_3">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">TheText != "Repair Completed"</CSharpValue>
@@ -881,7 +882,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <Sequence sap2010:Annotation.AnnotationText="Todo: need manually fix the Defect Code or Repair Code problem" DisplayName="Sequence - Verify Defect Code and Repair Code" sap:VirtualizedContainerService.HintSize="1138,1979" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                    <Sequence sap2010:Annotation.AnnotationText="Todo: need manually fix the Defect Code or Repair Code problem" DisplayName="Sequence - Verify Defect Code and Repair Code" sap:VirtualizedContainerService.HintSize="1143,1979" sap2010:WorkflowViewState.IdRef="Sequence_20">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="DefectCode" />
                       </Sequence.Variables>
@@ -979,7 +980,7 @@
                             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Warn">
                               <ui:LogMessage.Message>
                                 <InArgument x:TypeArguments="x:Object">
-                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
+                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_164">String.Format("{0}: {1}(fix me)", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
                                 </InArgument>
                               </ui:LogMessage.Message>
                             </ui:LogMessage>
@@ -1027,7 +1028,7 @@
                             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Warn">
                               <ui:LogMessage.Message>
                                 <InArgument x:TypeArguments="x:Object">
-                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
+                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_165">String.Format("{0}: {1}(fix me)", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
                                 </InArgument>
                               </ui:LogMessage.Message>
                             </ui:LogMessage>
@@ -1045,7 +1046,7 @@
                         </If.Else>
                       </If>
                     </Sequence>
-                    <uix:NGetText DisplayName="Get Text 'Site:*'" sap:VirtualizedContainerService.HintSize="1138,156" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'Site:*'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29409676" DesignTimeRectangle="832, 603, 200, 20" ElementType="DropDown" FriendlyName="'FG(CLIENT)'" FullSelectorArgument="&lt;webctrl idx='2' parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='83' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='DevPurpose' aaname='' /&gt;" Guid="569ef25a-bcf8-4cf8-886e-72cca0dac446" InformativeScreenshot="47073d8af902aaee1bbf07e86264b5f0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -1067,7 +1068,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="Site must be FG(CLIENT)" DisplayName="If - Not FG(CLIENT)" sap:VirtualizedContainerService.HintSize="1138,671" sap2010:WorkflowViewState.IdRef="If_9">
+                    <If sap2010:Annotation.AnnotationText="Site must be FG(CLIENT)" DisplayName="If - Not FG(CLIENT)" sap:VirtualizedContainerService.HintSize="1143,671" sap2010:WorkflowViewState.IdRef="If_9">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">TheText != "FG(CLIENT)"</CSharpValue>
@@ -1159,7 +1160,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NGetText DisplayName="Get Text 'Location:*'" sap:VirtualizedContainerService.HintSize="1138,156" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'Location:*'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="922, 726, 201, 21" ElementType="InputBox" FriendlyName="'L4-76.32'" FullSelectorArgument="&lt;webctrl idx='2' parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='70' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetDetails' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='DevPurpose' aaname='' /&gt;" Guid="2a453e6b-c1de-4213-b253-4e3fbba4bf55" InformativeScreenshot="fdb0acf3e08d163e2632a009a7659078.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -1181,7 +1182,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="Already in QC status. &#xA;No more processing if nothing changed. Need further checking by team leader." DisplayName="If - Already QC Site" sap:VirtualizedContainerService.HintSize="1138,904" sap2010:WorkflowViewState.IdRef="If_11">
+                    <If sap2010:Annotation.AnnotationText="Already in QC status. &#xA;No more processing if nothing changed. Need further checking by team leader." DisplayName="If - Already QC Site" sap:VirtualizedContainerService.HintSize="1143,904" sap2010:WorkflowViewState.IdRef="If_11">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">TheText.StartsWith("QC-")</CSharpValue>
@@ -1286,7 +1287,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Asset Status &amp; Grading'" sap:VirtualizedContainerService.HintSize="1138,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Asset Status &amp; Grading'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="918, 356, 123, 20" ElementType="Text" FriendlyName="'Asset Status &amp; Grading'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='__tab_ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetS*' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='__tab_ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetS*' type='' tag='SPAN' class='ajax__tab_tab' aaname='Asset Status &amp;amp; Grading' check:innerText='Asset Status &amp;amp; Grading' /&gt;" Guid="6af5ba63-1856-4a3e-b6ed-92d47174ce39" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAAYCAYAAADTTCLxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASFSURBVGhD7ZpbbxNHFID31/oP5EbNA9cHAlIMVCC14AQEIRGKY3tJWxzHTowd7nZiSLiUVkAKbf/F6bmN98x67QQ1T+xa+rRnZs79zG4kRADZL7W/bPgp/gWP3/0DxJP3/2akhEf7X6GF8PC3kc7bjLRAg9/aw+Fv44Jov/lb6CzDVC4HuRPLsOb2jp0GnB/jf/ESxqcchvIYbxdxVL0jEhaifHIFWEzSGdCH6ydM/sjUQj9B79vgnmhNVk7SPQwa/ObrLxDQTbAHawsnNemTcL3jGx0XY5PXy3c+jGTXvKMW/X+b46PDvNRAGS8V9YblJF09t7H14nA9nu63cZw10eAbr/6CgBbub0BrfwPOcXEFflLTZZ/ow7UZPKNz1tk4ZB9xXxGmAHdxL1zIR7q6F8VAtFnnQn8/ye4uNcTtzSxDmKD3M6/zcK1Dflx9mqP3RjudYSQOni+Ivt+XCIk92s8g/kxe+kJ5eD2yddu+4jwoB62R8/FkPDe6g56a+qZwphSH/NPg630cPinRZ4CpauOrX+GOC5BwJjIW2R6zvyeF8j7aW39Dvj1M0TEdz45jFeAOye1lmBwRK5zXgZicqOmDOKynMu+LDx+1MzGSGF8X4YbvdCTu5Hyfzw/NW8+sHstOT/sg/mytzp/kT4Nf3z2AgD4BTf4MfIHbF8npEpRRblRkqGcrctZoLbFjHgoyWdwdv6/2PgW4HY8zCmPvfA7b1eGs8e9ytXrlojTxx5bRv1iP9Ab2kpv4Nbg88G3lOtGWfaoPi/iL/Hj+Wd+P75AcVU/zjtdq16Nk55/7pXOJz4/WtZ0DeNj7DAF9AjbwJtT7dTjjErBgonRTHLdMQZPFndH75TmWz5QjW08XEy7F9ofZgav8doqutStpw9j/lhTmYg3r5eHqFp1pjbYmtZXc5+CW21eSYjKxvhB+LIeNGY+v64T64j0adebriT/uf6wndv0bDv7XLg6/viufgJWbkviVzQO+GcT8LDrGhszTepWG6c7XOcjEzd7ofZVzs+so9+DKtJPV7/Q9WNE4Fj8P68O3G84NC1sVH55/e7Z5DyZG5CRx1Z/Bi+PyMTn56LmtTeOLvl+Py0f6pfmobWIfbO0JstMb7r/zJ334pfsJ1l58hIAO6CZc1sD3UaY1U5LET5dkXeRGKEZ31L6zF+agqPv3b0gidi+iK7kcZtfUQRLTeWnije6wXq8Gp53e7JzIszWJZX0grk6fhHy4rjxcbh5FHxn0RHNx8RHbuwmsI6rX+sG8dcjkh20SZOff9cH2fwJrp1qpRhr8g+d/QkCvP92EjO+NGpyiwV+oybqxyMM/tfKJB//g2QcI6BZkfJ8s/fTD4M1nLjzk/fDpBwifvIdAbsEfCD0z0kD18Tuobr+FIHz6O1TxFtAzIx1UOvtQae9BQDegsv2Gb0JGOii3X0P50SsI6AbQgp4Z6WC1tQurWzsQlFt9XtAzIx2UNntIFwK6AbSgZ0Y6KDVfMgHdgFIzI02sNF4wQamBtwAFeWakgcHw4/8wkJEesv+9m9ofwH8wvTRheRjXiAAAAABJRU5ErkJggg==" InformativeScreenshot="1ffef6fd6596b5780ddc8dc41eea5d06.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -1297,7 +1298,7 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NGetText DisplayName="Get Text 'Cosmetic Grade'" sap:VirtualizedContainerService.HintSize="1138,156" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'Cosmetic Grade'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="752, 447, 150, 20" ElementType="DropDown" FriendlyName="'B'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetStatusG*' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetStatusG*' tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='DevPurpose' aaname='' /&gt;" Guid="decbb107-fab9-4724-8d16-366a2655fce8" InformativeScreenshot="584a58276c46d819664b5b70b79c1fb6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -1313,7 +1314,7 @@
                         </OutArgument>
                       </uix:NGetText.Text>
                     </uix:NGetText>
-                    <If DisplayName="If - Cosmetic Grade: B,C,D" sap:VirtualizedContainerService.HintSize="1138,539" sap2010:WorkflowViewState.IdRef="If_12">
+                    <If DisplayName="If - Cosmetic Grade: B,C,D" sap:VirtualizedContainerService.HintSize="1143,539" sap2010:WorkflowViewState.IdRef="If_12">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_142">TheText != "B" &amp;&amp; TheText != "C" &amp;&amp; TheText != "D"</CSharpValue>
@@ -1379,7 +1380,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NGetText DisplayName="Get Text 'Functional Final Notes'" sap:VirtualizedContainerService.HintSize="1138,156" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'Functional Final Notes'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29409676" DesignTimeRectangle="349, 471, 316, 36" ElementType="InputBox" FriendlyName="'ASSET INSPECTED'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetStatusG*' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetStatusG*' tag='TABLE' /&gt;&lt;webctrl type='' tag='TEXTAREA' class='txtarea' aaname='' /&gt;" Guid="48f8662e-26a8-4e11-b864-eb1c78e1ee51" InformativeScreenshot="5e058a01075526a77a0b2c144a20ed40.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -1395,7 +1396,7 @@
                         </OutArgument>
                       </uix:NGetText.Text>
                     </uix:NGetText>
-                    <If DisplayName="If - Functional Final Notes Empty" sap:VirtualizedContainerService.HintSize="1138,343" sap2010:WorkflowViewState.IdRef="If_24">
+                    <If DisplayName="If - Functional Final Notes Empty" sap:VirtualizedContainerService.HintSize="1143,343" sap2010:WorkflowViewState.IdRef="If_24">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">TheText == ""</CSharpValue>
@@ -1438,7 +1439,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NGetText DisplayName="Get Text 'Cosmetic Reasons'" sap:VirtualizedContainerService.HintSize="1138,156" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'Cosmetic Reasons'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="752, 511, 304, 19" ElementType="InputBox" FriendlyName="'BOX / PACKAGING (GOOD)'" FullSelectorArgument="&lt;webctrl tag='INPUT' id='lblCosmetic' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetStatusG*' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='narrowfont' aaname='' /&gt;" Guid="7974244f-0473-476e-9e3f-56bba6b091cc" InformativeScreenshot="5b1d859ceeaf8ef7a4b376667ce91e2f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -1454,7 +1455,7 @@
                         </OutArgument>
                       </uix:NGetText.Text>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="Must be &quot;BOX / PACKAGING (GOOD)&quot;" DisplayName="If - Cosmetic Reasons" sap:VirtualizedContainerService.HintSize="1138,1156" sap2010:WorkflowViewState.IdRef="If_13">
+                    <If sap2010:Annotation.AnnotationText="Must be &quot;BOX / PACKAGING (GOOD)&quot;" DisplayName="If - Cosmetic Reasons" sap:VirtualizedContainerService.HintSize="1143,1155" sap2010:WorkflowViewState.IdRef="If_13">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">TheText != "BOX / PACKAGING (GOOD)"</CSharpValue>
@@ -1468,7 +1469,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap2010:Annotation.AnnotationText="Cosmetic Reasons: BOX / PACKAGING (GOOD)" sap:VirtualizedContainerService.HintSize="376,937" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                        <Sequence sap2010:Annotation.AnnotationText="Cosmetic Reasons: BOX / PACKAGING (GOOD)" sap:VirtualizedContainerService.HintSize="376,936" sap2010:WorkflowViewState.IdRef="Sequence_32">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1483,7 +1484,7 @@
                             </Assign.To>
                             <Assign.Value>
                               <InArgument x:TypeArguments="x:String">
-                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">String.Format("{0}; Cosmetic Reasons: {1} (fix it)", AllAssetProcessInfo[AssetTag], TheText)</CSharpValue>
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_156">String.Format("{0}; Cosmetic Reasons: {1} (fixed)", AllAssetProcessInfo[AssetTag], TheText)</CSharpValue>
                               </InArgument>
                             </Assign.Value>
                           </Assign>
@@ -1509,7 +1510,7 @@
                               </uix:TargetAnchorable>
                             </uix:NTypeInto.Target>
                           </uix:NTypeInto>
-                          <uix:NClick ClickType="Single" DisplayName="Click 'COSMETICS DETAILS'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                          <uix:NClick ClickType="Single" DisplayName="Click 'COSMETICS DETAILS'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29409676" DesignTimeRectangle="779, 534, 17, 16" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popUpCosmetic_HCB-1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popUpCosmetic_HCB-1' tag='IMG' type='' class='dxWeb_pcCloseButton_Aqua' aaname='[Close]' /&gt;" Guid="8587c94b-96dd-4c40-8b9e-3bfa247226b6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGpSURBVDhPrZTLTsJAGIUnPp/v48Lo3vgGKsbEy8KNRgVNjJoa8I5BWhSpIMELBoW6shFIjz3TTDNQjDXp4lvM+ed8JWRmRL0NJI2ofgBJIx7eAYX1/I2TkvNvbupu6CDCbnkgxYaLnNXB6k4ZE3ON2Kyly7JXePySHiLKbwDJWg5Wdm0s5j5xUXNjk8p+SnHWdKSHiNumB3JsduSXc1X/F//C6YiMsMe+cgnz1QMxioH0sOLiwHYxNj4ZwrViVM4e+8olCs8eyNFNIN0uu9i6d7Fu9wcEzPQ158wIe+wrV0S6VOqGpF8wIFIw1/f9KZ03uwMMi7ke3hORGnYXJHP5IYfTR/0IunTUnD32lSsinTnrY1ZDFyr0OYlIsw89kL2rthwuWB4WSgG6yOgM/g1qD2GPfeUSuVoPZC8fSDefPGz46AIKmQ2LmREp9fvKJc7rPZD960BqOAjwBSEq09Fy9thXLpFv9EEOCm153Xjt8i5iw/3LmUfZV67wSJ1WvsBjQTG/HIepVPCgsMd+eKTMJqC48O+x4T8M/4U93SPu/FclaUSlBSQL8ANt2IYqXVJSwQAAAABJRU5ErkJggg==" InformativeScreenshot="b370f555f64be4ea7fa304f95406c283.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -1520,7 +1521,7 @@
                               </uix:TargetAnchorable>
                             </uix:NClick.Target>
                           </uix:NClick>
-                          <Assign DisplayName="Assign" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_39">
+                          <Assign DisplayName="Assign" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_39">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">
                                 <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_58">ProcessItemUpdated</CSharpReference>
@@ -1542,7 +1543,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NGetText DisplayName="Get Text 'Final Functional Status'" sap:VirtualizedContainerService.HintSize="1138.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'Final Functional Status'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29409676" DesignTimeRectangle="349, 534, 200, 20" ElementType="DropDown" FriendlyName="'Functional'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetStatusG*' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_tabSource_PCAssetStatusG*' tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='DevPurpose' aaname='' /&gt;" Guid="2b68d4e0-a910-4d96-b0fa-56de94f79003" InformativeScreenshot="3aeb9220912af366df09b02289afd650.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -1558,7 +1559,7 @@
                         </OutArgument>
                       </uix:NGetText.Text>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="Must be &quot;Functional&quot; for sellable assets." DisplayName="If - Functional Status" sap:VirtualizedContainerService.HintSize="1138.4,670.4" sap2010:WorkflowViewState.IdRef="If_23">
+                    <If sap2010:Annotation.AnnotationText="Must be &quot;Functional&quot; for sellable assets." DisplayName="If - Functional Status" sap:VirtualizedContainerService.HintSize="1143,671" sap2010:WorkflowViewState.IdRef="If_23">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">TheText!="Functional"</CSharpValue>
@@ -1572,13 +1573,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="375.2,450.4" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,452" sap2010:WorkflowViewState.IdRef="Sequence_57">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_40">
+                          <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_40">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">
                                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_60">AllAssetProcessInfo[AssetTag]</CSharpReference>
@@ -1590,7 +1591,7 @@
                               </InArgument>
                             </Assign.Value>
                           </Assign>
-                          <uix:NSelectItem DisplayName="Select Item 'Final Functional Status'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="Functional" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                          <uix:NSelectItem DisplayName="Select Item 'Final Functional Status'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="Functional" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                             <uix:NSelectItem.Items>
                               <scg:List x:TypeArguments="x:String" Capacity="11">
                                 <x:String>Make a selection...</x:String>
@@ -1616,7 +1617,7 @@
                               </uix:TargetAnchorable>
                             </uix:NSelectItem.Target>
                           </uix:NSelectItem>
-                          <Assign DisplayName="Assign" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_41">
+                          <Assign DisplayName="Assign" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_41">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">
                                 <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_61">ProcessItemUpdated</CSharpReference>
@@ -1638,7 +1639,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NClick sap2010:Annotation.AnnotationText="At least site location changed to QC site." ClickType="Single" DisplayName="Click Save button" sap:VirtualizedContainerService.HintSize="1138.4,188.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NClick sap2010:Annotation.AnnotationText="At least site location changed to QC site." ClickType="Single" DisplayName="Click Save button" sap:VirtualizedContainerService.HintSize="1143,187" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="1114, 256, 25, 25" ElementType="InputBox" FriendlyName="'INPUT ctl00_ctl00_MainC…'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_btnSave' tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_btnSave' tag='INPUT' type='image' class='marginimg' aaname='Save' /&gt;" Guid="1636e32c-3076-4025-9dc7-cc1d6d899a6e" ImageBase64="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" InformativeScreenshot="69ae93cd1f290e59082456790f467e5f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -1656,7 +1657,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <Assign DisplayName="Assign - init ProcessItemUpdated" sap:VirtualizedContainerService.HintSize="1138.4,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                    <Assign DisplayName="Assign - init ProcessItemUpdated" sap:VirtualizedContainerService.HintSize="1143,61" sap2010:WorkflowViewState.IdRef="Assign_21">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">
                           <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">ProcessItemUpdated</CSharpReference>
@@ -1666,7 +1667,7 @@
                         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NGetText DisplayName="Get Text 'QC Completed'" sap:VirtualizedContainerService.HintSize="1138.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NGetText DisplayName="Get Text 'QC Completed'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Includes/CheckListAnswers.aspx?TypeId=29287853&amp;Indicator=R" DesignTimeRectangle="944, 389, 13, 13" ElementType="CheckBox" FriendlyName="'Checkbox'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_popupCheckListAnswers_CI*' tag='IFRAME' /&gt;&lt;webctrl parentid='ucControls_pnlQCCompleted' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_popupCheckListAnswers_CI*' tag='IFRAME' /&gt;&lt;webctrl parentid='ucControls_pnlQCCompleted' tag='TABLE' /&gt;&lt;webctrl type='checkbox' tag='INPUT' class='' aaname='' /&gt;" Guid="56aaf736-86a2-4290-ae3e-57692787f016" InformativeScreenshot="22f7be2ea73d9f9251366c44783ddb58.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -1682,7 +1683,7 @@
                         </OutArgument>
                       </uix:NGetText.Text>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="QC Complete is unselected" sap:VirtualizedContainerService.HintSize="1138,671" sap2010:WorkflowViewState.IdRef="If_14">
+                    <If sap2010:Annotation.AnnotationText="QC Complete is unselected" sap:VirtualizedContainerService.HintSize="1143,671" sap2010:WorkflowViewState.IdRef="If_14">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">TheText == "unchecked"</CSharpValue>
@@ -1738,15 +1739,15 @@
                         </Sequence>
                       </If.Then>
                     </If>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1138.4,356" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1143,348" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                       <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,277.6" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,270" sap2010:WorkflowViewState.IdRef="Sequence_84">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage sap2010:Annotation.AnnotationText="Todo: &#xA;1. Forgot to answer all questions&#xA;2. Check other values in &quot;Repair: Checklist Questions&quot; page&#xA;3. Watch questions are different" DisplayName="Todo:  &quot;Repair: Checklist Questions" sap:VirtualizedContainerService.HintSize="333.6,184.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info">
+                          <ui:LogMessage sap2010:Annotation.AnnotationText="Todo: &#xA;1. Forgot to answer all questions&#xA;2. Check other values in &quot;Repair: Checklist Questions&quot; page&#xA;3. Watch questions are different" DisplayName="Todo:  &quot;Repair: Checklist Questions" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info">
                             <ui:LogMessage.Message>
                               <InArgument x:TypeArguments="x:Object">
                                 <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">"Todo: Repair: Checklist questions"</CSharpValue>
@@ -1761,20 +1762,20 @@
                         </Sequence>
                       </ui:CommentOut.Body>
                     </ui:CommentOut>
-                    <If DisplayName="If - Save Checklist Questions" sap:VirtualizedContainerService.HintSize="1138.4,1268" sap2010:WorkflowViewState.IdRef="If_15">
+                    <If DisplayName="If - Save Checklist Questions" sap:VirtualizedContainerService.HintSize="1143,1257" sap2010:WorkflowViewState.IdRef="If_15">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">ProcessItemUpdated</CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="719.2,1108.8" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                        <Sequence sap:VirtualizedContainerService.HintSize="722,1098" sap2010:WorkflowViewState.IdRef="Sequence_37">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick sap2010:Annotation.AnnotationText="Click &quot;Save and Close&quot; button on &quot;Repair: Checklist Questions&quot; window" ClickType="Single" DisplayName="Click - Save Checklist Questions" sap:VirtualizedContainerService.HintSize="677.6,201.6" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                          <uix:NClick sap2010:Annotation.AnnotationText="Click &quot;Save and Close&quot; button on &quot;Repair: Checklist Questions&quot; window" ClickType="Single" DisplayName="Click - Save Checklist Questions" sap:VirtualizedContainerService.HintSize="680,198" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Includes/CheckListAnswers.aspx?TypeId=29323978&amp;Indicator=R" DesignTimeRectangle="1361, 317, 30, 30" ElementType="InputBox" FriendlyName="'INPUT ucControls_btnSav…'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_popupCheckListAnswers_CI*' tag='IFRAME' /&gt;&lt;webctrl id='ucControls_btnSaveAndClose' tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_popupCheckListAnswers_CI*' tag='IFRAME' /&gt;&lt;webctrl id='ucControls_btnSaveAndClose' tag='INPUT' type='image' class='showHand' aaname='SAVE &amp;amp; CLOSE' /&gt;" Guid="593606c7-6855-40f8-aba9-d383bdd560e8" ImageBase64="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" InformativeScreenshot="8c0bc7e87109db61dcc08baada483c52.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -1793,7 +1794,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NClick>
-                          <uix:NClick sap2010:Annotation.AnnotationText="Click OK on Window: Andrews have been updated successfully" ClickType="Single" DelayBefore="2" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="677.6,201.6" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                          <uix:NClick sap2010:Annotation.AnnotationText="Click OK on Window: Andrews have been updated successfully" ClickType="Single" DelayBefore="2" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="680,198" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="1112, 157, 64, 32" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="6f89f832-1773-466b-a442-e5660d592bfb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAkCAYAAAAw55zoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVGhD7Zq9bhNBFIV5Dl4AniA8AS+AuzxBegoKpFSmgwpB4ZYiuHMRCTfQmSJEaRbJRbayXOCAnSVYu17/5DBnxnd9F6fMjtDuHOkqd3bHG53PM3dsXT9AUEklIIM4R+v9DI9fTvDw+Y9aBz3SKz1rFUBe9//c+cImBL2LLBBS4o1HhtrHsxRJemtv1l30Ss/0LivFAnn2bmovfooW6H9f4OmbXwW9usaTVz+tV0LhmAwKIFIzKE7UL6xz8I3nbmBOBpQFIhN03pTQnqkARHmmAhDlmQpAlGcqAFGeqQBEeaYCEOWZ8ghkhs5whWRp/43RBqN4jqO23E9xaa4m8Y0bt+c459xphsPSc+43KJ17AnKFzphfBza4jOZ48eE33l4swY9C2STdGtZApuhOzPzlCt3Ov8+636B07gfIycKaH13MStcPvnIJ3OL8lOMdkMOzFTIDb9C7Ks2vIiidewHSitbmyebdLraHhIMwGV4XeTLOMeJfA+agNLeaoHTuBchxvAHSHMd7924wSGWbOCBOa/Qq3ioSlM69ADkablfI3j0HYRTx27ZsmcxLMZWgdO6nhpzmpibs15CWqRVcDV9OOBYgZqv0ciSSq/lVBKVzP0Dk1NCnTGSOYHMlG8+3pndAeCrZbcaC+7nawkrp3BMQE+1rdOK1heDkPofstoUGwrGrL1UfvZTO/QH5T0N7pgIQ5ZkKQJRnKgBRnqkARHmmAhDlmQpAlGcqAFGeKQtE2nlUUxtVZEBZILqVyWhKK5Ne72xlSrOb7by+mdSUZnf3W1a0cUvNbir8HMKpAEKREpeO1JQ6Bz3Sq6wMUQlIEPAXgwhQPlqR+WUAAAAASUVORK5CYII=" InformativeScreenshot="0cf248643838339b4567955e0c19b015.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='BlueIQ - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="None">
                                 <uix:TargetAnchorable.Anchors>
@@ -1811,9 +1812,9 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NClick>
-                          <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="The OK button need some time to show out. There'll be no effect if click too early." DisplayName="Check App State 'OK'" sap:VirtualizedContainerService.HintSize="677.6,532.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" Mode="WaitDisappear" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                          <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="The OK button need some time to show out. There'll be no effect if click too early." DisplayName="Check App State 'OK'" sap:VirtualizedContainerService.HintSize="680,528" sap2010:WorkflowViewState.IdRef="NCheckState_2" Mode="WaitDisappear" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                             <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="249.6,85.6" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                              <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1822,13 +1823,13 @@
                               </Sequence>
                             </uix:NCheckState.IfExists>
                             <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="375.2,283.2" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                              <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="376,281" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick sap2010:Annotation.AnnotationText="Click again if failed the first time" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="333.6,188.8" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                                <uix:NClick sap2010:Annotation.AnnotationText="Click again if failed the first time" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                                   <uix:NClick.Target>
                                     <uix:TargetAnchorable DesignTimeRectangle="1112, 157, 64, 32" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="6f89f832-1773-466b-a442-e5660d592bfb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAkCAYAAAAw55zoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVGhD7Zq9bhNBFIV5Dl4AniA8AS+AuzxBegoKpFSmgwpB4ZYiuHMRCTfQmSJEaRbJRbayXOCAnSVYu17/5DBnxnd9F6fMjtDuHOkqd3bHG53PM3dsXT9AUEklIIM4R+v9DI9fTvDw+Y9aBz3SKz1rFUBe9//c+cImBL2LLBBS4o1HhtrHsxRJemtv1l30Ss/0LivFAnn2bmovfooW6H9f4OmbXwW9usaTVz+tV0LhmAwKIFIzKE7UL6xz8I3nbmBOBpQFIhN03pTQnqkARHmmAhDlmQpAlGcqAFGeqQBEeaYCEOWZ8ghkhs5whWRp/43RBqN4jqO23E9xaa4m8Y0bt+c459xphsPSc+43KJ17AnKFzphfBza4jOZ48eE33l4swY9C2STdGtZApuhOzPzlCt3Ov8+636B07gfIycKaH13MStcPvnIJ3OL8lOMdkMOzFTIDb9C7Ks2vIiidewHSitbmyebdLraHhIMwGV4XeTLOMeJfA+agNLeaoHTuBchxvAHSHMd7924wSGWbOCBOa/Qq3ioSlM69ADkablfI3j0HYRTx27ZsmcxLMZWgdO6nhpzmpibs15CWqRVcDV9OOBYgZqv0ciSSq/lVBKVzP0Dk1NCnTGSOYHMlG8+3pndAeCrZbcaC+7nawkrp3BMQE+1rdOK1heDkPofstoUGwrGrL1UfvZTO/QH5T0N7pgIQ5ZkKQJRnKgBRnqkARHmmAhDlmQpAlGcqAFGeKQtE2nlUUxtVZEBZILqVyWhKK5Ne72xlSrOb7by+mdSUZnf3W1a0cUvNbir8HMKpAEKREpeO1JQ6Bz3Sq6wMUQlIEPAXgwhQPlqR+WUAAAAASUVORK5CYII=" InformativeScreenshot="0cf248643838339b4567955e0c19b015.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='BlueIQ - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="None">
                                       <uix:TargetAnchorable.Anchors>
@@ -1868,13 +1869,13 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence sap:VirtualizedContainerService.HintSize="375.2,281.6" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,281" sap2010:WorkflowViewState.IdRef="Sequence_38">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick sap2010:Annotation.AnnotationText="If nothing has been changed, just close it." ClickType="Single" DisplayName="Click Close button" sap:VirtualizedContainerService.HintSize="333.6,188.8" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                          <uix:NClick sap2010:Annotation.AnnotationText="If nothing has been changed, just close it." ClickType="Single" DisplayName="Click Close button" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29323612" DesignTimeRectangle="1011, 278, 17, 16" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupCheckListAnswers_HC*' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupCheckListAnswers_HC*' tag='IMG' type='' class='dxWeb_pcCloseButton_Aqua' aaname='[Close]' /&gt;" Guid="623f70fa-8c23-4ab1-ab8c-8b9bac72e209" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGpSURBVDhPrZTLTsJAGIUnPp/v48Lo3vgGKsbEy8KNRgVNjJoa8I5BWhSpIMELBoW6shFIjz3TTDNQjDXp4lvM+ed8JWRmRL0NJI2ofgBJIx7eAYX1/I2TkvNvbupu6CDCbnkgxYaLnNXB6k4ZE3ON2Kyly7JXePySHiLKbwDJWg5Wdm0s5j5xUXNjk8p+SnHWdKSHiNumB3JsduSXc1X/F//C6YiMsMe+cgnz1QMxioH0sOLiwHYxNj4ZwrViVM4e+8olCs8eyNFNIN0uu9i6d7Fu9wcEzPQ158wIe+wrV0S6VOqGpF8wIFIw1/f9KZ03uwMMi7ke3hORGnYXJHP5IYfTR/0IunTUnD32lSsinTnrY1ZDFyr0OYlIsw89kL2rthwuWB4WSgG6yOgM/g1qD2GPfeUSuVoPZC8fSDefPGz46AIKmQ2LmREp9fvKJc7rPZD960BqOAjwBSEq09Fy9thXLpFv9EEOCm153Xjt8i5iw/3LmUfZV67wSJ1WvsBjQTG/HIepVPCgsMd+eKTMJqC48O+x4T8M/4U93SPu/FclaUSlBSQL8ANt2IYqXVJSwQAAAABJRU5ErkJggg==" InformativeScreenshot="8e830f270bb6f5aac1d66c45a3252c4a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -1893,7 +1894,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <Assign sap2010:Annotation.AnnotationText="ProcessUpdated will be true if any of the item is changed in the &quot;Processes Compoleted&quot; page." DisplayName="Assign - init ProcessItemUpdated" sap:VirtualizedContainerService.HintSize="1138.4,120" sap2010:WorkflowViewState.IdRef="Assign_24">
+                    <Assign sap2010:Annotation.AnnotationText="ProcessUpdated will be true if any of the item is changed in the &quot;Processes Compoleted&quot; page." DisplayName="Assign - init ProcessItemUpdated" sap:VirtualizedContainerService.HintSize="1143,118" sap2010:WorkflowViewState.IdRef="Assign_24">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Boolean">
                           <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">ProcessItemUpdated</CSharpReference>
@@ -1908,7 +1909,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <Assign sap2010:Annotation.AnnotationText="The sequence number of the items in &quot;Processes Competed&quot; page. &#xA;Sort is 1, Production is 2, Cosmetic Inspection is 11, etc.&#xA;&#xA;Note: Ignore the first one(0 - receiving) for it's disabled" sap:VirtualizedContainerService.HintSize="1138.4,184" sap2010:WorkflowViewState.IdRef="Assign_25">
+                    <Assign sap2010:Annotation.AnnotationText="The sequence number of the items in &quot;Processes Competed&quot; page. &#xA;Sort is 1, Production is 2, Cosmetic Inspection is 11, etc.&#xA;&#xA;Note: Ignore the first one(0 - receiving) for it's disabled" sap:VirtualizedContainerService.HintSize="1143,178" sap2010:WorkflowViewState.IdRef="Assign_25">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">
                           <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">CurrentItemNo</CSharpReference>
@@ -1923,7 +1924,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <Assign sap2010:Annotation.AnnotationText="Save all Processes Completed values.&#xA;&#xA;ProcessesCompleted[&quot;Sort&quot;] = &quot;Yes&quot;" sap:VirtualizedContainerService.HintSize="1138.4,120" sap2010:WorkflowViewState.IdRef="Assign_44">
+                    <Assign sap2010:Annotation.AnnotationText="Save all Processes Completed values.&#xA;&#xA;ProcessesCompleted[&quot;Sort&quot;] = &quot;Yes&quot;" sap:VirtualizedContainerService.HintSize="1143,118" sap2010:WorkflowViewState.IdRef="Assign_44">
                       <Assign.To>
                         <OutArgument x:TypeArguments="scg:Dictionary(x:Int32, x:String)">
                           <CSharpReference x:TypeArguments="scg:Dictionary(x:Int32, x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_67">ProcessesCompleted</CSharpReference>
@@ -1940,9 +1941,9 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Assign>
-                    <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="One by one check all the items in &quot;Processes Completed&quot; tab.&#xA;Last item Cosmetic Inspection is 11&#xA;&#xA;0 &quot;Receiving&quot;, &#xA;1 &quot;Sort&quot;,&#xA;2 &quot;Production&quot;, &#xA;3 &quot;Repair with Parts&quot;,&#xA;4 &quot;Repair Without Parts&quot;,&#xA;5 &quot;Data Erasure&quot;,&#xA;6 &quot;Imaging&quot;,&#xA;7 &quot;Kitting&quot;,&#xA;8 &quot;Deep Clean&quot;,&#xA;9 &quot;Clean &amp; Pack&quot;,&#xA;10 &quot;Rebox&quot;,&#xA;11 &quot;Cosmetic Inspection&quot;" DisplayName="While" sap:VirtualizedContainerService.HintSize="1138,333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                    <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="One by one check all the items in &quot;Processes Completed&quot; tab.&#xA;Last item Cosmetic Inspection is 11&#xA;&#xA;0 &quot;Receiving&quot;, &#xA;1 &quot;Sort&quot;,&#xA;2 &quot;Production&quot;, &#xA;3 &quot;Repair with Parts&quot;,&#xA;4 &quot;Repair Without Parts&quot;,&#xA;5 &quot;Data Erasure&quot;,&#xA;6 &quot;Imaging&quot;,&#xA;7 &quot;Kitting&quot;,&#xA;8 &quot;Deep Clean&quot;,&#xA;9 &quot;Clean &amp; Pack&quot;,&#xA;10 &quot;Rebox&quot;,&#xA;11 &quot;Cosmetic Inspection&quot;" DisplayName="While" sap:VirtualizedContainerService.HintSize="1143,333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                       <ui:InterruptibleWhile.Body>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="957,2261" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="958,2223" sap2010:WorkflowViewState.IdRef="Sequence_43">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="ui:UiElement" Name="ProcessItem" />
                             <Variable x:TypeArguments="x:String" Name="ProcessItemClass" />
@@ -1954,7 +1955,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence sap2010:Annotation.AnnotationText="Get value(Yes, No, NA)" sap:VirtualizedContainerService.HintSize="1107,1729" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                          <Sequence sap2010:Annotation.AnnotationText="Get value(Yes, No, NA)" sap:VirtualizedContainerService.HintSize="916,1729" sap2010:WorkflowViewState.IdRef="Sequence_69">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1994,7 +1995,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <Assign sap2010:Annotation.AnnotationText="No button selector" sap:VirtualizedContainerService.HintSize="872.8,91.2" sap2010:WorkflowViewState.IdRef="Assign_54">
+                            <Assign sap2010:Annotation.AnnotationText="No button selector" sap:VirtualizedContainerService.HintSize="874,91" sap2010:WorkflowViewState.IdRef="Assign_54">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_80">NoSelector</CSharpReference>
@@ -2668,7 +2669,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:InterruptibleWhile>
-                    <If sap:VirtualizedContainerService.HintSize="1138,438" sap2010:WorkflowViewState.IdRef="If_18">
+                    <If sap:VirtualizedContainerService.HintSize="1143,438" sap2010:WorkflowViewState.IdRef="If_18">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">ProcessItemUpdated</CSharpValue>
@@ -2705,7 +2706,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Close button'" sap:VirtualizedContainerService.HintSize="1138,156" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Close button'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="927, 240, 17, 16" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReaso*' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReasons_HCB-1' tag='IMG' type='' class='dxWeb_pcCloseButton_Aqua' aaname='[Close]' /&gt;" Guid="fa8946f9-5d47-4c95-b71d-b92866c86587" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGpSURBVDhPrZTLTsJAGIUnPp/v48Lo3vgGKsbEy8KNRgVNjJoa8I5BWhSpIMELBoW6shFIjz3TTDNQjDXp4lvM+ed8JWRmRL0NJI2ofgBJIx7eAYX1/I2TkvNvbupu6CDCbnkgxYaLnNXB6k4ZE3ON2Kyly7JXePySHiLKbwDJWg5Wdm0s5j5xUXNjk8p+SnHWdKSHiNumB3JsduSXc1X/F//C6YiMsMe+cgnz1QMxioH0sOLiwHYxNj4ZwrViVM4e+8olCs8eyNFNIN0uu9i6d7Fu9wcEzPQ158wIe+wrV0S6VOqGpF8wIFIw1/f9KZ03uwMMi7ke3hORGnYXJHP5IYfTR/0IunTUnD32lSsinTnrY1ZDFyr0OYlIsw89kL2rthwuWB4WSgG6yOgM/g1qD2GPfeUSuVoPZC8fSDefPGz46AIKmQ2LmREp9fvKJc7rPZD960BqOAjwBSEq09Fy9thXLpFv9EEOCm153Xjt8i5iw/3LmUfZV67wSJ1WvsBjQTG/HIepVPCgsMd+eKTMJqC48O+x4T8M/4U93SPu/FclaUSlBSQL8ANt2IYqXVJSwQAAAABJRU5ErkJggg==" InformativeScreenshot="f32b9b26c2b1a6e8c3861dc68aea3325.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -2717,7 +2718,7 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'IMG'" sap:VirtualizedContainerService.HintSize="1138,466" sap2010:WorkflowViewState.IdRef="NCheckState_3" Mode="WaitDisappear" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                    <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'IMG'" sap:VirtualizedContainerService.HintSize="1143,466" sap2010:WorkflowViewState.IdRef="NCheckState_3" Mode="WaitDisappear" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_86">
                           <sap:WorkflowViewStateService.ViewState>
@@ -2793,19 +2794,68 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each - list processing information" sap:VirtualizedContainerService.HintSize="1297,310" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+    <Assign sap:VirtualizedContainerService.HintSize="1297,60" sap2010:WorkflowViewState.IdRef="Assign_64">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_94">ErrMsg</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:String)" CurrentIndex="{x:Null}" DisplayName="For Each - list processing information" sap:VirtualizedContainerService.HintSize="1297,686" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:String)">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:String)" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,562" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn">
+            <If sap:VirtualizedContainerService.HintSize="484,339" sap2010:WorkflowViewState.IdRef="If_34">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_157">item.Value != ""</CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_65">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_95">ErrMsg</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_162">ErrMsg + item.Value + "\n"</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_92">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">item.Key + ":" + item.Value</CSharpValue>
@@ -2827,7 +2877,49 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message - finished time" sap:VirtualizedContainerService.HintSize="1296.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
+    <If sap:VirtualizedContainerService.HintSize="1297,339" sap2010:WorkflowViewState.IdRef="If_35">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_161">ErrMsg == ""</CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_93">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_66">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_96">ErrMsg</CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">All Good</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_94">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1297,84" sap2010:WorkflowViewState.IdRef="MessageBox_2">
+      <ui:MessageBox.Text>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_163">ErrMsg</CSharpValue>
+        </InArgument>
+      </ui:MessageBox.Text>
+    </ui:MessageBox>
+    <ui:LogMessage DisplayName="Log Message - finished time" sap:VirtualizedContainerService.HintSize="1297,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">DateTime.Now.ToString() + " Finished"</CSharpValue>
