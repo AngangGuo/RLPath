@@ -3,7 +3,7 @@
     <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1329,22275</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1329,21458</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -98,7 +98,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for sellable assets" DisplayName="QC_Sellable" sap:VirtualizedContainerService.HintSize="1339,22210" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for sellable assets" DisplayName="QC_Sellable" sap:VirtualizedContainerService.HintSize="1339,21393" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Facility" />
       <Variable x:TypeArguments="x:String" Name="QCLocation" />
@@ -240,13 +240,13 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="QC each sellable asset" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1297,18712" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="QC each sellable asset" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1297,17895" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="AssetTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1261,18557" sap2010:WorkflowViewState.IdRef="Sequence_47">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1261,17740" sap2010:WorkflowViewState.IdRef="Sequence_47">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -276,13 +276,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1219,18087" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V2">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1219,17270" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence sap2010:Annotation.AnnotationText="Process sellable asset in BlueIQ" DisplayName="Do - Process sellable asset" sap:VirtualizedContainerService.HintSize="1185,17951" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <Sequence sap2010:Annotation.AnnotationText="Process sellable asset in BlueIQ" DisplayName="Do - Process sellable asset" sap:VirtualizedContainerService.HintSize="1185,17134" sap2010:WorkflowViewState.IdRef="Sequence_46">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="TheText" />
                       <Variable x:TypeArguments="x:Boolean" Name="ProcessItemUpdated" />
@@ -1107,7 +1107,7 @@
                             </Assign.To>
                             <Assign.Value>
                               <InArgument x:TypeArguments="x:String">
-                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">String.Format("{0}; Wrong Site: {1}", AllAssetProcessInfo[AssetTag], TheText)</CSharpValue>
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_167">String.Format("{0}; Wrong Site: {1}(fixed)", AllAssetProcessInfo[AssetTag], TheText)</CSharpValue>
                               </InArgument>
                             </Assign.Value>
                           </Assign>
@@ -1753,20 +1753,24 @@
                         </Sequence>
                       </ui:CommentOut.Body>
                     </ui:CommentOut>
-                    <If DisplayName="If - Save Checklist Questions" sap:VirtualizedContainerService.HintSize="1143,1257" sap2010:WorkflowViewState.IdRef="If_15">
+                    <If DisplayName="If - Save Checklist Questions" sap:VirtualizedContainerService.HintSize="1143,440" sap2010:WorkflowViewState.IdRef="If_15">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">ProcessItemUpdated</CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="722,1098" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                        <Sequence DisplayName="Sequence - Close Checklist" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Int32" Name="retryTimes" />
+                          </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NClick sap2010:Annotation.AnnotationText="Click &quot;Save and Close&quot; button on &quot;Repair: Checklist Questions&quot; window" ClickType="Single" DisplayName="Click - Save Checklist Questions" sap:VirtualizedContainerService.HintSize="680,198" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                          <uix:NClick sap2010:Annotation.AnnotationText="Click &quot;Save and Close&quot; button on &quot;Repair: Checklist Questions&quot; window" ClickType="Single" DisplayName="Click - Save Checklist Questions" sap:VirtualizedContainerService.HintSize="812,198" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Includes/CheckListAnswers.aspx?TypeId=29323978&amp;Indicator=R" DesignTimeRectangle="1361, 317, 30, 30" ElementType="InputBox" FriendlyName="'INPUT ucControls_btnSav…'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_popupCheckListAnswers_CI*' tag='IFRAME' /&gt;&lt;webctrl id='ucControls_btnSaveAndClose' tag='INPUT' type='image' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_popupCheckListAnswers_CI*' tag='IFRAME' /&gt;&lt;webctrl id='ucControls_btnSaveAndClose' tag='INPUT' type='image' class='showHand' aaname='SAVE &amp;amp; CLOSE' /&gt;" Guid="593606c7-6855-40f8-aba9-d383bdd560e8" ImageBase64="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" InformativeScreenshot="8c0bc7e87109db61dcc08baada483c52.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
@@ -1785,7 +1789,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NClick>
-                          <uix:NClick sap2010:Annotation.AnnotationText="Click OK on Window: Andrews have been updated successfully" ClickType="Single" DelayBefore="2" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="680,198" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                          <uix:NClick sap2010:Annotation.AnnotationText="Click OK on Window: Andrews have been updated successfully" ClickType="Single" DelayBefore="2" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="812,198" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable DesignTimeRectangle="1112, 157, 64, 32" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="6f89f832-1773-466b-a442-e5660d592bfb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAkCAYAAAAw55zoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVGhD7Zq9bhNBFIV5Dl4AniA8AS+AuzxBegoKpFSmgwpB4ZYiuHMRCTfQmSJEaRbJRbayXOCAnSVYu17/5DBnxnd9F6fMjtDuHOkqd3bHG53PM3dsXT9AUEklIIM4R+v9DI9fTvDw+Y9aBz3SKz1rFUBe9//c+cImBL2LLBBS4o1HhtrHsxRJemtv1l30Ss/0LivFAnn2bmovfooW6H9f4OmbXwW9usaTVz+tV0LhmAwKIFIzKE7UL6xz8I3nbmBOBpQFIhN03pTQnqkARHmmAhDlmQpAlGcqAFGeqQBEeaYCEOWZ8ghkhs5whWRp/43RBqN4jqO23E9xaa4m8Y0bt+c459xphsPSc+43KJ17AnKFzphfBza4jOZ48eE33l4swY9C2STdGtZApuhOzPzlCt3Ov8+636B07gfIycKaH13MStcPvnIJ3OL8lOMdkMOzFTIDb9C7Ks2vIiidewHSitbmyebdLraHhIMwGV4XeTLOMeJfA+agNLeaoHTuBchxvAHSHMd7924wSGWbOCBOa/Qq3ioSlM69ADkablfI3j0HYRTx27ZsmcxLMZWgdO6nhpzmpibs15CWqRVcDV9OOBYgZqv0ciSSq/lVBKVzP0Dk1NCnTGSOYHMlG8+3pndAeCrZbcaC+7nawkrp3BMQE+1rdOK1heDkPofstoUGwrGrL1UfvZTO/QH5T0N7pgIQ5ZkKQJRnKgBRnqkARHmmAhDlmQpAlGcqAFGeKQtE2nlUUxtVZEBZILqVyWhKK5Ne72xlSrOb7by+mdSUZnf3W1a0cUvNbir8HMKpAEKREpeO1JQ6Bz3Sq6wMUQlIEPAXgwhQPlqR+WUAAAAASUVORK5CYII=" InformativeScreenshot="0cf248643838339b4567955e0c19b015.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='BlueIQ - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="None">
                                 <uix:TargetAnchorable.Anchors>
@@ -1803,60 +1807,106 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uix:NClick>
-                          <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="The OK button need some time to show out. There'll be no effect if click too early." DisplayName="Check App State 'OK'" sap:VirtualizedContainerService.HintSize="680,528" sap2010:WorkflowViewState.IdRef="NCheckState_2" Mode="WaitDisappear" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
-                            <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                          <Assign sap:VirtualizedContainerService.HintSize="812,61" sap2010:WorkflowViewState.IdRef="Assign_67">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">
+                                <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_97">retryTimes</CSharpReference>
+                              </OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">10</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="812,886" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                            <ui:InterruptibleDoWhile.Body>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="776,721" sap2010:WorkflowViewState.IdRef="Sequence_95">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                              </Sequence>
-                            </uix:NCheckState.IfExists>
-                            <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="376,281" sap2010:WorkflowViewState.IdRef="Sequence_36">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <uix:NClick sap2010:Annotation.AnnotationText="Click again if failed the first time" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
-                                  <uix:NClick.Target>
-                                    <uix:TargetAnchorable DesignTimeRectangle="1112, 157, 64, 32" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="6f89f832-1773-466b-a442-e5660d592bfb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAkCAYAAAAw55zoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVGhD7Zq9bhNBFIV5Dl4AniA8AS+AuzxBegoKpFSmgwpB4ZYiuHMRCTfQmSJEaRbJRbayXOCAnSVYu17/5DBnxnd9F6fMjtDuHOkqd3bHG53PM3dsXT9AUEklIIM4R+v9DI9fTvDw+Y9aBz3SKz1rFUBe9//c+cImBL2LLBBS4o1HhtrHsxRJemtv1l30Ss/0LivFAnn2bmovfooW6H9f4OmbXwW9usaTVz+tV0LhmAwKIFIzKE7UL6xz8I3nbmBOBpQFIhN03pTQnqkARHmmAhDlmQpAlGcqAFGeqQBEeaYCEOWZ8ghkhs5whWRp/43RBqN4jqO23E9xaa4m8Y0bt+c459xphsPSc+43KJ17AnKFzphfBza4jOZ48eE33l4swY9C2STdGtZApuhOzPzlCt3Ov8+636B07gfIycKaH13MStcPvnIJ3OL8lOMdkMOzFTIDb9C7Ks2vIiidewHSitbmyebdLraHhIMwGV4XeTLOMeJfA+agNLeaoHTuBchxvAHSHMd7924wSGWbOCBOa/Qq3ioSlM69ADkablfI3j0HYRTx27ZsmcxLMZWgdO6nhpzmpibs15CWqRVcDV9OOBYgZqv0ciSSq/lVBKVzP0Dk1NCnTGSOYHMlG8+3pndAeCrZbcaC+7nawkrp3BMQE+1rdOK1heDkPofstoUGwrGrL1UfvZTO/QH5T0N7pgIQ5ZkKQJRnKgBRnqkARHmmAhDlmQpAlGcqAFGeKQtE2nlUUxtVZEBZILqVyWhKK5Ne72xlSrOb7by+mdSUZnf3W1a0cUvNbir8HMKpAEKREpeO1JQ6Bz3Sq6wMUQlIEPAXgwhQPlqR+WUAAAAASUVORK5CYII=" InformativeScreenshot="0cf248643838339b4567955e0c19b015.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='BlueIQ - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="None">
+                                <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="The OK button need some time to show out. There'll be no effect if click too early." DisplayName="Check App State 'OK'" sap:VirtualizedContainerService.HintSize="734,629" sap2010:WorkflowViewState.IdRef="NCheckState_2" Mode="WaitDisappear" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Timeout="2" Version="V1">
+                                  <uix:NCheckState.IfExists>
+                                    <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="304,153" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_68">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">
+                                            <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_98">retryTimes</CSharpReference>
+                                          </OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </uix:NCheckState.IfExists>
+                                  <uix:NCheckState.IfNotExists>
+                                    <Sequence DisplayName="Target does not disappear" sap:VirtualizedContainerService.HintSize="376,382" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NClick sap2010:Annotation.AnnotationText="Click again if failed the first time" ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="1112, 157, 64, 32" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="6f89f832-1773-466b-a442-e5660d592bfb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAkCAYAAAAw55zoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVGhD7Zq9bhNBFIV5Dl4AniA8AS+AuzxBegoKpFSmgwpB4ZYiuHMRCTfQmSJEaRbJRbayXOCAnSVYu17/5DBnxnd9F6fMjtDuHOkqd3bHG53PM3dsXT9AUEklIIM4R+v9DI9fTvDw+Y9aBz3SKz1rFUBe9//c+cImBL2LLBBS4o1HhtrHsxRJemtv1l30Ss/0LivFAnn2bmovfooW6H9f4OmbXwW9usaTVz+tV0LhmAwKIFIzKE7UL6xz8I3nbmBOBpQFIhN03pTQnqkARHmmAhDlmQpAlGcqAFGeqQBEeaYCEOWZ8ghkhs5whWRp/43RBqN4jqO23E9xaa4m8Y0bt+c459xphsPSc+43KJ17AnKFzphfBza4jOZ48eE33l4swY9C2STdGtZApuhOzPzlCt3Ov8+636B07gfIycKaH13MStcPvnIJ3OL8lOMdkMOzFTIDb9C7Ks2vIiidewHSitbmyebdLraHhIMwGV4XeTLOMeJfA+agNLeaoHTuBchxvAHSHMd7924wSGWbOCBOa/Qq3ioSlM69ADkablfI3j0HYRTx27ZsmcxLMZWgdO6nhpzmpibs15CWqRVcDV9OOBYgZqv0ciSSq/lVBKVzP0Dk1NCnTGSOYHMlG8+3pndAeCrZbcaC+7nawkrp3BMQE+1rdOK1heDkPofstoUGwrGrL1UfvZTO/QH5T0N7pgIQ5ZkKQJRnKgBRnqkARHmmAhDlmQpAlGcqAFGeKQtE2nlUUxtVZEBZILqVyWhKK5Ne72xlSrOb7by+mdSUZnf3W1a0cUvNbir8HMKpAEKREpeO1JQ6Bz3Sq6wMUQlIEPAXgwhQPlqR+WUAAAAASUVORK5CYII=" InformativeScreenshot="0cf248643838339b4567955e0c19b015.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='BlueIQ - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="None">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="760, 121, 416, 20" ElementType="Text" FriendlyName="'Answers have'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='Answers have been updated successfully' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='Answers have been updated successfully' role='text' automationid='' check:fulltext='Answers have been updated successfully' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaQAAAAYCAYAAAC1M4mPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUdSURBVHhe7ZoJbttADEV7lBTouRLkKHaO45zFuYcvoZKzcpWVNi1k5T9ASGYRh8MZfmbxjwUAAADYAShIAAAAdgEKEgAAgF2AggQAAGAXoCABAADYBShIAAAAdgEKEgAAgF1w0IL0sZx+vi6XW2v+R26X1+Xp/NFajw/v5/mfB5LP6225ttYjcz3/Wp5+0nPnDqh7cntfng+yfwD+hrAglWR56ARBQfoqthYkFuI/L1wHKUifKCwoSAB4goJUxeFEAnN62AxBQfoqUJA+AReWl/dlSxRQkADw+IJ0fauJ0r8KehKNP0sY0Z/9TZyMjfK+SFgldiUp+/szOeua78vlZfaXvj7X+FhpBekqbCqh4PHWT0/3wYuqFkq3vwAfI1/YczvSLxHbLlgcz/A9gRPFG8Wu27oXF0KeA41d5RmFcWP7s8+dXe8356Tjo+OsiWLi57M9GWe1trlzUX96Jsm9dPPF2fDDvlifZD70e1Ib7XzpW35Hn207M9kFwEFxBWkmkU+Ensw9yUq7JbVKsIEWjuuZxO2ltwOh7Gtx4kq7yVgO2yNhGPNqe4gD2RjfFzFo9q3tTECK70ZsGjZGyj43UzvGphCpIYpKwERMJDym4mPjLONCW2RhHf6Yc2jrDoHM4kY4ITWxlOP2rhQfTIGpZHFmP/X8eW+bfbn2pX6/2h+eiYlHw/o/MLGXPhWy+1Ri2fazcgcBODq6IMnEIKzIuERcS6SCSW4av4wkrW2e7xN8Cs7qmileSOxeJlaw9f4zYWK/Int+L3LtFTsufsIvt+dMqAmem9kJ1pe2I9+zfWq7Nr6Bf0NYAx9M3CXxufn586y0X5Osf+VMon0w4V0nTOynTw1RXFSs1fnqvTkbABwYVZCcIJkE84Klk6eMm5/AR3JTMtqvKjn5PfVUkfBrEvxumROL2LrIlFYRGrsWMwRA7Z3tyfntsX4Rkb9z7RU7Y0/6Gb6kAmwwZ0YdQoh9XOQZ6hhVPhO3fF57il9zvUnU15m2pn0/f8Yjs7XWb/zkZ5zhHJfxLufM/TLWJvbujOyd72uY872/FwCOiShIiYjQ05NKJVEhThiXbJSk18tbFa/RflV2rRB2/JoCTnApCAP2KytIdZ9TKLgt5jbR0D5tF4bI300CI8TKYQSLcWLXMaKo9+fjIudnvm+J25zHmJgqEh/uxleu7+OoYxytvda/5Wzj91XMTOzdGW0sSKXNY2t3AoADMgtSIu4ycbxgJcmsbNVEtv87mm2iJGQsYJFIDlIh8+LBdqpgmjG3dt3T6azfZ3HZIg7FX2mPYyF8zO3wuitFxuzTid1A70/7U9eY61eRH4XExqK0+/h63NifWZDausF9YmwMSjs8R81cQxYnosR4tos9WRja/4pW+++erVmzI+86x0TY13dXx16NufPltfwdBODojII0k90ghEcnGMNJVhOpCh8LCz9ePOV7oVg1URlPlLiMmpclrBFPgu2M/UkbnPjmp3krXJUqSPfWrv72TwVG81bstAIwxqTQbS5IzYdm4/nyQev1NVpc6LfVsYY6T0LFxnzKbi1uw/fpZ4ljn0/P9FfHIP+UnYlVdg+o38ZDrS3ei/uzM2lFpD09DjK+6q5zDNS9ke/TPPa5ranudXC+ZdzdQQCOjf5QAzg4vlCDfcIFKfwBEYADg4L0rUBBegyy3xgBODYoSN8KFKS90/+kmP05FoAjg4IEAABgF6AgAQAA2AUoSAAAAHYBChIAAIAdsCy/AUzAjxORHQFLAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NClick>
+                                      <Assign sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_69">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">
+                                            <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_99">retryTimes</CSharpReference>
+                                          </OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">
+                                            <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_170">retryTimes - 1</CSharpValue>
+                                          </InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </uix:NCheckState.IfNotExists>
+                                  <uix:NCheckState.Target>
+                                    <uix:TargetAnchorable DesignTimeRectangle="1112, 157, 64, 32" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="8e31308e-accf-4264-ad35-dff2cbe7bdb2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAkCAYAAAAw55zoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVGhD7Zq9bhNBFIV5Dl4AniA8AS+AuzxBegoKpFSmgwpB4ZYiuHMRCTfQmSJEaRbJRbayXOCAnSVYu17/5DBnxnd9F6fMjtDuHOkqd3bHG53PM3dsXT9AUEklIIM4R+v9DI9fTvDw+Y9aBz3SKz1rFUBe9//c+cImBL2LLBBS4o1HhtrHsxRJemtv1l30Ss/0LivFAnn2bmovfooW6H9f4OmbXwW9usaTVz+tV0LhmAwKIFIzKE7UL6xz8I3nbmBOBpQFIhN03pTQnqkARHmmAhDlmQpAlGcqAFGeqQBEeaYCEOWZ8ghkhs5whWRp/43RBqN4jqO23E9xaa4m8Y0bt+c459xphsPSc+43KJ17AnKFzphfBza4jOZ48eE33l4swY9C2STdGtZApuhOzPzlCt3Ov8+636B07gfIycKaH13MStcPvnIJ3OL8lOMdkMOzFTIDb9C7Ks2vIiidewHSitbmyebdLraHhIMwGV4XeTLOMeJfA+agNLeaoHTuBchxvAHSHMd7924wSGWbOCBOa/Qq3ioSlM69ADkablfI3j0HYRTx27ZsmcxLMZWgdO6nhpzmpibs15CWqRVcDV9OOBYgZqv0ciSSq/lVBKVzP0Dk1NCnTGSOYHMlG8+3pndAeCrZbcaC+7nawkrp3BMQE+1rdOK1heDkPofstoUGwrGrL1UfvZTO/QH5T0N7pgIQ5ZkKQJRnKgBRnqkARHmmAhDlmQpAlGcqAFGeKQtE2nlUUxtVZEBZILqVyWhKK5Ne72xlSrOb7by+mdSUZnf3W1a0cUvNbir8HMKpAEKREpeO1JQ6Bz3Sq6wMUQlIEPAXgwhQPlqR+WUAAAAASUVORK5CYII=" InformativeScreenshot="ce2b94c2363708c1c6a85c07ca1146a7.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='BlueIQ - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
                                         <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                          <uix:Target DesignTimeRectangle="760, 121, 416, 20" ElementType="Text" FriendlyName="'Answers have'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='Answers have been updated successfully' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='Answers have been updated successfully' role='text' automationid='' check:fulltext='Answers have been updated successfully' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaQAAAAYCAYAAAC1M4mPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUdSURBVHhe7ZoJbttADEV7lBTouRLkKHaO45zFuYcvoZKzcpWVNi1k5T9ASGYRh8MZfmbxjwUAAADYAShIAAAAdgEKEgAAgF2AggQAAGAXoCABAADYBShIAAAAdgEKEgAAgF1w0IL0sZx+vi6XW2v+R26X1+Xp/NFajw/v5/mfB5LP6225ttYjcz3/Wp5+0nPnDqh7cntfng+yfwD+hrAglWR56ARBQfoqthYkFuI/L1wHKUifKCwoSAB4goJUxeFEAnN62AxBQfoqUJA+AReWl/dlSxRQkADw+IJ0fauJ0r8KehKNP0sY0Z/9TZyMjfK+SFgldiUp+/szOeua78vlZfaXvj7X+FhpBekqbCqh4PHWT0/3wYuqFkq3vwAfI1/YczvSLxHbLlgcz/A9gRPFG8Wu27oXF0KeA41d5RmFcWP7s8+dXe8356Tjo+OsiWLi57M9GWe1trlzUX96Jsm9dPPF2fDDvlifZD70e1Ib7XzpW35Hn207M9kFwEFxBWkmkU+Ensw9yUq7JbVKsIEWjuuZxO2ltwOh7Gtx4kq7yVgO2yNhGPNqe4gD2RjfFzFo9q3tTECK70ZsGjZGyj43UzvGphCpIYpKwERMJDym4mPjLONCW2RhHf6Yc2jrDoHM4kY4ITWxlOP2rhQfTIGpZHFmP/X8eW+bfbn2pX6/2h+eiYlHw/o/MLGXPhWy+1Ri2fazcgcBODq6IMnEIKzIuERcS6SCSW4av4wkrW2e7xN8Cs7qmileSOxeJlaw9f4zYWK/Int+L3LtFTsufsIvt+dMqAmem9kJ1pe2I9+zfWq7Nr6Bf0NYAx9M3CXxufn586y0X5Osf+VMon0w4V0nTOynTw1RXFSs1fnqvTkbABwYVZCcIJkE84Klk6eMm5/AR3JTMtqvKjn5PfVUkfBrEvxumROL2LrIlFYRGrsWMwRA7Z3tyfntsX4Rkb9z7RU7Y0/6Gb6kAmwwZ0YdQoh9XOQZ6hhVPhO3fF57il9zvUnU15m2pn0/f8Yjs7XWb/zkZ5zhHJfxLufM/TLWJvbujOyd72uY872/FwCOiShIiYjQ05NKJVEhThiXbJSk18tbFa/RflV2rRB2/JoCTnApCAP2KytIdZ9TKLgt5jbR0D5tF4bI300CI8TKYQSLcWLXMaKo9+fjIudnvm+J25zHmJgqEh/uxleu7+OoYxytvda/5Wzj91XMTOzdGW0sSKXNY2t3AoADMgtSIu4ycbxgJcmsbNVEtv87mm2iJGQsYJFIDlIh8+LBdqpgmjG3dt3T6azfZ3HZIg7FX2mPYyF8zO3wuitFxuzTid1A70/7U9eY61eRH4XExqK0+/h63NifWZDausF9YmwMSjs8R81cQxYnosR4tos9WRja/4pW+++erVmzI+86x0TY13dXx16NufPltfwdBODojII0k90ghEcnGMNJVhOpCh8LCz9ePOV7oVg1URlPlLiMmpclrBFPgu2M/UkbnPjmp3krXJUqSPfWrv72TwVG81bstAIwxqTQbS5IzYdm4/nyQev1NVpc6LfVsYY6T0LFxnzKbi1uw/fpZ4ljn0/P9FfHIP+UnYlVdg+o38ZDrS3ei/uzM2lFpD09DjK+6q5zDNS9ke/TPPa5ranudXC+ZdzdQQCOjf5QAzg4vlCDfcIFKfwBEYADg4L0rUBBegyy3xgBODYoSN8KFKS90/+kmP05FoAjg4IEAABgF6AgAQAA2AUoSAAAAHYBChIAAIAdsCy/AUzAjxORHQFLAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                          <uix:Target DesignTimeRectangle="760, 121, 416, 20" ElementType="Text" FriendlyName="'Answers have'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='Answers have been updated successfully' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='Answers have been updated successfully' role='text' automationid='' check:fulltext='Answers have been updated successfully' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaQAAAAYCAYAAAC1M4mPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUdSURBVHhe7ZoJbttADEV7lBTouRLkKHaO45zFuYcvoZKzcpWVNi1k5T9ASGYRh8MZfmbxjwUAAADYAShIAAAAdgEKEgAAgF2AggQAAGAXoCABAADYBShIAAAAdgEKEgAAgF1w0IL0sZx+vi6XW2v+R26X1+Xp/NFajw/v5/mfB5LP6225ttYjcz3/Wp5+0nPnDqh7cntfng+yfwD+hrAglWR56ARBQfoqthYkFuI/L1wHKUifKCwoSAB4goJUxeFEAnN62AxBQfoqUJA+AReWl/dlSxRQkADw+IJ0fauJ0r8KehKNP0sY0Z/9TZyMjfK+SFgldiUp+/szOeua78vlZfaXvj7X+FhpBekqbCqh4PHWT0/3wYuqFkq3vwAfI1/YczvSLxHbLlgcz/A9gRPFG8Wu27oXF0KeA41d5RmFcWP7s8+dXe8356Tjo+OsiWLi57M9GWe1trlzUX96Jsm9dPPF2fDDvlifZD70e1Ib7XzpW35Hn207M9kFwEFxBWkmkU+Ensw9yUq7JbVKsIEWjuuZxO2ltwOh7Gtx4kq7yVgO2yNhGPNqe4gD2RjfFzFo9q3tTECK70ZsGjZGyj43UzvGphCpIYpKwERMJDym4mPjLONCW2RhHf6Yc2jrDoHM4kY4ITWxlOP2rhQfTIGpZHFmP/X8eW+bfbn2pX6/2h+eiYlHw/o/MLGXPhWy+1Ri2fazcgcBODq6IMnEIKzIuERcS6SCSW4av4wkrW2e7xN8Cs7qmileSOxeJlaw9f4zYWK/Int+L3LtFTsufsIvt+dMqAmem9kJ1pe2I9+zfWq7Nr6Bf0NYAx9M3CXxufn586y0X5Osf+VMon0w4V0nTOynTw1RXFSs1fnqvTkbABwYVZCcIJkE84Klk6eMm5/AR3JTMtqvKjn5PfVUkfBrEvxumROL2LrIlFYRGrsWMwRA7Z3tyfntsX4Rkb9z7RU7Y0/6Gb6kAmwwZ0YdQoh9XOQZ6hhVPhO3fF57il9zvUnU15m2pn0/f8Yjs7XWb/zkZ5zhHJfxLufM/TLWJvbujOyd72uY872/FwCOiShIiYjQ05NKJVEhThiXbJSk18tbFa/RflV2rRB2/JoCTnApCAP2KytIdZ9TKLgt5jbR0D5tF4bI300CI8TKYQSLcWLXMaKo9+fjIudnvm+J25zHmJgqEh/uxleu7+OoYxytvda/5Wzj91XMTOzdGW0sSKXNY2t3AoADMgtSIu4ycbxgJcmsbNVEtv87mm2iJGQsYJFIDlIh8+LBdqpgmjG3dt3T6azfZ3HZIg7FX2mPYyF8zO3wuitFxuzTid1A70/7U9eY61eRH4XExqK0+/h63NifWZDausF9YmwMSjs8R81cQxYnosR4tos9WRja/4pW+++erVmzI+86x0TY13dXx16NufPltfwdBODojII0k90ghEcnGMNJVhOpCh8LCz9ePOV7oVg1URlPlLiMmpclrBFPgu2M/UkbnPjmp3krXJUqSPfWrv72TwVG81bstAIwxqTQbS5IzYdm4/nyQev1NVpc6LfVsYY6T0LFxnzKbi1uw/fpZ4ljn0/P9FfHIP+UnYlVdg+o38ZDrS3ei/uzM2lFpD09DjK+6q5zDNS9ke/TPPa5ranudXC+ZdzdQQCOjf5QAzg4vlCDfcIFKfwBEYADg4L0rUBBegyy3xgBODYoSN8KFKS90/+kmP05FoAjg4IEAABgF6AgAQAA2AUoSAAAAHYBChIAAIAdsCy/AUzAjxORHQFLAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
                                         </scg:List>
                                       </uix:TargetAnchorable.Anchors>
                                     </uix:TargetAnchorable>
-                                  </uix:NClick.Target>
+                                  </uix:NCheckState.Target>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                </uix:NClick>
+                                </uix:NCheckState>
                               </Sequence>
-                            </uix:NCheckState.IfNotExists>
-                            <uix:NCheckState.Target>
-                              <uix:TargetAnchorable DesignTimeRectangle="1112, 157, 64, 32" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="8e31308e-accf-4264-ad35-dff2cbe7bdb2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAkCAYAAAAw55zoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVGhD7Zq9bhNBFIV5Dl4AniA8AS+AuzxBegoKpFSmgwpB4ZYiuHMRCTfQmSJEaRbJRbayXOCAnSVYu17/5DBnxnd9F6fMjtDuHOkqd3bHG53PM3dsXT9AUEklIIM4R+v9DI9fTvDw+Y9aBz3SKz1rFUBe9//c+cImBL2LLBBS4o1HhtrHsxRJemtv1l30Ss/0LivFAnn2bmovfooW6H9f4OmbXwW9usaTVz+tV0LhmAwKIFIzKE7UL6xz8I3nbmBOBpQFIhN03pTQnqkARHmmAhDlmQpAlGcqAFGeqQBEeaYCEOWZ8ghkhs5whWRp/43RBqN4jqO23E9xaa4m8Y0bt+c459xphsPSc+43KJ17AnKFzphfBza4jOZ48eE33l4swY9C2STdGtZApuhOzPzlCt3Ov8+636B07gfIycKaH13MStcPvnIJ3OL8lOMdkMOzFTIDb9C7Ks2vIiidewHSitbmyebdLraHhIMwGV4XeTLOMeJfA+agNLeaoHTuBchxvAHSHMd7924wSGWbOCBOa/Qq3ioSlM69ADkablfI3j0HYRTx27ZsmcxLMZWgdO6nhpzmpibs15CWqRVcDV9OOBYgZqv0ciSSq/lVBKVzP0Dk1NCnTGSOYHMlG8+3pndAeCrZbcaC+7nawkrp3BMQE+1rdOK1heDkPofstoUGwrGrL1UfvZTO/QH5T0N7pgIQ5ZkKQJRnKgBRnqkARHmmAhDlmQpAlGcqAFGeKQtE2nlUUxtVZEBZILqVyWhKK5Ne72xlSrOb7by+mdSUZnf3W1a0cUvNbir8HMKpAEKREpeO1JQ6Bz3Sq6wMUQlIEPAXgwhQPlqR+WUAAAAASUVORK5CYII=" InformativeScreenshot="ce2b94c2363708c1c6a85c07ca1146a7.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='BlueIQ - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive">
-                                <uix:TargetAnchorable.Anchors>
-                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                    <uix:Target DesignTimeRectangle="760, 121, 416, 20" ElementType="Text" FriendlyName="'Answers have'" FullSelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='Answers have been updated successfully' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='blueiq.cloudblue.com says' role='dialog' /&gt;&lt;ctrl name='Answers have been updated successfully' role='text' automationid='' check:fulltext='Answers have been updated successfully' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaQAAAAYCAYAAAC1M4mPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUdSURBVHhe7ZoJbttADEV7lBTouRLkKHaO45zFuYcvoZKzcpWVNi1k5T9ASGYRh8MZfmbxjwUAAADYAShIAAAAdgEKEgAAgF2AggQAAGAXoCABAADYBShIAAAAdgEKEgAAgF1w0IL0sZx+vi6XW2v+R26X1+Xp/NFajw/v5/mfB5LP6225ttYjcz3/Wp5+0nPnDqh7cntfng+yfwD+hrAglWR56ARBQfoqthYkFuI/L1wHKUifKCwoSAB4goJUxeFEAnN62AxBQfoqUJA+AReWl/dlSxRQkADw+IJ0fauJ0r8KehKNP0sY0Z/9TZyMjfK+SFgldiUp+/szOeua78vlZfaXvj7X+FhpBekqbCqh4PHWT0/3wYuqFkq3vwAfI1/YczvSLxHbLlgcz/A9gRPFG8Wu27oXF0KeA41d5RmFcWP7s8+dXe8356Tjo+OsiWLi57M9GWe1trlzUX96Jsm9dPPF2fDDvlifZD70e1Ib7XzpW35Hn207M9kFwEFxBWkmkU+Ensw9yUq7JbVKsIEWjuuZxO2ltwOh7Gtx4kq7yVgO2yNhGPNqe4gD2RjfFzFo9q3tTECK70ZsGjZGyj43UzvGphCpIYpKwERMJDym4mPjLONCW2RhHf6Yc2jrDoHM4kY4ITWxlOP2rhQfTIGpZHFmP/X8eW+bfbn2pX6/2h+eiYlHw/o/MLGXPhWy+1Ri2fazcgcBODq6IMnEIKzIuERcS6SCSW4av4wkrW2e7xN8Cs7qmileSOxeJlaw9f4zYWK/Int+L3LtFTsufsIvt+dMqAmem9kJ1pe2I9+zfWq7Nr6Bf0NYAx9M3CXxufn586y0X5Osf+VMon0w4V0nTOynTw1RXFSs1fnqvTkbABwYVZCcIJkE84Klk6eMm5/AR3JTMtqvKjn5PfVUkfBrEvxumROL2LrIlFYRGrsWMwRA7Z3tyfntsX4Rkb9z7RU7Y0/6Gb6kAmwwZ0YdQoh9XOQZ6hhVPhO3fF57il9zvUnU15m2pn0/f8Yjs7XWb/zkZ5zhHJfxLufM/TLWJvbujOyd72uY872/FwCOiShIiYjQ05NKJVEhThiXbJSk18tbFa/RflV2rRB2/JoCTnApCAP2KytIdZ9TKLgt5jbR0D5tF4bI300CI8TKYQSLcWLXMaKo9+fjIudnvm+J25zHmJgqEh/uxleu7+OoYxytvda/5Wzj91XMTOzdGW0sSKXNY2t3AoADMgtSIu4ycbxgJcmsbNVEtv87mm2iJGQsYJFIDlIh8+LBdqpgmjG3dt3T6azfZ3HZIg7FX2mPYyF8zO3wuitFxuzTid1A70/7U9eY61eRH4XExqK0+/h63NifWZDausF9YmwMSjs8R81cQxYnosR4tos9WRja/4pW+++erVmzI+86x0TY13dXx16NufPltfwdBODojII0k90ghEcnGMNJVhOpCh8LCz9ePOV7oVg1URlPlLiMmpclrBFPgu2M/UkbnPjmp3krXJUqSPfWrv72TwVG81bstAIwxqTQbS5IzYdm4/nyQev1NVpc6LfVsYY6T0LFxnzKbi1uw/fpZ4ljn0/P9FfHIP+UnYlVdg+o38ZDrS3ei/uzM2lFpD09DjK+6q5zDNS9ke/TPPa5ranudXC+ZdzdQQCOjf5QAzg4vlCDfcIFKfwBEYADg4L0rUBBegyy3xgBODYoSN8KFKS90/+kmP05FoAjg4IEAABgF6AgAQAA2AUoSAAAAHYBChIAAIAdsCy/AUzAjxORHQFLAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
-                                  </scg:List>
-                                </uix:TargetAnchorable.Anchors>
-                              </uix:TargetAnchorable>
-                            </uix:NCheckState.Target>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </uix:NCheckState>
+                            </ui:InterruptibleDoWhile.Body>
+                            <ui:InterruptibleDoWhile.Condition>
+                              <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_169">retryTimes &gt; 0</CSharpValue>
+                            </ui:InterruptibleDoWhile.Condition>
+                          </ui:InterruptibleDoWhile>
                         </Sequence>
                       </If.Then>
                       <If.Else>
@@ -1934,7 +1984,7 @@
                     </Assign>
                     <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="One by one check all the items in &quot;Processes Completed&quot; tab.&#xA;Last item Cosmetic Inspection is 11&#xA;&#xA;0 &quot;Receiving&quot;, &#xA;1 &quot;Sort&quot;,&#xA;2 &quot;Production&quot;, &#xA;3 &quot;Repair with Parts&quot;,&#xA;4 &quot;Repair Without Parts&quot;,&#xA;5 &quot;Data Erasure&quot;,&#xA;6 &quot;Imaging&quot;,&#xA;7 &quot;Kitting&quot;,&#xA;8 &quot;Deep Clean&quot;,&#xA;9 &quot;Clean &amp; Pack&quot;,&#xA;10 &quot;Rebox&quot;,&#xA;11 &quot;Cosmetic Inspection&quot;" DisplayName="While" sap:VirtualizedContainerService.HintSize="1143,333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                       <ui:InterruptibleWhile.Body>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="958,2223" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="959,2323" sap2010:WorkflowViewState.IdRef="Sequence_43">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="ui:UiElement" Name="ProcessItem" />
                             <Variable x:TypeArguments="x:String" Name="ProcessItemClass" />
@@ -1946,7 +1996,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence sap2010:Annotation.AnnotationText="Get value(Yes, No, NA)" sap:VirtualizedContainerService.HintSize="916,1729" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                          <Sequence sap2010:Annotation.AnnotationText="Get value(Yes, No, NA)" sap:VirtualizedContainerService.HintSize="917,1725" sap2010:WorkflowViewState.IdRef="Sequence_69">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1954,7 +2004,7 @@
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap2010:Annotation.AnnotationText="init button selected status&#xA;&#xA;For new order(Sort only)" sap:VirtualizedContainerService.HintSize="874,117" sap2010:WorkflowViewState.IdRef="Assign_45">
+                            <Assign sap2010:Annotation.AnnotationText="init button selected status&#xA;&#xA;For new order(Sort only)" sap:VirtualizedContainerService.HintSize="875,117" sap2010:WorkflowViewState.IdRef="Assign_45">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_68">ProcessesCompleted[CurrentItemNo]</CSharpReference>
@@ -1969,7 +2019,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <Assign sap2010:Annotation.AnnotationText="Yes button selector" sap:VirtualizedContainerService.HintSize="874,91" sap2010:WorkflowViewState.IdRef="Assign_30">
+                            <Assign sap2010:Annotation.AnnotationText="Yes button selector" sap:VirtualizedContainerService.HintSize="875,91" sap2010:WorkflowViewState.IdRef="Assign_30">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_79">YesSelector</CSharpReference>
@@ -1986,7 +2036,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <Assign sap2010:Annotation.AnnotationText="No button selector" sap:VirtualizedContainerService.HintSize="874,91" sap2010:WorkflowViewState.IdRef="Assign_54">
+                            <Assign sap2010:Annotation.AnnotationText="No button selector" sap:VirtualizedContainerService.HintSize="875,91" sap2010:WorkflowViewState.IdRef="Assign_54">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_80">NoSelector</CSharpReference>
@@ -2003,7 +2053,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </Assign>
-                            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="874,51" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="875,51" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                               <ui:WaitUiElementAppear.FoundElement>
                                 <OutArgument x:TypeArguments="ui:UiElement">
                                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_45">ProcessItem</CSharpReference>
@@ -2031,7 +2081,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:WaitUiElementAppear>
-                            <uix:NGetAttribute Attribute="class" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="874,51" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" Version="V1">
+                            <uix:NGetAttribute Attribute="class" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="875,51" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" Version="V1">
                               <uix:NGetAttribute.InUiElement>
                                 <InArgument x:TypeArguments="ui:UiElement">
                                   <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">ProcessItem</CSharpValue>
@@ -2049,7 +2099,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NGetAttribute>
-                            <If sap:VirtualizedContainerService.HintSize="874,1005" sap2010:WorkflowViewState.IdRef="If_17">
+                            <If sap:VirtualizedContainerService.HintSize="875,1001" sap2010:WorkflowViewState.IdRef="If_17">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
                                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">ProcessItemClass.Contains("RadioButtonChecked")</CSharpValue>
@@ -2139,14 +2189,14 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence sap2010:Annotation.AnnotationText="Check No button status" sap:VirtualizedContainerService.HintSize="525,848" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                <Sequence sap2010:Annotation.AnnotationText="Check No button status" sap:VirtualizedContainerService.HintSize="526,844" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="483,86" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+                                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="484,86" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
                                     <ui:WaitUiElementAppear.FoundElement>
                                       <OutArgument x:TypeArguments="ui:UiElement">
                                         <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_71">ProcessItem</CSharpReference>
@@ -2174,7 +2224,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:WaitUiElementAppear>
-                                  <uix:NGetAttribute Attribute="class" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="483,186" sap2010:WorkflowViewState.IdRef="NGetAttribute_2" Version="V1">
+                                  <uix:NGetAttribute Attribute="class" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="484,186" sap2010:WorkflowViewState.IdRef="NGetAttribute_2" Version="V1">
                                     <uix:NGetAttribute.InUiElement>
                                       <InArgument x:TypeArguments="ui:UiElement">
                                         <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">ProcessItem</CSharpValue>
@@ -2192,20 +2242,20 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </uix:NGetAttribute>
-                                  <If sap:VirtualizedContainerService.HintSize="483.2,372.8" sap2010:WorkflowViewState.IdRef="If_25">
+                                  <If sap:VirtualizedContainerService.HintSize="484,369" sap2010:WorkflowViewState.IdRef="If_25">
                                     <If.Condition>
                                       <InArgument x:TypeArguments="x:Boolean">
                                         <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">ProcessItemClass.Contains("RadioButtonChecked")</CSharpValue>
                                       </InArgument>
                                     </If.Condition>
                                     <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="304,184" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="304,183" sap2010:WorkflowViewState.IdRef="Sequence_64">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Assign sap2010:Annotation.AnnotationText="Yes button is in selected status" sap:VirtualizedContainerService.HintSize="262.4,91.2" sap2010:WorkflowViewState.IdRef="Assign_48">
+                                        <Assign sap2010:Annotation.AnnotationText="Yes button is in selected status" sap:VirtualizedContainerService.HintSize="262,91" sap2010:WorkflowViewState.IdRef="Assign_48">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:String">
                                               <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_73">ProcessesCompleted[CurrentItemNo]</CSharpReference>
@@ -2236,7 +2286,7 @@
                               </If.Else>
                             </If>
                           </Sequence>
-                          <Switch x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Todo: make the select button a subroutine: Pass selector string" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="914.4,380.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                          <Switch x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Todo: make the select button a subroutine: Pass selector string" DisplayName="Switch" sap:VirtualizedContainerService.HintSize="917,366" sap2010:WorkflowViewState.IdRef="Switch`1_2">
                             <Switch.Expression>
                               <InArgument x:TypeArguments="x:Int32">
                                 <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">CurrentItemNo</CSharpValue>
@@ -2247,7 +2297,7 @@
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If x:Key="2" sap2010:Annotation.AnnotationText="Production must be Yes" sap:VirtualizedContainerService.HintSize="483.2,568" sap2010:WorkflowViewState.IdRef="If_27">
+                            <If x:Key="2" sap2010:Annotation.AnnotationText="Production must be Yes" sap:VirtualizedContainerService.HintSize="484,565" sap2010:WorkflowViewState.IdRef="If_27">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
                                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_109">ProcessesCompleted[CurrentItemNo] != "Yes"</CSharpValue>
@@ -2261,13 +2311,13 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="376,348" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,345" sap2010:WorkflowViewState.IdRef="Sequence_72">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="334.4,60" sap2010:WorkflowViewState.IdRef="Assign_52">
+                                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_52">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">
                                         <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_77">AllAssetProcessInfo[AssetTag]</CSharpReference>
@@ -2279,7 +2329,7 @@
                                       </InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Warn">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Warn">
                                     <ui:LogMessage.Message>
                                       <InArgument x:TypeArguments="x:Object">
                                         <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
@@ -2300,7 +2350,7 @@
                               </If.Else>
                             </If>
                             <x:Null x:Key="3" />
-                            <If x:Key="4" sap2010:Annotation.AnnotationText="Repair Without Parts must be Yes" sap:VirtualizedContainerService.HintSize="483.2,612" sap2010:WorkflowViewState.IdRef="If_29">
+                            <If x:Key="4" sap2010:Annotation.AnnotationText="Repair Without Parts must be Yes" sap:VirtualizedContainerService.HintSize="484,604" sap2010:WorkflowViewState.IdRef="If_29">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
                                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_121">ProcessesCompleted[CurrentItemNo] != "Yes"</CSharpValue>
@@ -2314,14 +2364,14 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence sap2010:Annotation.AnnotationText="Repair Without Parts must be Yes. &#xA;Ask the associate to fix it." sap:VirtualizedContainerService.HintSize="375.2,392" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                <Sequence sap2010:Annotation.AnnotationText="Repair Without Parts must be Yes. &#xA;Ask the associate to fix it." sap:VirtualizedContainerService.HintSize="376,387" sap2010:WorkflowViewState.IdRef="Sequence_76">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_56">
+                                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_56">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">
                                         <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_83">AllAssetProcessInfo[AssetTag]</CSharpReference>
@@ -2333,14 +2383,14 @@
                                       </InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Warn">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Warn">
                                     <ui:LogMessage.Message>
                                       <InArgument x:TypeArguments="x:Object">
                                         <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_123">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
                                       </InArgument>
                                     </ui:LogMessage.Message>
                                   </ui:LogMessage>
-                                  <ui:Break sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="Break_2" />
+                                  <ui:Break sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Break_2" />
                                 </Sequence>
                               </If.Then>
                               <If.Else>
@@ -2355,7 +2405,7 @@
                             </If>
                             <x:Null x:Key="5" />
                             <x:Null x:Key="6" />
-                            <If x:Key="7" sap2010:Annotation.AnnotationText="Kitting must be No" sap:VirtualizedContainerService.HintSize="483.2,909.6" sap2010:WorkflowViewState.IdRef="If_30">
+                            <If x:Key="7" sap2010:Annotation.AnnotationText="Kitting must be No" sap:VirtualizedContainerService.HintSize="484,902" sap2010:WorkflowViewState.IdRef="If_30">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
                                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">ProcessesCompleted[CurrentItemNo] != "No"</CSharpValue>
@@ -2369,13 +2419,13 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,689.6" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,685" sap2010:WorkflowViewState.IdRef="Sequence_78">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_57">
+                                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_57">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">
                                         <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_84">AllAssetProcessInfo[AssetTag]</CSharpReference>
@@ -2387,14 +2437,14 @@
                                       </InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Warn">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Warn">
                                     <ui:LogMessage.Message>
                                       <InArgument x:TypeArguments="x:Object">
                                         <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_126">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
                                       </InArgument>
                                     </ui:LogMessage.Message>
                                   </ui:LogMessage>
-                                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="333.6,86.4" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
+                                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="334,86" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
                                     <ui:WaitUiElementAppear.FoundElement>
                                       <OutArgument x:TypeArguments="ui:UiElement">
                                         <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_85">ProcessItem</CSharpReference>
@@ -2416,7 +2466,7 @@
                                       </ui:Target>
                                     </ui:WaitUiElementAppear.Target>
                                   </ui:WaitUiElementAppear>
-                                  <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="333.6,137.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" Version="V1">
+                                  <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" Version="V1">
                                     <uix:NClick.InUiElement>
                                       <InArgument x:TypeArguments="ui:UiElement">
                                         <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_128">ProcessItem</CSharpValue>
@@ -2446,7 +2496,7 @@
                               </If.Else>
                             </If>
                             <x:Null x:Key="8" />
-                            <If x:Key="9" sap2010:Annotation.AnnotationText="Clean &amp; Pack must be Yes" sap:VirtualizedContainerService.HintSize="483.2,909.6" sap2010:WorkflowViewState.IdRef="If_31">
+                            <If x:Key="9" sap2010:Annotation.AnnotationText="Clean &amp; Pack must be Yes" sap:VirtualizedContainerService.HintSize="484,902" sap2010:WorkflowViewState.IdRef="If_31">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
                                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_130">ProcessesCompleted[CurrentItemNo] != "Yes"</CSharpValue>
@@ -2460,13 +2510,13 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,689.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,685" sap2010:WorkflowViewState.IdRef="Sequence_80">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_59">
+                                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_59">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">
                                         <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_87">AllAssetProcessInfo[AssetTag]</CSharpReference>
@@ -2478,14 +2528,14 @@
                                       </InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Warn">
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Warn">
                                     <ui:LogMessage.Message>
                                       <InArgument x:TypeArguments="x:Object">
                                         <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_132">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
                                       </InArgument>
                                     </ui:LogMessage.Message>
                                   </ui:LogMessage>
-                                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="333.6,86.4" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5">
+                                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="334,86" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5">
                                     <ui:WaitUiElementAppear.FoundElement>
                                       <OutArgument x:TypeArguments="ui:UiElement">
                                         <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_88">ProcessItem</CSharpReference>
@@ -2507,7 +2557,7 @@
                                       </ui:Target>
                                     </ui:WaitUiElementAppear.Target>
                                   </ui:WaitUiElementAppear>
-                                  <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="333.6,137.6" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" Version="V1">
+                                  <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" Version="V1">
                                     <uix:NClick.InUiElement>
                                       <InArgument x:TypeArguments="ui:UiElement">
                                         <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_134">ProcessItem</CSharpValue>
@@ -2537,13 +2587,13 @@
                               </If.Else>
                             </If>
                             <x:Null x:Key="10" />
-                            <Sequence x:Key="11" sap:VirtualizedContainerService.HintSize="524.8,1002.4" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                            <Sequence x:Key="11" sap:VirtualizedContainerService.HintSize="526,996" sap2010:WorkflowViewState.IdRef="Sequence_85">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <If sap2010:Annotation.AnnotationText="Cosmetic Inspection must be Yes" sap:VirtualizedContainerService.HintSize="483.2,909.6" sap2010:WorkflowViewState.IdRef="If_32">
+                              <If sap2010:Annotation.AnnotationText="Cosmetic Inspection must be Yes" sap:VirtualizedContainerService.HintSize="484,904" sap2010:WorkflowViewState.IdRef="If_32">
                                 <If.Condition>
                                   <InArgument x:TypeArguments="x:Boolean">
                                     <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_135">ProcessesCompleted[CurrentItemNo] != "Yes"</CSharpValue>
@@ -2557,13 +2607,13 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,689.6" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,687" sap2010:WorkflowViewState.IdRef="Sequence_82">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_61">
+                                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_61">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">
                                           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_90">AllAssetProcessInfo[AssetTag]</CSharpReference>
@@ -2575,14 +2625,14 @@
                                         </InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Warn">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Warn">
                                       <ui:LogMessage.Message>
                                         <InArgument x:TypeArguments="x:Object">
                                           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_137">String.Format("{0}: {1}", AssetTag, AllAssetProcessInfo[AssetTag])</CSharpValue>
                                         </InArgument>
                                       </ui:LogMessage.Message>
                                     </ui:LogMessage>
-                                    <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="333.6,86.4" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6">
+                                    <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="334,86" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6">
                                       <ui:WaitUiElementAppear.FoundElement>
                                         <OutArgument x:TypeArguments="ui:UiElement">
                                           <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_91">ProcessItem</CSharpReference>
@@ -2635,7 +2685,7 @@
                               </If>
                             </Sequence>
                           </Switch>
-                          <Assign sap:VirtualizedContainerService.HintSize="914.4,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                          <Assign sap:VirtualizedContainerService.HintSize="917,60" sap2010:WorkflowViewState.IdRef="Assign_33">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Int32">
                                 <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_49">CurrentItemNo</CSharpReference>
@@ -2675,7 +2725,7 @@
                           </sap:WorkflowViewStateService.ViewState>
                           <uix:NClick ClickType="Single" DelayAfter="2" DisplayName="Click  Save button from 'Processes Completed' page" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                             <uix:NClick.Target>
-                              <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="1321, 264, 30, 30" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReaso*' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReaso*' tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='dx-vam' aaname='Save' /&gt;" Guid="504f8c34-e7e8-45b8-996b-24886ae0de96" ImageBase64="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" InformativeScreenshot="a2ac8626f8ce905b18fb9d6b1202151d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                              <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="1321, 264, 30, 30" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReasons_ucProcessComplete_btnSaveImg' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReaso*' tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='dx-vam' aaname='Save' /&gt;" Guid="504f8c34-e7e8-45b8-996b-24886ae0de96" ImageBase64="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" InformativeScreenshot="a2ac8626f8ce905b18fb9d6b1202151d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
                                 <uix:TargetAnchorable.Anchors>
                                   <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
                                     <uix:Target DesignTimeRectangle="1227, 333, 122, 16" ElementType="Text" FriendlyName="'Process Complete Date'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table' parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReaso*' tableCol='16' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReaso*' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Process Complete Date' check:innerText='Process Complete Date' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAUCAYAAABLTIm0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQySURBVGhD7Vdda1RXFL0/Z/5D/sdt/EjfazSiKEqS52aMGUVEFJqBElI/UgQRMlxrRKMpEohhwlWC6SehJLmlSJ+b0tV99vna58y9kwgWrHMfFty99zpr77X3PCRJ97d/UGPwUB9+QFEffkCRLP/wF2oMHurDDyiSlR/3UeN9sIOpL1KMdcpq/x8k3/+8D8ZaB+lQiobA6czUPmLMfRnOnH69U8r7cNhB88RBuzkMpxyxn8bQBJpr5dwA2VdonOigU1YrQbL66z4Y6x18Rk2m1038iIRk/BHimylaDJn9zuW6OBPE/wV2ME1HPfOorGZxGE452NNU1+f4DofQUrz38J682v4bjG4Hw3ToVtfE27tojaYYntvFq8ezaIx20GrqXyBzmG9+lVR7YnUIT+YmdD6obeCszQ3N4m4Z1/WXXEJzw2k79MwboWI+7tec9fpKW/nj2OvdJa/DxHMabga9l7OPTZ8SX6Enz1WacS4Gc2K/Zv/swc0qdaJ9WW6fG/l/5zYyHBmaxNUN+yf/Hq6SwXNL9L2km/F3XKN44RIJX8p1jbmzWGBeyD8yv8fxs/lJzeeegruUcX+lZ7n8dt5oS6g+oxmexXlG9Xzc2/bk/r4mefzt9HOcc/6ldoWvqL+rWb3Yt0CwSwfVX97GQOr07EPOHO+U/p3LdwHG6wxHSfzaaxM/bdOC2rhvv09meBFwTS3i3p9OcfR2ofMWMd/GcU8DpdGYzoNcjBe3aZFVnD7zhe9ynBf9ZS324eMC106mOP+U8lW+JIdrB8Ue5d7DOcO86R/f6IA42dwDGG8yHFO/fodJXH9jaurRqQwvLdcs8kHwVscPaPBjtCCn6+pSW8G8Zy2Tcz0KXD/luRdoQYEe4aU6kpxJos98/I4Wq7k5LgifUjP24WM9G89U6Utw+H3ox6LMl+rj57OQc8ZaYo89N5I8gqgnW78DjM0Mx0n8xqaJJZa16KqNmdvGQ1k38cPLKY7fKcL3Mb8UBW6QoZ63QjvI95u3z3yrd+i4l3PDzXFRaHDN+Ix9+FjPeXGZ8pW+BKc0robq4+czcPuPd6TmN/3jG8VxhOSnPwDG2wwjtISbb00s8ZxExjKsuVyBm2Mpxp/reHGGhp3JPZeGWXRczx+5V/h4hvSo57jMGc3FGfG+p7cH9w1qOcY5rp5v7R4d186q+MIz14yeeuPmDXYjtSt8xe8JUlvH7dJdB7tU4H2G/ayvYNc8o9y78ia4Kha6yS/vAMaWNndry8QSK3r56zLHfBpSIap1WiYf1HJM2JxCK6/IAesLtCSXr5jJIOhFmFgxtYr5WNv00f29PtcMt1L3XYFbtHwfl3vgnUVvQ802Ovw+RNy3x7/QbbTa1Nvq6Lk4b/3KHRBGFgqnk2z/CdToRXYlxeffFqW1TwH14StQH77GJ4n68AOK+vADCeBfh8ULfBhAj3AAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
@@ -2699,7 +2749,7 @@
                     </If>
                     <uix:NClick ClickType="Single" DisplayName="Click 'Close button'" sap:VirtualizedContainerService.HintSize="1143,156" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6924503a-7fc5-4e90-8fbd-987b3a633b96" Version="V1">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="927, 240, 17, 16" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReaso*' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReasons_HCB-1' tag='IMG' type='' class='dxWeb_pcCloseButton_Aqua' aaname='[Close]' /&gt;" Guid="fa8946f9-5d47-4c95-b71d-b92866c86587" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGpSURBVDhPrZTLTsJAGIUnPp/v48Lo3vgGKsbEy8KNRgVNjJoa8I5BWhSpIMELBoW6shFIjz3TTDNQjDXp4lvM+ed8JWRmRL0NJI2ofgBJIx7eAYX1/I2TkvNvbupu6CDCbnkgxYaLnNXB6k4ZE3ON2Kyly7JXePySHiLKbwDJWg5Wdm0s5j5xUXNjk8p+SnHWdKSHiNumB3JsduSXc1X/F//C6YiMsMe+cgnz1QMxioH0sOLiwHYxNj4ZwrViVM4e+8olCs8eyNFNIN0uu9i6d7Fu9wcEzPQ158wIe+wrV0S6VOqGpF8wIFIw1/f9KZ03uwMMi7ke3hORGnYXJHP5IYfTR/0IunTUnD32lSsinTnrY1ZDFyr0OYlIsw89kL2rthwuWB4WSgG6yOgM/g1qD2GPfeUSuVoPZC8fSDefPGz46AIKmQ2LmREp9fvKJc7rPZD960BqOAjwBSEq09Fy9thXLpFv9EEOCm153Xjt8i5iw/3LmUfZV67wSJ1WvsBjQTG/HIepVPCgsMd+eKTMJqC48O+x4T8M/4U93SPu/FclaUSlBSQL8ANt2IYqXVJSwQAAAABJRU5ErkJggg==" InformativeScreenshot="f32b9b26c2b1a6e8c3861dc68aea3325.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                        <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Audit/RepairDetailLOB.aspx?Scanid=29287853" DesignTimeRectangle="927, 240, 17, 16" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReasons_HCB-1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReasons_HCB-1' tag='IMG' type='' class='dxWeb_pcCloseButton_Aqua' aaname='[Close]' /&gt;" Guid="fa8946f9-5d47-4c95-b71d-b92866c86587" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGpSURBVDhPrZTLTsJAGIUnPp/v48Lo3vgGKsbEy8KNRgVNjJoa8I5BWhSpIMELBoW6shFIjz3TTDNQjDXp4lvM+ed8JWRmRL0NJI2ofgBJIx7eAYX1/I2TkvNvbupu6CDCbnkgxYaLnNXB6k4ZE3ON2Kyly7JXePySHiLKbwDJWg5Wdm0s5j5xUXNjk8p+SnHWdKSHiNumB3JsduSXc1X/F//C6YiMsMe+cgnz1QMxioH0sOLiwHYxNj4ZwrViVM4e+8olCs8eyNFNIN0uu9i6d7Fu9wcEzPQ158wIe+wrV0S6VOqGpF8wIFIw1/f9KZ03uwMMi7ke3hORGnYXJHP5IYfTR/0IunTUnD32lSsinTnrY1ZDFyr0OYlIsw89kL2rthwuWB4WSgG6yOgM/g1qD2GPfeUSuVoPZC8fSDefPGz46AIKmQ2LmREp9fvKJc7rPZD960BqOAjwBSEq09Fy9thXLpFv9EEOCm153Xjt8i5iw/3LmUfZV67wSJ1WvsBjQTG/HIepVPCgsMd+eKTMJqC48O+x4T8M/4U93SPu/FclaUSlBSQL8ANt2IYqXVJSwQAAAABJRU5ErkJggg==" InformativeScreenshot="f32b9b26c2b1a6e8c3861dc68aea3325.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
                             <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
                               <uix:Target DesignTimeRectangle="894, 288, 30, 30" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReaso*' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='ctl00_ctl00_MainContent_PageMainContent_popupControlServiceReaso*' tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='dx-vam' aaname='Save' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAf+SURBVFhHzZf3WxTnFsfvv5MoSlO6CKjBGIqxIAoIKoqiC3aMIEYhGKMxxigSAUHxahIsqERCFMUWlKKCiGyhGpa6LEtvfnPOO7PDrq43P17P83ye2Zl593y/57zvtP/gI4mP20j/kBFP1cW48OAw0ot34ErZCRgMRvT0GBQMBgN6Db0Eb6V9a3rR3d2FvPup+PnP3SJXWX0RBoaNsop1vGekqb0OW88E4sStzTheHIMfb2/ChcepGB8fx9jYGEaGR9Bv6hdC7e0d6OruhsHYi/7BAQyNDGFweAh9A33o6OqATqtF5p1EHC/agozbO5Dxx06oMr4gjdey2lRYGWnvaUFSzkocLAjFzvzPEf+LH+Iu+SLlRpQ4z2aGhoaEibY2PXS6BrS8aUU7iep72vCg9iZqmsvRbexBQ3MjKioqsP1cIKIzvbD+jBfic/1x6GoUaYRB390scppDMTI2PorEjEgk/BIAFYnHsQlCdckPKQVrxBizkd5eMqLXo6GhURhp69Rj3/nVWHnECeHHXFCtK0djSxMqKyuxI3cxNmR6Y/3PRIa3MJV0cTkSToUJTXMoRhr+fg3VmQWS+EVfqP4rsYU4SFVwfMhIc1szwg95IOxbd6xMc0VxeT6aW1uEke3ZwYjOmIPodMYbMVneiD3rh+3pQdC21oq8HIqRR89vQZXnJ4S3XPDFZiZP4sDlfzcSesAdK752xfL9Ligq+00xsi0zCNGn5mDtSTJyeo7oDBuLz/TH/apCkZdDMXLrcR5iz83F5vM+gthzEptyfbD/10gx5kNGmtqasGyPK77cMwuLE5xR+PBXxUh8RiDW/OSFtT9JXVlHptad9BLbwvt5Ii+HYqTw0XlszPHGphwSZ876YOPZuYLki/9i5O8mBG11RmC8IwLiHXCj9BKa37Sgioyo0gMQdZyNSKw5QfzoRcc8UVh6XuTlUIzceJCLmOw52Jg9l7YyWRKJ58Pw9u3bDxp5o3+DVbvmYX60HT5bb4cHVXfQ1NqMx2UPEX1sniQsxL0Q+YMnIo95YvX3HrhRkiurWxi5fj9XXGK8wjeckRArneBET2vvYWJiwqaRju5O6Fo1uFh4Bnef/I7O3k5x/HjefoQfcZWFiaMeiDjigfDviMPuuH7XlpHSXKw7Tdc7XWLrT9OCYnil85yeonZ+Nxf3Km6iVd9I1TagXluH6trneKWugabpNa0THd0bqDtdLahrrMG5myex6ht3rCbhCBYW4tKVFXbIHavS3HDdVkcKSnNoZXvSQuLFJC0oq3mlLbcz/FtKxpdq2hQsuCqVtql0+aa4IzTFTQgJUUVYYmWqmyA0xRUFJTmyuqWRezk0jx6SKCHmVJ5XXlhibuX5Nc+xudUCud2WFa/8RiJUCBMHGVesOOCKkK9dcO2OLSN3c7D6B4/3BCN5bsX8elqLyq0Ot6haVGoWtRAOJWG+xzAh++lek+yCZcmzychZWd3CyLWSswg/6iaqFPMqIwTlai0rNrdbVEyCXKVAEXQRsGgIsXwfkTQby5jE2Viy1xlXb3/ASNhhN0RwlTJhLG5RsSLOVVOlISyYLFWoiJlJoqoZEmWW7pVYsoeZhS8TnHD1TxtGrlKbVtFzwkqU4XlmYapWtJSSL5WTCwELEYWvSOyrWUJQEmWcsXg33Xl30XanM4J3OOKKTSN0cOneWVbJpxI5I2iXA92+HSX2yJj3ZYKZ3RJBOx0QvNNJCAcLYcYJQduJbU4I2OqAK8U2jFymgwHbHBDEgwnxR0rAv1ckeuDktX3462URXuge0WPeNi+0zENUqUtx+V461qf5I5BzknDgViKeDPBjQOWIRVvsSTNbVrc08kc2FqnsERDHzwtH+bnhiPBkHzS21Ylb/OTkJN4y9NsmdI7HTNIdmDEN9uLYhb34fPNMfCHEHbBoswPt28N/00zkk6Y5FCP5RdlYSCd5oID+xH8oeVIgJZ+k5GYjjA0Tlkb4ccCvls1tGhK1o9z2EjESCzbMEJrmmDJyK0s8sPzlgQs32mNRrCPqNM9E8gatDpr6emjUamgZjeZ/wuP4pdrUb8SybZ6UewYxE59Fz8ACYv5aO6FpDsXIb79nYf666WKQ+U8LN9jjlaYKE+OTMPWZiD5BP2MyWWGyoM/YByMxODiIPpMBS+I8SHi6EGfmrbGDX9Q05JOmOaaMFGbCL3KaMnj+WjKzbiZq6ivo8T+BkZFRwRgxSi3ntlsxSseJkZERMW54eFj8NhoNWBzrDt/I6SROBni7ejp8w6cJTXMoRm4/ug6fiE/FIDGYmE/Oq+vKhZEGHU+NmlrOrddaoWNo6vjzwXJqerp76JWhB8EbXeEbMU3KLcNaxQ+uyeoWRtSNte8Nnhdphxe1T6lSqepxWoDMxMTkO0iLk1+cmDGGxg/TN5DB0IkgG0Z4X934Ula3MDI2NoqYpCWYG/6JtZGXT4QRvb4dleUV4vXvWVWVjOVvmcoqMaaSvmn09PJk6OlCUIy1EdZgLdY0h2KEo62jBSFxvsoUsZHnNWXi666PFmhnZ6egq7NLousd5POCjg5atEb67OywMsK5V8T7Qk9almFlhEPbVIvlKm/4yJ15VvMXvR4OY3BgQFwFzNDQ+5jPDdKn5wCNFfT3k8F2BG5woXyfipycmzXejfeMcJgGjCh5fANHs5JQ/eopNA01UOss4P13sTwvqIZaW4069TPsSovCodMJIqepv1dWsQ6bRv4f8ZEYAf4B4wfuHVcchcsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
@@ -2906,7 +2956,7 @@
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1297,84" sap2010:WorkflowViewState.IdRef="MessageBox_2">
       <ui:MessageBox.Text>
         <InArgument x:TypeArguments="x:Object">
-          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_163">ErrMsg</CSharpValue>
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_168">"QC Summary\n\n" + ErrMsg</CSharpValue>
         </InArgument>
       </ui:MessageBox.Text>
     </ui:MessageBox>
