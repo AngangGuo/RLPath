@@ -497,7 +497,7 @@
                     <If DisplayName="If - Status is Shipped" sap:VirtualizedContainerService.HintSize="995,536" sap2010:WorkflowViewState.IdRef="If_38">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
-                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_200">TheText != "Inventory"</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_206">TheText != "Inventory" &amp;&amp; TheText != "Audit"</CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
