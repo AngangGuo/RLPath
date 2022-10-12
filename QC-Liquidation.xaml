@@ -3,7 +3,7 @@
     <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1503,24802</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1503,24678</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
@@ -102,7 +102,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for liquidation assets.&#xA;Passing in Browser instance,&#xA;" DisplayName="QC_Liquidation" sap:VirtualizedContainerService.HintSize="1513,24737" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Automate the QC processes for liquidation assets.&#xA;Passing in Browser instance,&#xA;" DisplayName="QC_Liquidation" sap:VirtualizedContainerService.HintSize="1513,24613" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="AssetTags" />
       <Variable x:TypeArguments="s:String[]" Name="AllLPNs" />
@@ -2586,13 +2586,6 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1471,84" sap2010:WorkflowViewState.IdRef="MessageBox_1">
-      <ui:MessageBox.Text>
-        <InArgument x:TypeArguments="x:Object">
-          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_123">"QC Summary\n\n" + ErrMsg</CSharpValue>
-        </InArgument>
-      </ui:MessageBox.Text>
-    </ui:MessageBox>
     <ui:LogMessage DisplayName="Log Message - finished time" sap:VirtualizedContainerService.HintSize="1471,91" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
