@@ -494,7 +494,7 @@
                         </OutArgument>
                       </uix:NGetText.Text>
                     </uix:NGetText>
-                    <If sap2010:Annotation.AnnotationText="Normal status maybe:&#xD;&#xA;1. Inventory&#xD;&#xA;2. Audit&#xD;&#xA;3. (Empty)" DisplayName="If - Status is Shipped" sap:VirtualizedContainerService.HintSize="995,608" sap2010:WorkflowViewState.IdRef="If_38">
+                    <If sap2010:Annotation.AnnotationText="Normal status maybe:&#xA;1. Inventory&#xA;2. Audit&#xA;3. (Empty)" DisplayName="If - Status is Shipped" sap:VirtualizedContainerService.HintSize="995,608" sap2010:WorkflowViewState.IdRef="If_38">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_207">TheText == "Shipped"</CSharpValue>
@@ -1079,7 +1079,7 @@
                       <If sap2010:Annotation.AnnotationText="Most of the time we use the following repair code: &#xA;COS2, COS3, COSREPS, NPRB, PTAC" DisplayName="If - Wrong Repair Code" sap:VirtualizedContainerService.HintSize="484,710" sap2010:WorkflowViewState.IdRef="If_21">
                         <If.Condition>
                           <InArgument x:TypeArguments="x:Boolean">
-                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">!(Asset["RepairCode"].StartsWith("COS2") || Asset["RepairCode"].StartsWith("COS3") || Asset["RepairCode"].StartsWith("COSREP1") || Asset["RepairCode"].StartsWith("NPRB") || Asset["RepairCode"].StartsWith("PTAC"))</CSharpValue>
+                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_208">!(Asset["RepairCode"].StartsWith("COS1") || Asset["RepairCode"].StartsWith("COS2") || Asset["RepairCode"].StartsWith("COS3") || Asset["RepairCode"].StartsWith("COSREP1") || Asset["RepairCode"].StartsWith("NPRB") || Asset["RepairCode"].StartsWith("PTAC"))</CSharpValue>
                           </InArgument>
                         </If.Condition>
                         <sap:WorkflowViewStateService.ViewState>
