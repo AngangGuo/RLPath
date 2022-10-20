@@ -147,7 +147,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog - QC Location" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Please select the QC location(YVR3):" OptionsString="QC-76.01;QC-76.02;QC-76.31;QC-76.32" Title="Asset QC Location">
+          <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog - QC Location" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Please select the QC location(YVR3):" OptionsString="QC-76.01;QC-76.02;QC-76.07;QC-76.08" Title="Asset QC Location">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">
                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">QCLocation</CSharpReference>
@@ -169,7 +169,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog - QC Location" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please select the QC location(YYC1):" OptionsString="QC-76.11;QC-76.12" Title="Asset QC Location">
+          <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog - QC Location" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Please select the QC location(YYC1):" OptionsString="QC-76.11;QC-76.12;QC-76.17;QC-76.18" Title="Asset QC Location">
             <ui:InputDialog.Result>
               <OutArgument x:TypeArguments="x:String">
                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">QCLocation</CSharpReference>
