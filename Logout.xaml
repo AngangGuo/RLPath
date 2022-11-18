@@ -3,7 +3,7 @@
     <x:Property Name="in_Browser" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1161,1118</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1090,1274</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="58">
@@ -38,6 +38,8 @@
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -91,19 +93,19 @@
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Louout" sap:VirtualizedContainerService.HintSize="602,1053" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Louout" sap:VirtualizedContainerService.HintSize="600,1209" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="560,961" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="ebd1fd98-8cd8-4ff6-ad18-9e993fc34447" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="558,1119" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="ebd1fd98-8cd8-4ff6-ad18-9e993fc34447" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,825" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="524,973" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="CurrentURL" />
             </Sequence.Variables>
@@ -112,27 +114,27 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGetUrl DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="484,86" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V1">
+            <uix:NGetUrl DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="482,96" sap2010:WorkflowViewState.IdRef="NGetUrl_1" Version="V1">
               <uix:NGetUrl.CurrentUrl>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">CurrentURL</CSharpReference>
                 </OutArgument>
               </uix:NGetUrl.CurrentUrl>
             </uix:NGetUrl>
-            <If sap:VirtualizedContainerService.HintSize="484,474" sap2010:WorkflowViewState.IdRef="If_1">
+            <If sap:VirtualizedContainerService.HintSize="482,555" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">!CurrentURL.Contains("Login.aspx")</CSharpValue>
                 </InArgument>
               </If.Condition>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,286" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="400,292" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ebd1fd98-8cd8-4ff6-ad18-9e993fc34447" Version="V1">
+                  <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="358,202" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ebd1fd98-8cd8-4ff6-ad18-9e993fc34447" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://blueiq.cloudblue.com/Receiving/LoadPalletDetails.aspx?searchby=LoadID&amp;searchvalue=L1021369" DesignTimeRectangle="1467, 143, 34, 12" ElementType="Text" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl id='ctl00_ctl00_ContentPlaceHolderHeader_topHeader_LoginView1_LoginS*' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ctl00_ctl00_ContentPlaceHolderHeader_topHeader_LoginView1_LoginS*' tag='A' type='' class='' aaname='Logout' check:innerText='Logout' /&gt;" Guid="5d1280d8-7dd6-4d2c-a9e7-5522191d1179" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAQCAYAAAB6Hg0eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEJSURBVEhL5VSxDYMwEGQq1mEFZmAD1ykQA6CImoI2NWKAVCkAZYWP/+yHBykSEIKIctIL//E+zm+bgI5GV1Ec5VT7FGAuqaj3KSMII0NHBNDkGMdlixS858K5Mf88HX7AGFo62/uD0JcphVnjM4dTGKsze8Y2GZMDyqEEIIiDm5NJDJnhVUNG6gdNx0nN0CWlPc5fYgzXO6Wi46SlwhrArdL1qBFhVWMBA7hxb4xZbOsY8+oqi+BUzJlxH2UDshCL4b/1N8Z220rNu/EKY7ZAhxTrd0oAgswtOvzeJLiUTDZ2TPhxvjb2CSZd3Qcwdn88/UqWx7zDsnWaWxuX6w0ajH069gWc1BjRCzDIW0DKcTqlAAAAAElFTkSuQmCC" InformativeScreenshot="ef1b03778c8aa07577fe611edb682ea3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='BlueIQ' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -165,7 +167,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,7 +176,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="482,150" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Logged out"</CSharpValue>
